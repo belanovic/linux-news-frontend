@@ -10,6 +10,7 @@
 }
 .header {
     background: green;
+    position: sticky;
 }
 .main {
     background: yellow;
@@ -82,6 +83,13 @@
 
 /* navigation */
 
+.navigation {
+    position: absolute;
+    width: 100%;
+    z-index: 3;
+    transition: left 1s;
+    background: red;
+}
 .nav-list {
     list-style-type: none;
     margin: 0;
@@ -89,6 +97,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    z-index: 3;
 }
 .nav-item {
     margin: 0;
