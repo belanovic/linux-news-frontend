@@ -5,10 +5,7 @@ export default function Navigation({navVisible}) {
     return (
         <nav 
             className="navigation" 
-            style = {{
-                left: navDisplay
-               /*  transform: 'translateY(50%)' */
-            }}
+            style = {{left: navDisplay}}
         >
             <ul className="nav-list">
                 <li className="nav-item"><a href={`#`} className="nav-link">Politika</a></li>
