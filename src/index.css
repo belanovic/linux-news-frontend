@@ -5,12 +5,13 @@
 /* typography */
 
 .wrapper {
-      
+    
 }
 .header {
     background: green;
     width: 100%;
-    position: fixed;
+    position: sticky;
+    top: 0;
     z-index: 4;
 }
 .main {
@@ -19,7 +20,6 @@
 .footer {
     background: black;
 }
-
 .swiper-container {
     width: 100%;
 }
@@ -108,7 +108,7 @@
 .nav-item:active {
     background: rgb(73, 73, 73);
     border-radius: 15px;
-}   
+}
 .nav-link {
     font-size: 2rem;
     padding: 0.7em 0 0.7em 0;
