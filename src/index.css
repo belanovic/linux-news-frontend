@@ -194,7 +194,21 @@
     font-size: 3rem;
     color: white;
     background: green;
-    display: flex;
-    flex-direction: column;
     padding: 1em 0 1em 0;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+}
+.footer-item {
+    
+}
+.footer-item-link {
+    display: block;
+    text-align: center;
+    color: white;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 0.5em;
 }
