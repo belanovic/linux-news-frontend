@@ -1,41 +1,56 @@
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import BootstrapCarousel from './BootstrapCarousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
+import getFrontpageNews from './getNews.js';
 
-export default function Header() {
+
+
+export default function Main() {
+
+    const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]);
+
+    useEffect(async () => {
+        const n = await getFrontpageNews();
+        n.sort((a, b) => a.position - b.position);
+        n.forEach((prom) => {
+            console.log(prom.position + ' ' + prom.title);
+        })
+        setFrontpageNews(n);
+    }, [])
+
     return (
         <main className="main">
             <div className="container main-container">
-                <BootstrapCarousel />
+                <BootstrapCarousel frontpageNews = {frontpageNews} />
                 <Card 
                     classSuffix = 'general'
-                    title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    title = {frontpageNews[5].title}
+                    paragraph = {frontpageNews[5].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/3nVwbjf'
+                    src = {frontpageNews[5].imgURL}
                 />
                 <Card 
                     classSuffix = 'general'
-                    title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    title = {frontpageNews[6].title}
+                    paragraph = {frontpageNews[6].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/2LN8xIC'
+                    src = {frontpageNews[6].imgURL}
                 />
                 <Card 
                     classSuffix = 'general'
-                    title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    title = {frontpageNews[7].title}
+                    paragraph = {frontpageNews[7].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/35YgQbv'
+                    src = {frontpageNews[7].imgURL}
                 />
                 <Card 
                     classSuffix = 'general'
-                    title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    title = {frontpageNews[8].title}
+                    paragraph = {frontpageNews[8].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/2LE1wdd'
+                    src = {frontpageNews[8].imgURL}
                 />
                 <PartTitle title = "Magazin" />
                 <Card 

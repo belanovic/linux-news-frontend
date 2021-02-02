@@ -21,7 +21,7 @@ export default function Header() {
                         onClick={handleClick}
                     >
                         <i className="fas fa-bars" style = {{display: barsDisplay}}></i>
-                        <i class="fas fa-times" style = {{display: timesDisplay}}></i>
+                        <i className="fas fa-times" style = {{display: timesDisplay}}></i>
                     </div>
                 </div>
                 <Navigation navVisible = {navVisible} />
