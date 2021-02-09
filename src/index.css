@@ -37,9 +37,7 @@
     padding: 0px;
     margin: 0;
 }
-.imgSlide {
-    width: 100%;
-}
+
 .imgThumb {
     width: 100%;
 }
@@ -129,6 +127,13 @@
 }
 
 /* Card */
+
+.card-slide {
+    width: 100%;
+}
+.card-slide img {
+    width: 100%;
+}
 
 .card-general {
     display: flex;
