@@ -6,7 +6,7 @@
 /public/images
 /src/carousel/images
 .pnp.js
-
+hostBackend.js
 # testing
 /coverage
 
