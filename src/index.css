@@ -2,17 +2,19 @@
     box-sizing: border-box;
 }
 
-/* typography */
+html {
+    font-size: 16px;
+}
+
+/* ========== TYPOGRAPHY =========== */
+
+/* Wrapper */
 
 .wrapper {
     background: yellow;
 }
 .header {
     background: rgb(14, 136, 99);
-    width: 100%;
-    position: sticky;
-    top: 0;
-    z-index: 4;
     margin-bottom: 1em;
 }
 .main {
@@ -21,9 +23,9 @@
 .footer {
     background: black;
 }
-.swiper-container {
-    width: 100%;
-}
+
+/* Carousel */
+
 #main.swiper-container {
     margin-bottom: 1em;
 }
@@ -38,30 +40,13 @@
     margin: 0;
 }
 
-.imgThumb {
-    width: 100%;
-}
-.imgThumb:hover {
-    cursor: pointer;
-}
-
 #thumbs .swiper-wrapper {
     margin-bottom: 1em;
 }
 
-#thumbs .swiper-slide {
-    transition: all 0.5s;
-    transform: scale(0.7, 0.7);
-}
-#thumbs .swiper-slide-thumb-active {
-    transform: scale(1, 1);
-}
-
-/* ****** HEADER ***** */
+/* Header */
 
 .titleBox {
-    display: flex;
-    justify-content: space-between;
     margin: 1em 0 1em 0;
 }
 .title {
@@ -72,8 +57,128 @@
     font-style: italic;
 }
 .menuToggle {
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: white;
+}
+
+/* Card */
+
+.card-slide-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0.2em 0.2em;
+}
+
+.card-general {
+    margin-bottom: 1em;
+}
+.card-general-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+}
+
+.card-general-text {
+    overflow: hidden;
+}
+
+.card-sport {
+    margin-bottom: 1em;
+}
+
+.card-sport-text {
+    overflow: hidden;
+    width: 48%;
+}
+
+.card-sport-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-sport-paragraph {
+    margin-top: 0;
+    font-size: 1rem;
+}
+ 
+/* Part */
+
+.partTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    background: green;
+    color: white;
+    padding: .4em 0 0.4em 0;
+    margin-bottom: 0.3em;
+}
+
+/* Footer */
+
+.footer {
+    color: white;
+    background: green;
+    padding: 1em 0 1em 0;
+}
+.footer-social {
+    font-size: 3rem;
+    text-align: center;
+}
+.footer-social .fab {
+    margin: 0.2em;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.footer-item-link {
+    text-align: center;
+    color: white;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+
+/* ============ LAYOUT ============= */
+
+/* Wrapper */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+/* Carousel */
+
+.swiper-container {
+    width: 100%;
+}
+
+.imgThumb {
+    width: 100%;
+}
+.imgThumb:hover {
+    cursor: pointer;
+}
+
+#thumbs .swiper-slide {
+    transition: all 0.5s;
+    transform: scale(0.7, 0.7);
+}
+#thumbs .swiper-slide-thumb-active {
+    transform: scale(1, 1);
+}
+
+/* Header */
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
 }
 .menuToggle:hover {
     cursor: pointer;
@@ -82,7 +187,59 @@
     display: none;
 }
 
-/* navigation */
+/* Card */
+
+.card-slide {
+    width: 100%;
+}
+.card-slide img {
+    width: 100%;
+}
+
+.card-general {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vw;
+}
+
+.card-general-text {
+    width: 48%;
+}
+
+.card-general-img {
+    width: 50%;
+    height: 25vw;
+}
+
+.card-magazin-img {
+    width: 100%;
+    height: 50vw;
+}
+
+.card-sport {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vw;
+}
+
+.card-sport-text {
+    width: 48%;
+}
+
+.card-sport-img {
+    width: 50%;
+    height: 25vw;
+}
+
+/* Footer */
+
+.footer-item-link {
+    display: block;
+}
+
+/* ========== Navigation ============= */
 
 .navigation {
     position: absolute;
@@ -124,94 +281,4 @@
 }
 .nav-link:visited {
     color: white;
-}
-
-/* Card */
-
-.card-slide {
-    width: 100%;
-}
-.card-slide img {
-    width: 100%;
-}
-
-.card-general {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 25vw;
-    margin-bottom: 1em;
-}
-
-.card-general-text {
-    overflow: hidden;
-    width: 48%;
-}
-
-.card-general-img {
-    width: 50%;
-    height: 25vw;
-}
-.card-general-title {
-    margin-top: 0;
-}
-
-.card-magazin-img {
-    width: 100%;
-    height: 50vw;
-}
-
-.card-sport {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-    height: 25vw;
-    margin-bottom: 1em;
-}
-
-.card-sport-text {
-    overflow: hidden;
-    width: 48%;
-}
-
-.card-sport-img {
-    width: 50%;
-    height: 25vw;
-}
-.card-sport-title {
-    margin-top: 0;
-}
-
-/* Part title */
-
-.partTitle {
-    font-size: 3rem;
-    font-weight: bold;
-    background: green;
-    color: white;
-    padding: .4em 0 0.4em 0;
-    margin-bottom: 0.3em;
-}
-
-/****** Footer ******/
-
-.footer {
-    font-size: 3rem;
-    color: white;
-    background: green;
-    padding: 1em 0 1em 0;
-}
-.footer-links {
-    list-style-type: none;
-    padding: 0;
-}
-
-.footer-item-link {
-    display: block;
-    text-align: center;
-    color: white;
-}
-.footer-copyright {
-    text-align: center;
-    font-size: 0.5em;
 }

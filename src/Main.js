@@ -76,21 +76,21 @@ export default function Main() {
                 />
                 <PartTitle title = "Sport" />
                 <Card 
-                    classSuffix = 'general'
+                    classSuffix = 'sport'
                     title = "Naslov prve kartice"
                     paragraph = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2Y1Vyp1'
                 />
                 <Card 
-                    classSuffix = 'general'
+                    classSuffix = 'sport'
                     title = "Naslov prve kartice"
                     paragraph = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3qH7Dfn'
                 />
                 <Card 
-                    classSuffix = 'general'
+                    classSuffix = 'sport'
                     title = "Naslov prve kartice"
                     paragraph = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
