@@ -3,7 +3,7 @@ import BootstrapCarousel from './BootstrapCarousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
-import getFrontpageNews from './getNews.js';
+import {getFrontpageNews} from './getNews.js';
 
 
 
@@ -30,6 +30,8 @@ export default function Main() {
                     paragraph = {frontpageNews[5].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[5].imgURL}
+                    frontpageNews = {frontpageNews}
+                    id = {frontpageNews[5]._id}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -37,6 +39,8 @@ export default function Main() {
                     paragraph = {frontpageNews[6].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[6].imgURL}
+                    frontpageNews = {frontpageNews}
+                    id = {frontpageNews[6]._id}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -44,6 +48,8 @@ export default function Main() {
                     paragraph = {frontpageNews[7].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[7].imgURL}
+                    frontpageNews = {frontpageNews}
+                    id = {frontpageNews[7]._id}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -51,6 +57,8 @@ export default function Main() {
                     paragraph = {frontpageNews[8].paragraph}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[8].imgURL}
+                    id = {frontpageNews[8]._id}
+                    frontpageNews = {frontpageNews}
                 />
                 <PartTitle title = "Magazin" />
                 <Card 

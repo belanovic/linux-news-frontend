@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Navigation from './Navigation.js';
+import {Link} from 'react-router-dom';
 
 export default function Header() {
     const [navVisible, setNavVisible] = useState(false);
@@ -15,7 +16,7 @@ export default function Header() {
         <header className="header">
             <div className="container header-container">
                 <div className="titleBox">
-                    <h1 className="title">Vesti</h1>
+                    <Link to = '/'><h1 className="title">Vesti</h1></Link>
                     <div
                         className="menuToggle"
                         onClick={handleClick}
