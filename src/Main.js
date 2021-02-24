@@ -1,11 +1,9 @@
 import React, {useState, useEffect} from 'react';
-import BootstrapCarousel from './BootstrapCarousel.js';
+import Carousel from './Carousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
-
-
 
 export default function Main() {
 
@@ -23,7 +21,7 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
-                <BootstrapCarousel frontpageNews = {frontpageNews} />
+                <Carousel frontpageNews = {frontpageNews} />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[5].title}

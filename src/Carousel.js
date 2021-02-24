@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import Card from './Card.js';
+import CardCarousel from './CardCarousel.js';
 
 SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
 
@@ -20,12 +21,11 @@ export default function BootstrapCarousel({ frontpageNews }) {
         tag='section'
         grabCursor={true}
         wrapperTag='ul'
-        navigation
         thumbs={{ swiper: thumbsSwiper }}
       >
 
         <SwiperSlide tag='li'>
-          <Card
+          <CardCarousel
             classSuffix='slide'
             title={frontpageNews[0].title}
             paragraph={frontpageNews[0].paragraph}
@@ -35,7 +35,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
-          <Card
+          <CardCarousel
             classSuffix='slide'
             title={frontpageNews[1].title}
             paragraph={frontpageNews[1].paragraph}
@@ -45,7 +45,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
-          <Card
+          <CardCarousel
             classSuffix='slide'
             title={frontpageNews[2].title}
             paragraph={frontpageNews[2].paragraph}
@@ -55,7 +55,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
-          <Card
+          <CardCarousel
             classSuffix='slide'
             title={frontpageNews[3].title}
             paragraph={frontpageNews[3].paragraph}
@@ -65,7 +65,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
-          <Card
+          <CardCarousel
             classSuffix='slide'
             title={frontpageNews[4].title}
             paragraph={frontpageNews[4].paragraph}

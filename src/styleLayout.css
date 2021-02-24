@@ -1,0 +1,110 @@
+/* ============ LAYOUT ============= */
+
+/* Wrapper */
+
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+/* Container */
+
+.container {
+    max-width: 700px;
+}
+
+/* Carousel */
+
+.imgThumb {
+    width: 100%;
+}
+.imgThumb:hover {
+    cursor: pointer;
+}
+
+#thumbs .swiper-slide {
+    transition: all 0.5s;
+    transform: scale(0.7, 0.7);
+}
+#thumbs .swiper-slide-thumb-active {
+    transform: scale(1, 1);
+}
+
+/* Header */
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+}
+.menuToggle:hover {
+    cursor: pointer;
+}
+.fa-times {
+    display: none;
+}
+
+/* Card */
+
+.card-slide {
+    position: relative;
+}
+
+.card-slide img {
+    width: 100%;
+    height: 50vw;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+.card-slide-text {
+    position: absolute;
+    bottom: 1px;
+    width: 100%;
+}
+.card-slide-paragraph {
+    display: none;
+}
+.card-general {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vw;
+}
+
+.card-general-text {
+    width: 48%;
+}
+
+.card-general-img {
+    width: 50%;
+    height: 25vw;
+}
+
+.card-magazin-img {
+    width: 100%;
+    height: 50vw;
+}
+
+.card-sport {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 25vw;
+}
+
+.card-sport-text {
+    width: 48%;
+}
+
+.card-sport-img {
+    width: 50%;
+    height: 25vw;
+}
+
+/* Footer */
+
+.footer-item-link {
+    display: block;
+}
