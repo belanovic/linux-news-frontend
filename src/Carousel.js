@@ -28,7 +28,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[0].title}
-            paragraph={frontpageNews[0].paragraph}
+            ss={frontpageNews[0].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[0].imgURL}
             id = {frontpageNews[0]._id}
@@ -38,7 +38,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[1].title}
-            paragraph={frontpageNews[1].paragraph}
+            ss={frontpageNews[1].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[1].imgURL}
             id = {frontpageNews[1]._id}
@@ -48,7 +48,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[2].title}
-            paragraph={frontpageNews[2].paragraph}
+            ss={frontpageNews[2].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[2].imgURL}
             id = {frontpageNews[2]._id}
@@ -58,7 +58,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[3].title}
-            paragraph={frontpageNews[3].paragraph}
+            ss={frontpageNews[3].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[3].imgURL}
             id = {frontpageNews[3]._id}
@@ -68,7 +68,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[4].title}
-            paragraph={frontpageNews[4].paragraph}
+            paragraphs={frontpageNews[4].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[4].imgURL}
             id = {frontpageNews[4]._id}

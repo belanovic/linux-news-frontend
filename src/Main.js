@@ -16,6 +16,7 @@ export default function Main() {
             console.log(prom.position + ' ' + prom.title);
         })
         setFrontpageNews(n);
+        console.log(n)
     }, [])
 
     return (
@@ -25,8 +26,8 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[5].title}
-                    paragraph = {frontpageNews[5].paragraph}
-                    // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
+                    paragraphs = {frontpageNews[5].text}
+                    // date = {new Date(frontpageNews[5].dateCreated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[5].imgURL}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[5]._id}
@@ -34,7 +35,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[6].title}
-                    paragraph = {frontpageNews[6].paragraph}
+                    paragraphs = {frontpageNews[6].text}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[6].imgURL}
                     frontpageNews = {frontpageNews}
@@ -43,7 +44,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[7].title}
-                    paragraph = {frontpageNews[7].paragraph}
+                    paragraphs = {frontpageNews[7].text}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[7].imgURL}
                     frontpageNews = {frontpageNews}
@@ -52,7 +53,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[8].title}
-                    paragraph = {frontpageNews[8].paragraph}
+                    paragraphs = {frontpageNews[8].text}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = {frontpageNews[8].imgURL}
                     id = {frontpageNews[8]._id}
@@ -62,21 +63,21 @@ export default function Main() {
                 <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
                 />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
                 />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
                 />
@@ -84,28 +85,28 @@ export default function Main() {
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2Y1Vyp1'
                 />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3qH7Dfn'
                 />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/39XvfFN'
                 />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
-                    paragraph = {lorem(0, 150)}
+                    paragraphs = {lorem(0, 150)}
                     // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3sI8COt'
                 />

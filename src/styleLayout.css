@@ -63,7 +63,7 @@
     bottom: 1px;
     width: 100%;
 }
-.card-slide-paragraph {
+.card-slide-paragraphs {
     display: none;
 }
 .card-general {
@@ -76,10 +76,13 @@
 .card-general-text {
     width: 48%;
 }
-
+.card-general-paragraphs {
+    display: none;
+}
 .card-general-img {
     width: 50%;
     height: 25vw;
+    object-fit: cover;
 }
 
 .card-magazin-img {
