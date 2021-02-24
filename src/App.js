@@ -5,8 +5,6 @@ import Footer from './Footer.js';
 import Article from './Article.js';
 import {Switch, Route} from 'react-router-dom';
 
-import BootstrapCarousel from './BootstrapCarousel.js';
-
 export default function App() {    
     return (
         <div className = "wrapper">
