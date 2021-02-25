@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 16px;
 }
 
 /* ========== TYPOGRAPHY =========== */
@@ -14,11 +14,11 @@ html {
     background: red;
 }
 .header {
-    background: rgb(14, 136, 99);
+    background: rgb(251, 71, 0);
     margin-bottom: 1em;
 }
 .main {
-    background: yellow;
+    background: white;
 }
 .footer {
     background: black;

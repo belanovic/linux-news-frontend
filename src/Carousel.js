@@ -21,6 +21,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
         tag='section'
         grabCursor={true}
         wrapperTag='ul'
+        navigation
         thumbs={{ swiper: thumbsSwiper }}
       >
 
