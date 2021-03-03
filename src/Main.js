@@ -63,7 +63,7 @@ export default function Main() {
                     id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
                 />
-                <PartTitle title = "Magazin" />
+                <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
@@ -88,7 +88,7 @@ export default function Main() {
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
                 />
-                <PartTitle title = "Sport" />
+                <PartTitle title = "Sport" classSuffix = "sport" />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"

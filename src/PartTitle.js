@@ -1,9 +1,9 @@
 import React from 'react';
 
-export default function PartTitle({title}) {
+export default function PartTitle({classSuffix, title}) {
     return (
-        <div className="partTitle">
-            <div className="container footer-container">
+        <div className = {`container partTitle partTitle-${classSuffix}`}>
+            <div>
                 {title}
             </div>
         </div>

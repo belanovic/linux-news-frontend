@@ -3,16 +3,14 @@
 }
 
 html {
-    font-size: 10px;
+    font-size: 16px;
 }
 
 /* ========== TYPOGRAPHY =========== */
 
 /* Wrapper */
 
-.wrapper {
-    background: red;
-}
+
 .header {
     background: rgb(251, 71, 0);
     margin-bottom: 1em;
@@ -40,6 +38,14 @@ html {
     margin: 0;
 }
 
+#main .swiper-button-prev, #main .swiper-button-next {
+    color: white;
+    opacity: 0.5;
+}
+#main .swiper-button-prev:hover, #main .swiper-button-next:hover,
+#main .swiper-button-prev:active, #main .swiper-button-next:active {
+    opacity: 1;
+}
 #thumbs .swiper-wrapper {
     margin-bottom: 1em;
 }
@@ -124,15 +130,19 @@ html {
     font-weight: bold;
     background: green;
     color: white;
-    padding: .4em 0 0.4em 0;
+    padding: .4em 0 0.4em 0.4em;
     margin-bottom: 0.3em;
+}
+
+.partTitle-magazin {
+    background: purple;
 }
 
 /* Footer */
 
 .footer {
     color: white;
-    background: green;
+    background: rgb(46, 46, 46);
     padding: 1em 0 1em 0;
 }
 .footer-social {
