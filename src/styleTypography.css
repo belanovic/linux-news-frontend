@@ -104,6 +104,10 @@ html {
     overflow: hidden;
 }
 
+.card-general-date {
+    background: yellow;
+}
+
 .card-sport {
     margin-bottom: 1em;
 }
