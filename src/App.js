@@ -5,7 +5,8 @@ import Footer from './Footer.js';
 import Article from './Article.js';
 import {Switch, Route} from 'react-router-dom';
 
-export default function App() {    
+export default function App() {
+     
     return (
         <div className = "wrapper">
 

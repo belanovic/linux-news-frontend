@@ -1,24 +1,23 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import Carousel from './Carousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
 import time from './time.js';
+import {context} from './newsContext.js';
 
 export default function Main() {
 
-    const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]);
+    const {frontpageNews, setFrontpageNews} = useContext(context);
+
+    /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]);
 
     useEffect(async () => {
         const n = await getFrontpageNews();
         n.sort((a, b) => a.position - b.position);
-        n.forEach((prom) => {
-            console.log(prom.position + ' ' + prom.title);
-        })
         setFrontpageNews(n);
-        console.log(n)
-    }, [])
+    }, []) */
 
     return (
         <main className="main">
