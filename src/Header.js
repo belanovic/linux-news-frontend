@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import Navigation from './Navigation.js';
 import {Link} from 'react-router-dom';
+import {context} from './newsContext.js';
 
 export default function Header() {
+    const {getAndSetFrontpageNews} = useContext(context);
     const [navVisible, setNavVisible] = useState(false);
 
     const handleClick = () => {
@@ -16,7 +18,7 @@ export default function Header() {
         <header className="header">
             <div className="container header-container">
                 <div className="titleBox">
-                    <Link to = '/'><h1 className="title">Vesti</h1></Link>
+                    <Link to = '/'><h1 className="title" onClick = {() => getAndSetFrontpageNews()}>Vesti</h1></Link>
                     <div
                         className="menuToggle"
                         onClick={handleClick}

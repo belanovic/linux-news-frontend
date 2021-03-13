@@ -9,7 +9,6 @@ export default function Article() {
     useEffect( async() => {
         const res = await getArticle(id);
         const a = await res.json();
-        console.log(a);
         setArticle(a);
     }, [])
 
