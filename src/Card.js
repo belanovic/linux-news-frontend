@@ -9,9 +9,9 @@ export default function Card({ classSuffix, title, paragraphs, datePublished, da
             setDateLoaded(false);
         }
     }, [])
-    useEffect(() => {
+    /* useEffect(() => {
         console.log(dateLoaded);
-    }, [dateLoaded]);
+    }, [dateLoaded]); */
     return (
             <div className={`card-${classSuffix}`}>
                 <Link to = {`/article/${id}`}
@@ -20,9 +20,8 @@ export default function Card({ classSuffix, title, paragraphs, datePublished, da
                 <div className={`card-${classSuffix}-text`}>
                     <Link to = {`/article/${id}`}><h3 className={`card-${classSuffix}-title`}>{title}</h3></Link>
                     <p className={`card-${classSuffix}-date`}>
-                        <span className = "date datePublished" >{dateLoaded === true? datePublished : 'none'}</span>
-                        {` >>> `}
-                        <span className = "date dateUpdated">{dateLoaded === true? dateUpdated : 'none'}</span>
+                        <span className = "date datePublished" >{dateLoaded === true? datePublished + ' > ' : ''}</span>
+                        <span className = "date dateUpdated">{dateLoaded === true? dateUpdated : ''}</span>
                     </p>
                     <p className={`card-${classSuffix}-paragraphs`}>{paragraphs}</p>
                 </div>
