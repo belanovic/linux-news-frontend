@@ -12,7 +12,7 @@ html {
 
 
 .header {
-    background: rgb(251, 71, 0);
+    background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
     margin-bottom: 1em;
 }
 .main {

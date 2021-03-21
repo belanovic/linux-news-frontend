@@ -8,7 +8,7 @@ function Provider(props) {
     const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     const [dateLoaded, setDateLoaded] = useState(false);
 
-
+    
     async function getAndSetFrontpageNews() {
         try {
             console.log('getAndSetFrontpageNews called')
