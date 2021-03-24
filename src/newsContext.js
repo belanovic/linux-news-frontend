@@ -13,9 +13,7 @@ function Provider(props) {
         try {
             console.log('getAndSetFrontpageNews called')
             const n = await getFrontpageNews();
-            n.sort((a, b) => a.position - b.position);
-            console.log(n);
-            console.log(typeof n[0].dateUpdated);
+            n.sort((a, b) => a.position - b.position);        
             setFrontpageNews(n);
             setDateLoaded(true);
         } catch (err) {

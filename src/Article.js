@@ -11,11 +11,15 @@ export default function Article() {
         setArticle(oneArticle);
     }, [])
 
+    useEffect( async() => {
+        console.log(article)
+    }, [article])
+
     return (
         <article className="article">
             <h2 className = "article-title">{article.title}</h2>
             <h3 className = "article-subtitle">{article.subtitle}</h3>
-            <div className = "article-text">{article.paragraphs}</div>
+            <div className = "article-text">{article !== ''? article.paragraphs.map(prom => <p>{prom.props.children}</p>) : ''}</div>
         </article>
     )
 }
