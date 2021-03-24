@@ -7,16 +7,15 @@ export default function Article() {
     const {id} = useParams();
 
     useEffect( async() => {
-        const res = await getArticle(id);
-        const a = await res.json();
-        setArticle(a);
+        const oneArticle = await getArticle(id);
+        setArticle(oneArticle);
     }, [])
 
     return (
         <article className="article">
             <h2 className = "article-title">{article.title}</h2>
             <h3 className = "article-subtitle">{article.subtitle}</h3>
-            <div className = "article-text">{article.paragraph}</div>
+            <div className = "article-text">{article.text}</div>
         </article>
     )
 }

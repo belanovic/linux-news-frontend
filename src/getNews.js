@@ -12,8 +12,9 @@ export async function getFrontpageNews() {
 }
 export async function getArticle(id) {
     try {
-        const response = await fetch(`${HOST_BACKEND}/oneArticle/${id}`);        
-        return response
+        const response = await fetch(`${HOST_BACKEND}/oneArticle/${id}`);
+        const oneArticle = await response.json();
+        return oneArticle
     }
     catch(err) {
         console.log(err);
