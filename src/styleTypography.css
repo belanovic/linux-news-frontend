@@ -90,7 +90,7 @@ html {
 
 .card-img {
     opacity: 0;
-    transition: 1s opacity;
+    transition: 500ms opacity;
 }
 
 .opacityOne {

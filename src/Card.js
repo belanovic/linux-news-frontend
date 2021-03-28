@@ -18,9 +18,9 @@ export default function Card({ classSuffix, title, paragraphs, datePublished, da
         }, 50) */
 
         const efficientFunction = debounce(async function() {
-            if(inViewport === true) {
-                console.log('istina je')
-            };
+            
+            console.log('efficientFunction called');
+
             const v = isInViewport(cardElement.current);
             const promiseResolveA = await setInViewport((prev) => {
                 if(prev === true){
