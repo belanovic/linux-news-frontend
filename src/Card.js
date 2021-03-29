@@ -11,12 +11,7 @@ export default function Card({ classSuffix, title, paragraphs, datePublished, da
     const [inViewport, setInViewport] = useState(false);
 
     useEffect(() => {
-        /* const efficientFunction = debounce(function(e) {
-            if(inViewport) return;
-            const v = isInViewport(cardElement.current);
-            setInViewport(v);
-        }, 50) */
-
+       
         const efficientFunction = debounce(async function() {
             
             console.log('efficientFunction called');
