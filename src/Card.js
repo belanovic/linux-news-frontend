@@ -4,7 +4,7 @@ import {context} from './newsContext.js';
 import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 
-export default function Card({ classSuffix, title, paragraphs, datePublished, dateUpdated, src, id}) {
+export default function Card({ position, classSuffix, title, paragraphs, datePublished, dateUpdated, src, id}) {
     
     const {dateLoaded, setDateLoaded} = useContext(context);
     const cardElement = useRef(null);
@@ -43,9 +43,10 @@ export default function Card({ classSuffix, title, paragraphs, datePublished, da
     return (
             <div className={`card-${classSuffix}`}                             >
                 <Link to = {`/article/${id}`}
-                    ><img className={`card-${classSuffix}-img card-img ${inViewport && 'opacityOne'}`} 
-                      ref = {cardElement}
-                      src={src}
+                    ><img className={`card-${classSuffix}-img card-img 
+                            ${inViewport === true || (position > 4 && position < 8)? 'opacityOne' : ''}`} 
+                          ref = {cardElement}
+                          src={src}
                     > 
                       </img>
                 </Link>

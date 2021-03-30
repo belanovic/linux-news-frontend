@@ -33,6 +33,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[0].imgURL}
             id = {frontpageNews[0]._id}
+            position = {frontpageNews[0].position}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -43,6 +44,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[1].imgURL}
             id = {frontpageNews[1]._id}
+            position = {frontpageNews[1].position}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -53,6 +55,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[2].imgURL}
             id = {frontpageNews[2]._id}
+            position = {frontpageNews[2].position}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -63,6 +66,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[3].imgURL}
             id = {frontpageNews[3]._id}
+            position = {frontpageNews[3].position}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -73,6 +77,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[4].imgURL}
             id = {frontpageNews[4]._id}
+            position = {frontpageNews[4].position}
           />
         </SwiperSlide>
 

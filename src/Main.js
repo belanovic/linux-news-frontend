@@ -32,6 +32,7 @@ export default function Main() {
                     src = {frontpageNews[5].imgURL}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[5]._id}
+                    position = {frontpageNews[5].position}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -42,6 +43,7 @@ export default function Main() {
                     src = {frontpageNews[6].imgURL}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[6]._id}
+                    position = {frontpageNews[6].position}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -52,6 +54,7 @@ export default function Main() {
                     src = {frontpageNews[7].imgURL}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[7]._id}
+                    position = {frontpageNews[7].position}
                 />
                 <Card 
                     classSuffix = 'general'
@@ -62,6 +65,7 @@ export default function Main() {
                     src = {frontpageNews[8].imgURL}
                     id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
+                    position = {frontpageNews[8].position}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
@@ -71,6 +75,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}
                     src = 'https://bit.ly/2LE1wdd'
+                 
                 />
                  <Card 
                     classSuffix = 'magazin'
@@ -79,6 +84,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
+         
                 />
                  <Card 
                     classSuffix = 'magazin'
@@ -87,6 +93,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
+                
                 />
                 <PartTitle title = "Sport" classSuffix = "sport" />
                 <Card 
@@ -96,6 +103,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2Y1Vyp1'
+
                 />
                 <Card 
                     classSuffix = 'sport'
@@ -104,6 +112,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3qH7Dfn'
+              
                 />
                 <Card 
                     classSuffix = 'sport'
@@ -112,6 +121,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/39XvfFN'
+          
                 />
                 <Card 
                     classSuffix = 'sport'
@@ -120,6 +130,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3sI8COt'
+                    
                 />
             </div>
         </main>
