@@ -44,7 +44,7 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
             <div className={`card-${classSuffix}`}                             >
                 <Link to = {`/article/${id}`}
                     ><img className={`card-${classSuffix}-img card-img 
-                            ${inViewport === true || (position > 4 && position < 8)? 'opacityOne' : ''}`} 
+                            ${inViewport === true || (position > 5 && position < 9)? 'opacityOne' : ''}`} 
                           ref = {cardElement}
                           src={src}
                     > 
