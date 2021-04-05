@@ -91,7 +91,7 @@ html {
 .card-img {
     opacity: 0.2;
     transition: 250ms opacity;
-    transition-timing-function: ease-out;
+    transition-timing-function: linear;
 }
 
 .opacityOne {
