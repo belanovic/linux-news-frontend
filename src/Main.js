@@ -1,4 +1,6 @@
 import React, {useState, useEffect, useContext} from 'react';
+import NewsTicker from './NewsTicker.js';
+import NewsTicker1 from './NewsTicker1.js';
 import Carousel from './Carousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
@@ -22,6 +24,8 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
+                {/* <NewsTicker /> */}
+                <NewsTicker1 frontpageNews = {frontpageNews} />
                 <Carousel frontpageNews = {frontpageNews} />
                 <Card 
                     classSuffix = 'general'

@@ -45,6 +45,22 @@
     display: none;
 }
 
+/* NewsTicker1 */
+
+.newsTicker1 {
+    height: 50px;
+    overflow: hidden;
+    position: relative
+}
+.newsTicker1Container {
+    background: 'yellow';
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    position: absolute;
+    padding-left: 100%;
+}
+
 /* Card */
 
 .card-slide {
