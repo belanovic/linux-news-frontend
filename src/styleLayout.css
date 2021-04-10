@@ -48,17 +48,24 @@
 /* NewsTicker1 */
 
 .newsTicker1 {
-    height: 50px;
     overflow: hidden;
-    position: relative
+    padding-left: 100%;
 }
 .newsTicker1Container {
     background: 'yellow';
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
+    align-items: center;
     white-space: nowrap;
-    position: absolute;
-    padding-left: 100%;
+}
+
+/* Covid */
+
+.covidNavigation {
+    display: flex;
+}
+.covidNavigationItem:hover {
+    cursor: pointer;
 }
 
 /* Card */

@@ -34,21 +34,21 @@ export default function NewsTicker1({frontpageNews}) {
                 }}
             >
                 <div className = "tickerTitle">{frontpageNews[5].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[0].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[1].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[2].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[3].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[4].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[5].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
                 <div className = "tickerTitle">{frontpageNews[0].title}</div>
-                <span className = "tickerSpan"> *** </span>
+                <div className = "tickerStars"><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i><i class="fas fa-asterisk"></i></div>
             </div>
         </div>
     )

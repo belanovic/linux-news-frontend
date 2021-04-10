@@ -18,7 +18,12 @@ export default function Header() {
         <header className="header">
             <div className="container header-container">
                 <div className="titleBox">
-                    <Link to = '/'><h1 className="title" onClick = {() => getAndSetFrontpageNews()}>Vesti</h1></Link>
+                    <Link to = '/'>
+                        <h1 className="title" onClick = {() => getAndSetFrontpageNews()}>
+                        <i class="fab fa-react"></i>
+                            Vesti
+                        </h1>
+                    </Link>
                     <div
                         className="menuToggle"
                         onClick={handleClick}

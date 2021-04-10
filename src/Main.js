@@ -8,6 +8,7 @@ import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
 import dateFormat from './dateFormat.js';
 import {context} from './newsContext.js';
+import Covid from './Covid.js';
 
 export default function Main() {
 
@@ -24,6 +25,7 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
+                <Covid />
                 {/* <NewsTicker /> */}
                 <NewsTicker1 frontpageNews = {frontpageNews} />
                 <Carousel frontpageNews = {frontpageNews} />
