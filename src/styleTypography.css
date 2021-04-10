@@ -109,12 +109,12 @@ html {
 }
 .covidNavigationItem {
     margin-right: 1em;
+    caret-color: transparent;
 }
-
 /* Card */
 
 .card-slide {
-    padding-top: 1px;
+    /* padding-top: 1px; */
     padding-left: 0;
 }
 

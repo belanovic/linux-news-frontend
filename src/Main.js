@@ -25,9 +25,9 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
+                <NewsTicker1 frontpageNews = {frontpageNews} />
                 <Covid />
                 {/* <NewsTicker /> */}
-                <NewsTicker1 frontpageNews = {frontpageNews} />
                 <Carousel frontpageNews = {frontpageNews} />
                 <Card 
                     classSuffix = 'general'
