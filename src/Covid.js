@@ -52,17 +52,17 @@ export default function Covid() {
                 style={{ display: covidNavigationSerbiaDisplay }}
             >
                 <div className="covidData">
-                    <span className="covidDataName">Zarazeni: </span>
+                    <div className="covidDataName">Zarazeni: </div>
                     <span className="covidDataNumber">{covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].confirmed)}</span>
                     <span className="covidDataNumber">{` (+ ${covidSerbia && covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].new_confirmed)})`}</span>
                 </div>
                 <div className="covidData">
-                    <span className="covidDataName">Preminuli:</span>
+                    <div className="covidDataName">Preminuli:</div>
                     <span className="covidDataNumber">{covidSerbia && covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].deaths)}</span>
                     <span className="covidDataNumber">{` (+ ${covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].new_deaths)})`}</span>
                 </div>
                 <div className="covidData">
-                    <span className="covidDataName">Aktivni: </span>
+                    <div className="covidDataName">Aktivni: </div>
                     <span className="covidDataNumber">{covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.latest_data.critical)}</span>
                 </div>
             </div>
@@ -71,12 +71,12 @@ export default function Covid() {
                 style={{ display: covidNavigationWorldDisplay }}
             >
                 <div className="covidData">
-                    <span className="covidDataName">Zarazeni: </span>
-                    <span className="covidDataNumber">{covidWorld && covidWorld[0].confirmed}</span>
+                    <div className="covidDataName">Zarazeni: </div>
+                    <span className="covidDataNumber">{covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].confirmed)}</span>
                     <span className="covidDataNumber">{` (+ ${covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].new_confirmed)})`}</span>
                 </div>
                 <div className="covidData">
-                    <span className="covidDataName">Preminuli:</span>
+                    <div className="covidDataName">Preminuli:</div>
                     <span className="covidDataNumber">{covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].deaths)}</span>
                     <span className="covidDataNumber">{` (+ ${covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].new_deaths)})`}</span>
                 </div>
