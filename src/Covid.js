@@ -3,18 +3,18 @@ import react, { useState, useEffect } from 'react';
 export default function Covid() {
     const [covidSerbia, setCovidSerbia] = useState('');
     const [covidWorld, setCovidWorld] = useState('');
-    const [covidNavigationSerbiaDisplay, setCovidNavigationSerbiaDisplay] = useState('block')
+    const [covidNavigationSerbiaDisplay, setCovidNavigationSerbiaDisplay] = useState('flex')
     const [covidNavigationWorldDisplay, setCovidNavigationWorldDisplay] = useState('none');
 
     const handleClick = (location) => {
-        if(location === 'serbia') {
-            setCovidNavigationSerbiaDisplay('block');
+        if (location === 'serbia') {
+            setCovidNavigationSerbiaDisplay('flex');
             setCovidNavigationWorldDisplay('none');
             return;
         }
-        if(location === 'world') {
+        if (location === 'world') {
             setCovidNavigationSerbiaDisplay('none');
-            setCovidNavigationWorldDisplay('block');
+            setCovidNavigationWorldDisplay('flex');
             return;
         }
     }
@@ -34,30 +34,52 @@ export default function Covid() {
         <div className="covid">
             <div className="covidTitle">Koronavirus</div>
             <div className="covidNavigation">
-                <div 
+                <div
                     className="covidNavigationItem covidNavigationSerbia"
-                    onClick = {() => handleClick('serbia')}
-                    style = {{borderBottom: covidNavigationSerbiaDisplay === 'block' && '3px solid red'}}
+                    onClick={() => handleClick('serbia')}
+                    style={{ borderBottom: covidNavigationSerbiaDisplay === 'flex' && '3px solid red' }}
                 >Srbija
                 </div>
                 <div
                     className="covidNavigationItem covidNavigationWorld"
-                    onClick = {() => handleClick('world')}
-                    style = {{borderBottom: covidNavigationWorldDisplay === 'block' && '3px solid red'}}
+                    onClick={() => handleClick('world')}
+                    style={{ borderBottom: covidNavigationWorldDisplay === 'flex' && '3px solid red' }}
                 >Svet
                 </div>
             </div>
-            <div 
+            <div
                 className="covidSerbia"
                 style={{ display: covidNavigationSerbiaDisplay }}
             >
-            {covidSerbia && covidSerbia.latest_data.deaths}   
+                <div className="covidData">
+                    <span className="covidDataName">Zarazeni: </span>
+                    <span className="covidDataNumber">{covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].confirmed)}</span>
+                    <span className="covidDataNumber">{` (+ ${covidSerbia && covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].new_confirmed)})`}</span>
+                </div>
+                <div className="covidData">
+                    <span className="covidDataName">Preminuli:</span>
+                    <span className="covidDataNumber">{covidSerbia && covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].deaths)}</span>
+                    <span className="covidDataNumber">{` (+ ${covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].new_deaths)})`}</span>
+                </div>
+                <div className="covidData">
+                    <span className="covidDataName">Aktivni: </span>
+                    <span className="covidDataNumber">{covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.latest_data.critical)}</span>
+                </div>
             </div>
-            <div 
+            <div
                 className="covidWorld"
                 style={{ display: covidNavigationWorldDisplay }}
             >
-            {covidWorld && covidWorld[0].deaths}
+                <div className="covidData">
+                    <span className="covidDataName">Zarazeni: </span>
+                    <span className="covidDataNumber">{covidWorld && covidWorld[0].confirmed}</span>
+                    <span className="covidDataNumber">{` (+ ${covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].new_confirmed)})`}</span>
+                </div>
+                <div className="covidData">
+                    <span className="covidDataName">Preminuli:</span>
+                    <span className="covidDataNumber">{covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].deaths)}</span>
+                    <span className="covidDataNumber">{` (+ ${covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].new_deaths)})`}</span>
+                </div>
             </div>
         </div>
     )

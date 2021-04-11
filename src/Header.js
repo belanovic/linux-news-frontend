@@ -20,7 +20,7 @@ export default function Header() {
                 <div className="titleBox">
                     <Link to = '/'>
                         <h1 className="title" onClick = {() => getAndSetFrontpageNews()}>
-                        <i class="fab fa-react"></i>
+                        <i className="fab fa-react"></i>
                             Vesti
                         </h1>
                     </Link>
