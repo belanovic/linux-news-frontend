@@ -1,4 +1,5 @@
 import react, { useState, useEffect } from 'react';
+import Pulse from './Pulse.js'
 
 export default function Covid() {
     const [covidSerbia, setCovidSerbia] = useState('');
@@ -32,7 +33,7 @@ export default function Covid() {
     return (
 
         <div className="covid">
-            <div className="covidTitle">Koronavirus</div>
+            <div className="covidTitle"><span>Koronavirus</span><Pulse /></div>
             <div className="covidNavigation">
                 <div
                     className="covidNavigationItem covidNavigationSerbia"
