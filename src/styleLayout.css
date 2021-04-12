@@ -85,7 +85,27 @@
 .covidSerbia, .covidWorld {
     display: flex;
     justify-content: space-around;
-
+}
+.covidData {
+    background: rgb(199, 199, 199);
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 1em 0.3em 1em 0.3em;
+}
+.covidSerbia .covidData {
+    flex: 0 0 32%;
+}
+.covidWorld .covidData {
+    flex: 0 0 45%;
+}
+.covidDataName {
+    margin-bottom: 0.5em;
+}
+.covidDataNumber {
+    font-weight: bold;
+}
+.covidDataNumberPlus {
+    color: red;
 }
 
 /* Card */
