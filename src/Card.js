@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import {context} from './newsContext.js';
 import isInViewport from './isInViewport';
 import debounce from './debounce.js';
+import shortenSentence from './shortenSentence.js';
 
 export default function Card({ position, classSuffix, title, paragraphs, datePublished, dateUpdated, src, id}) {
     
@@ -51,7 +52,7 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
                       </img>
                 </Link>
                 <div className={`card-${classSuffix}-text`}>
-                    <Link to = {`/article/${id}`}><h3 className={`card-${classSuffix}-title`}>{title}</h3></Link>
+                    <Link to = {`/article/${id}`}><h3 className={`card-${classSuffix}-title`}>{shortenSentence(title, 70)}</h3></Link>
                     <p className={`card-${classSuffix}-date`}>
                         <span className = "date datePublished" >{dateLoaded === true? datePublished + ' > ' : ''}</span>
                         <span className = "date dateUpdated">{dateLoaded === true? dateUpdated : ''}</span>
