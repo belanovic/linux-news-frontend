@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* ========== TYPOGRAPHY =========== */
@@ -116,7 +116,6 @@ html {
 /* Card */
 
 .card-slide {
-    /* padding-top: 1px; */
     padding-left: 0;
 }
 
