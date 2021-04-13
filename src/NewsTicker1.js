@@ -9,8 +9,8 @@ export default function NewsTicker1({frontpageNews}) {
         let counter = 0;
         const sliding = setInterval(() => {
   
-            setDistanceFromRight(prev => prev - 0.01);
-            counter = counter - 0.01;
+            setDistanceFromRight(prev => prev - 0.005);
+            counter = counter - 0.005;
 
             if(counter < -100) {
                 setDistanceFromRight(0);
