@@ -95,7 +95,7 @@
     background: rgb(212, 212, 212);
     text-align: center;
     letter-spacing: 1px;
-    padding: 1em 0.2em 1em 0.2em;
+    padding: 0.8em 0.2em 0.8em 0.2em;
     flex: 0 0 49%;
 }
 .covidDataName {
