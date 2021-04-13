@@ -82,6 +82,7 @@
 
 .covidNavigation {
     display: flex;
+    justify-content: center;
 }
 .covidNavigationItem:hover {
     cursor: pointer;
@@ -94,7 +95,7 @@
     background: rgb(212, 212, 212);
     text-align: center;
     letter-spacing: 1px;
-    padding: 1em 0.5em 1em 0.5em;
+    padding: 1em 0.3em 1em 0.3em;
     flex: 0 0 48%;
 }
 .covidDataName {
