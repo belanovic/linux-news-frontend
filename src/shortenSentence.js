@@ -1,4 +1,5 @@
 export default function shortenSentence(sentence, numChars) {
+    if(sentence === undefined) return sentence;
     let lengthSentence = sentence.length;
 
     if(lengthSentence < numChars) {
