@@ -14,7 +14,6 @@ export default function App() {
         <div className = "wrapper">
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
             <Header />
-           {/*  <NewsTicker1 frontpageNews = {frontpageNews} /> */}
             <Switch>
                 <Route exact path = "/"><Main /></Route>
                 <Route path = "/article/:id"><Article /></Route>
