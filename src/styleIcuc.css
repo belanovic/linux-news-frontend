@@ -1,6 +1,6 @@
+/* Icuc */
+
 @keyframes circle {
-/*     0%   {background-color: rgb(222, 246, 3, 1); width: 1em; height: 1em;}
-    100% {background-color: rgb(222, 246, 3, 0); width: 4em; height: 4em;} */
     0%   {opacity: 1; width: 0.6em; height: 0.6em;}
     100% {opacity: 0; width: 2.4em; height: 2.4em;}
   }
@@ -9,10 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-right: 1em;
 }
 
 .icucText {
     font-size: 1rem;
+    margin-right: 2em;
 }
 
 .pulseContainer {

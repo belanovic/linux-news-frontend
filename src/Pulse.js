@@ -1,5 +1,5 @@
 import react from 'react';
-import './pulse.css';
+import './styleIcuc.css';
 
 export default function Pulse() {
     return (

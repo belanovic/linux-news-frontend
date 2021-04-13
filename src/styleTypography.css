@@ -3,7 +3,7 @@
 }
 
 html {
-    font-size: 12px;
+    font-size: 16px;
 }
 
 /* ========== TYPOGRAPHY =========== */
@@ -77,9 +77,11 @@ html {
 }
 
 .tickerTitle {
-    font-size: 1.2rem;
+    font-size: 0.9rem;
+    font-weight: bold;
     padding: 0.5em 0 0.5em 0;
     color: white;
+    letter-spacing: 1px;
 }
 
 .tickerStars {
@@ -112,6 +114,17 @@ html {
 .covidNavigationItem {
     margin-right: 1em;
     caret-color: transparent;
+}
+.covidData {
+    background: rgb(212, 212, 212);
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+}
+
+.covidDataNumber {
+    font-weight: bold;
+    font-size: 0.9rem;
 }
 /* Card */
 
