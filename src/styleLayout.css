@@ -62,6 +62,10 @@
 
 /* Covid */
 
+.covid {
+    margin-bottom: 1em;
+}
+
 .covidTitle {
     display: flex;
     justify-content: space-between;
@@ -87,16 +91,11 @@
     justify-content: space-around;
 }
 .covidData {
-    background: rgb(199, 199, 199);
+    background: rgb(212, 212, 212);
     text-align: center;
     letter-spacing: 1px;
-    padding: 1em 0.3em 1em 0.3em;
-}
-.covidSerbia .covidData {
-    flex: 0 0 32%;
-}
-.covidWorld .covidData {
-    flex: 0 0 45%;
+    padding: 1em 0.5em 1em 0.5em;
+    flex: 0 0 48%;
 }
 .covidDataName {
     margin-bottom: 0.5em;

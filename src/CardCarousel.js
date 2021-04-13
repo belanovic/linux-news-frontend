@@ -9,7 +9,7 @@ export default function CardCarousel({ classSuffix, title, paragraphs, date, src
             <div className={`card-${classSuffix}`}>
                 <img className={`card-${classSuffix}-img `} src={src}></img>
                 <div className={`card-${classSuffix}-text`}>
-                    <h3 className={`card-${classSuffix}-title`}>{shortenSentence(title, 70)}</h3>
+                    <h3 className={`card-${classSuffix}-title`}>{title}</h3>
                     <p className={`card-${classSuffix}-paragraphs`}>{paragraphs}</p>
                 </div>
                 {/* <span className = "card-date">{date}</span> */}

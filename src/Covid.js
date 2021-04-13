@@ -72,12 +72,12 @@ export default function Covid() {
                         <span className="covidDataNumberPlus">{` (+${covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].new_deaths)})`}</span>
                     </div>
                 </div>
-                <div className="covidData">
+                {/* <div className="covidData">
                     <div className="covidDataName">Aktivni: </div>
                     <div className = "covidDataNumber">
                         <span className="covidDataNumberAll">{covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.latest_data.critical)}</span>
                     </div>
-                </div>
+                </div> */}
             </div>
             <div
                 className="covidWorld"
