@@ -26,13 +26,33 @@ export default function NewsTicker1({frontpageNews}) {
     useEffect(() => {
         console.log(distanceFromRight)
     }, [distanceFromRight]) */
+    const [duration, setDuration] = useState(0);
+    useEffect(() => {
+        setDuration((prev) => {
+            if(frontpageNews[5].title) {
+                const length = frontpageNews[5].title.length +
+                frontpageNews[0].title.length + 
+                frontpageNews[1].title.length/*  + 
+                frontpageNews[2].title.length + 
+                frontpageNews[3].title.length + 
+                frontpageNews[4].title.length + 
+                frontpageNews[5].title.length +
+                frontpageNews[0].title.length */
+                console.log(length)
+                return length/5
+            } else {
+                return 0
+            }
+            
+        }) 
+    }, [frontpageNews])
     return (
         <div className = "newsTicker1">
             <div 
                 className = "newsTicker1Container"
-                /* style = {{
-                    transform: `translateX(${distanceFromRight}%)`
-                }} */
+                style = {{
+                    animationDuration: `${duration}s`
+                }}
             >
                 <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
@@ -40,7 +60,7 @@ export default function NewsTicker1({frontpageNews}) {
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
                 <Link to={`/article/${frontpageNews[1]._id}`}><div className = "tickerTitle">{frontpageNews[1].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
+                {/* <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
                 <Link to={`/article/${frontpageNews[3]._id}`}><div className = "tickerTitle">{frontpageNews[3].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
@@ -49,7 +69,7 @@ export default function NewsTicker1({frontpageNews}) {
                 <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
                 <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
+                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div> */}
             </div>
         </div>
     )

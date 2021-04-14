@@ -59,6 +59,11 @@ body {
 
 /* NewsTicker1 */
 
+@keyframes ticker {
+    from {transform: translateX(0%)}
+    to {transform: translateX(-100%)}
+}
+
 .newsTicker1 {
     overflow: hidden;
     padding-left: 100%;
@@ -70,6 +75,12 @@ body {
     justify-content: space-between;
     align-items: center;
     white-space: nowrap;
+    animation-name: ticker;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.newsTicker1Container:hover {
+    animation-play-state: paused;
 }
 
 /* Covid */
@@ -199,21 +210,4 @@ body {
     left: 0;
     right: 0;
     background: rgba(173, 185, 3, 0.3);
-}
-
-
-
-@keyframes ticker {
-    from {transform: translateX(0%)}
-    to {transform: translateX(-100%)}
-}
-
-.newsTicker1Container {
-    animation-name: ticker;
-    animation-duration: 80s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-}
-.newsTicker1Container:hover {
-    animation-play-state: paused;
 }
