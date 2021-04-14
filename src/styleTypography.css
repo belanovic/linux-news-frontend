@@ -87,7 +87,7 @@ a {
     color: white;
 }
 .covidTitle span {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     font-weight: bold;
 }
 
@@ -160,7 +160,7 @@ a {
 }
 
 .card-slide-title {
-    font-size: 1.25rem;
+    font-size: 1.5rem;
     font-weight: bold;
     line-height: 1.3;
     letter-spacing: 1px;
@@ -180,7 +180,7 @@ a {
 .card-general-title {
     color: black;
     margin-top: 0;
-    font-size: 1rem;
+    font-size: 1.175rem;
     font-weight: bold;
     line-height: 1.3;
     letter-spacing: 1px;
