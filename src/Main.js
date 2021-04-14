@@ -9,6 +9,7 @@ import {getFrontpageNews} from './getNews.js';
 import dateFormat from './dateFormat.js';
 import {context} from './newsContext.js';
 import Covid from './Covid.js';
+import Line from './Line.js';
 
 export default function Main() {
 
@@ -29,6 +30,7 @@ export default function Main() {
                 <Covid />
                 {/* <NewsTicker /> */}
                 <Carousel frontpageNews = {frontpageNews} />
+                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[5].title}
@@ -40,6 +42,7 @@ export default function Main() {
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
                 />
+                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[6].title}
@@ -51,6 +54,7 @@ export default function Main() {
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
                 />
+                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[7].title}
@@ -62,6 +66,7 @@ export default function Main() {
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
                 />
+                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[8].title}
@@ -83,6 +88,7 @@ export default function Main() {
                     src = 'https://bit.ly/2LE1wdd'
                  
                 />
+                <Line />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
@@ -92,6 +98,7 @@ export default function Main() {
                     src = 'https://bit.ly/2LE1wdd'
          
                 />
+                <Line />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
@@ -111,6 +118,7 @@ export default function Main() {
                     src = 'https://bit.ly/2Y1Vyp1'
 
                 />
+                <Line />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
@@ -120,6 +128,7 @@ export default function Main() {
                     src = 'https://bit.ly/3qH7Dfn'
               
                 />
+                <Line />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
@@ -129,6 +138,7 @@ export default function Main() {
                     src = 'https://bit.ly/39XvfFN'
           
                 />
+                <Line />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
