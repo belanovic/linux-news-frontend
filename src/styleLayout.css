@@ -200,3 +200,20 @@ body {
     right: 0;
     background: rgba(173, 185, 3, 0.3);
 }
+
+
+
+@keyframes ticker {
+    from {transform: translateX(0%)}
+    to {transform: translateX(-100%)}
+}
+
+.newsTicker1Container {
+    animation-name: ticker;
+    animation-duration: 80s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.newsTicker1Container:hover {
+    animation-play-state: paused;
+}

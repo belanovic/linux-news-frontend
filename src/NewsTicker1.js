@@ -1,8 +1,9 @@
 import react, {useState, useEffect, useRef} from 'react';
+import {Link} from 'react-router-dom';
 
 export default function NewsTicker1({frontpageNews}) {
 
-    const [distanceFromRight, setDistanceFromRight] = useState(0);
+    /* const [distanceFromRight, setDistanceFromRight] = useState(0);
 
     useEffect(() => {
 
@@ -20,7 +21,7 @@ export default function NewsTicker1({frontpageNews}) {
         return () => {
             clearInterval(sliding);
         }
-    }, [])
+    }, []) */
 /* 
     useEffect(() => {
         console.log(distanceFromRight)
@@ -29,25 +30,25 @@ export default function NewsTicker1({frontpageNews}) {
         <div className = "newsTicker1">
             <div 
                 className = "newsTicker1Container"
-                style = {{
+                /* style = {{
                     transform: `translateX(${distanceFromRight}%)`
-                }}
+                }} */
             >
-                <div className = "tickerTitle">{frontpageNews[5].title}</div>
+                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[0].title}</div>
+                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[1].title}</div>
+                <Link to={`/article/${frontpageNews[1]._id}`}><div className = "tickerTitle">{frontpageNews[1].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[2].title}</div>
+                <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[3].title}</div>
+                <Link to={`/article/${frontpageNews[3]._id}`}><div className = "tickerTitle">{frontpageNews[3].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[4].title}</div>
+                <Link to={`/article/${frontpageNews[4]._id}`}><div className = "tickerTitle">{frontpageNews[4].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[5].title}</div>
+                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <div className = "tickerTitle">{frontpageNews[0].title}</div>
+                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
             </div>
         </div>
