@@ -142,7 +142,6 @@ body {
 .card-general-container-title {
    overflow: hidden;
 }
-
 .card-general-paragraphs {
     display: none;
 }
@@ -162,7 +161,7 @@ body {
 
 .card-magazin-img {
     width: 100%;
-    height: 60vw;
+    height: 65vw;
 }
 
 .card-sport {
@@ -172,7 +171,7 @@ body {
 
 .card-sport a {
     width: 50%;
-    height: 25vw;
+    height: 30vw;
 }
 
 .card-sport-text {
