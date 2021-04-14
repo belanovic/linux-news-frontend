@@ -3,7 +3,15 @@
 }
 
 html {
-    font-size: 12px;
+    font-size: 16px;
+}
+
+body {
+    font-family:Arial, Helvetica, sans-serif
+}
+
+a {
+    text-decoration: none;
 }
 
 /* ========== TYPOGRAPHY =========== */
@@ -13,7 +21,6 @@ html {
 
 .header {
     background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
-    margin-bottom: 1em;
 }
 .main {
     background: white;
@@ -21,6 +28,86 @@ html {
 .footer {
     background: black;
 }
+
+/* Header */
+
+.titleBox {
+    margin: 1em 0 1em 0;
+    padding: 1em;
+}
+.titleBox a {
+    text-decoration: none;
+}
+.title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+    font-style: italic;
+}
+.fa-react {
+    color: white;
+}
+.menuToggle {
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* Ticker */
+
+.newsTicker1 {
+    background: black;
+}
+
+.tickerTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5em 0 0.5em 0;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.tickerStars {
+    padding: 0 0.5em 0 0.5em ;
+}
+
+.fa-asterisk {
+    font-size: 0.7rem;
+    color: white;
+}
+
+/* Covid */
+
+.covidTitle {
+    padding: 0.4em 0.5em 0.4em 0.5em;
+    background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
+    color: white;
+}
+.covidTitle span {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.covidNavigation {
+    font-size: 1.2rem;
+    padding: 0.3em 0.5em 0.3em 0.3em;
+}
+.covidNavigationItem {
+    margin-right: 1em;
+    caret-color: transparent;
+}
+.covidData {
+    background: rgb(212, 212, 212);
+    text-align: center;
+    letter-spacing: 1px;
+    padding: 0.5em 0.2em 0.5em 0.2em;
+}
+
+.covidDataNumber {
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
 
 /* Carousel */
 
@@ -50,83 +137,14 @@ html {
     margin-bottom: 1em;
 }
 
-/* Header */
-
-.titleBox {
-    margin: 1em 0 1em 0;
-}
-.title {
-    font-size: 3rem;
-    font-weight: bold;
-    color: white;
-    margin: 0;
-    font-style: italic;
-}
-.fa-react {
-    color: white;
-}
-.menuToggle {
-    font-size: 2rem;
-    color: white;
-}
-
-/* Ticker */
-
-.newsTicker1 {
-    background: black;
-}
-
-.tickerTitle {
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 0.5em 0 0.5em 0;
-    color: white;
-    letter-spacing: 1px;
-}
-
-.tickerStars {
-    padding: 0 0.5em 0 0.5em ;
-}
-
-.fa-asterisk {
-    font-size: 0.7rem;
-    color: white;
-}
-
-
-
-/* Covid */
-
-.covidTitle {
-    padding: 0.3em 0.5em 0.3em 0.5em;
-    background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
-    color: white;
-}
-.covidTitle span {
-    font-size: 1.2rem;
-    font-weight: bold;
-}
-
-.covidNavigation {
-    font-size: 1.2rem;
-    padding: 0.3em 0.5em 0.3em 0.3em;
-}
-.covidNavigationItem {
-    margin-right: 1em;
-    caret-color: transparent;
-}
-.covidData {
-    background: rgb(212, 212, 212);
-    text-align: center;
-    letter-spacing: 1px;
-    padding: 0.5em 0.2em 0.5em 0.2em;
-}
-
-.covidDataNumber {
-    font-weight: bold;
-    font-size: 0.9rem;
-}
 /* Card */
+
+.card a {
+    color: black;
+}
+.card a:hover {
+    text-decoration: underline;
+}
 
 .card-slide {
     padding-left: 0;
@@ -172,10 +190,6 @@ html {
     overflow: hidden;
 }
 
-/* .card-general-date {
-    
-} */
-
 .card-sport {
     margin-bottom: 1em;
 }
@@ -202,7 +216,7 @@ html {
     font-weight: bold;
     background: green;
     color: white;
-    padding: .4em 0 0.4em 0.4em;
+    padding: 0.4em 0.4em 0.4em 0.4em;
     margin-bottom: 0.3em;
 }
 

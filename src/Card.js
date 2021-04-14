@@ -42,7 +42,7 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
     }, [inViewport])
 
     return (
-        <div className={`card-${classSuffix}`}>
+        <div className={`card card-${classSuffix}`}>
             <Link to={`/article/${id}`}
             ><img className={`card-${classSuffix}-img card-img 
                             ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
