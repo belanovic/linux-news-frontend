@@ -17,11 +17,12 @@ export default function BootstrapCarousel({ frontpageNews }) {
         autoplay={{
           delay: '3000'
         }}
+        pagination= {{clickable: true}}
         loop={true}
         tag='section'
+        navigation 
         grabCursor={true}
-        wrapperTag='ul'
-        navigation
+        wrapperTag='ul' 
         thumbs={{ swiper: thumbsSwiper }}
       >
 
@@ -83,7 +84,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
 
       </Swiper>
 
-      <Swiper
+      {/* { <Swiper
         id="thumbs"
         onSwiper={setThumbsSwiper}
         slidesPerView={5}
@@ -93,7 +94,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
         <SwiperSlide tag='li'><img src={frontpageNews[2].imgURL} className="imgThumb"></img></SwiperSlide>
         <SwiperSlide tag='li'><img src={frontpageNews[3].imgURL} className="imgThumb"></img></SwiperSlide>
         <SwiperSlide tag='li'><img src={frontpageNews[4].imgURL} className="imgThumb"></img></SwiperSlide>
-      </Swiper>
+      </Swiper> } */}
     </>
   )
 }

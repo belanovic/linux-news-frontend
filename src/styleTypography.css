@@ -252,3 +252,17 @@ a {
     text-align: center;
     font-size: 1rem;
 }
+
+.swiper-pagination {
+    background-color: white;
+    bottom: 0 !important;
+    height: 20px !important;
+}
+.swiper-pagination:hover {
+    cursor:initial
+}
+.swiper-pagination-bullet {
+    width: 1em !important;
+    height: 1em !important;
+    margin: 7px 10px 0 10px !important;
+}
