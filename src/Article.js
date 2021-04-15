@@ -19,7 +19,7 @@ export default function Article() {
         <article className="article">
             <h2 className = "article-title">{article.title}</h2>
             <h3 className = "article-subtitle">{article.subtitle}</h3>
-            <img src = {article.imgURL}></img>
+            <img className = "article-image" src = {article.imgURL}></img>
             <div className = "article-text">{article !== ''? article.paragraphs.map((prom, i) => <p key = {i}>{prom.props.children}</p>) : ''}</div>
         </article>
     )
