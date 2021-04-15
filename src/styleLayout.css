@@ -203,6 +203,9 @@ body {
 .article {
     padding: 0 0.8em 0 0.8em;
 }
+.article-image {
+    display: block;
+}
 
 /* .article-title {
     margin-left: 0.5em;

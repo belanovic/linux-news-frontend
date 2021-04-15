@@ -132,6 +132,9 @@ a {
     color: white;
     opacity: 0.5;
 }
+#main .swiper-button-prev::after, #main .swiper-button-next::after {
+    font-size: 3em;
+}
 #main .swiper-button-prev:hover, #main .swiper-button-next:hover,
 #main .swiper-button-prev:active, #main .swiper-button-next:active {
     opacity: 1;
@@ -217,8 +220,8 @@ a {
     padding: 0.2em 0.5em 0.2em 0.5em;
     font-size: 1.5rem;
     color: white;
-    
-    background: rgb(253, 106, 48);
+    caret-color: transparent;
+    background: rgb(251, 29, 0);
 }
 .article-title {
    font-size: 2.5rem;
@@ -230,6 +233,12 @@ a {
 .article-text {
     font-size: 1.5rem;
     line-height: 1.3;
+}
+.imgDescription {
+    background: black;
+    color: white;
+    font-size: 1.25em;
+    padding: 0.2em 0.2em 0.2em 0.5em;
 }
 
 /* Part */

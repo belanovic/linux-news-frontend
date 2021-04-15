@@ -7,18 +7,22 @@ export default function Article() {
     const [article, setArticle] = useState('');
     const {id} = useParams();
 
+    const formatCathegory = (category) => {
+        if (category === 'politics') return 'Политика'
+        if (category === 'business') return 'Економија'
+        if (category === 'technology') return 'Технологија'
+        if (category === 'entertainment') return 'Магазин'
+        if (category === 'sports') return 'Спорт'
+    }
+
     useEffect( async() => {
         const oneArticle = await getArticle(id);
         setArticle(oneArticle);
     }, [])
 
-    useEffect( async() => {
-        console.log(article)
-    }, [article])
-
     return (
         <article className="article">
-            <div class = "article-category"> {article.category}</div>
+            <div className = "article-category"> {formatCathegory(article.category)}</div>
             <h2 className = "article-title">{article.title}</h2>
             <div className = "article-origin">
                 <div className = "article-origin-source">Izvor: {article.source}</div>
