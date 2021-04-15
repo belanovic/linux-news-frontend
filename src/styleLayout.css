@@ -200,6 +200,23 @@ body {
 
 /* Article */
 
+.article {
+    padding: 0 0.8em 0 0.8em;
+}
+
+/* .article-title {
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+}
+.article-subtitle {
+    margin-left: 1em;
+    margin-right: 1em;
+}
+.article-text {
+    margin-left: 1em;
+    margin-right: 1em;
+} */
+
 .article-image {
     width: 100%;
 }

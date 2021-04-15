@@ -209,6 +209,23 @@ a {
     font-size: 1rem;
 }
 
+/* Article */
+
+.article-title {
+   font-size: 2.5rem;
+   letter-spacing: 1px;
+}
+.article-subtitle {
+    font-size: 1.75rem;
+    line-height: 1.5;
+}
+.article-text {
+    font-size: 1.5rem;
+    line-height: 1.8;
+
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
 /* Part */
 
 .partTitle {
