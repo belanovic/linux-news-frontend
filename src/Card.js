@@ -15,8 +15,6 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
 
         const efficientFunction = debounce(async function () {
 
-            console.log('efficientFunction called');
-
             const v = isInViewport(cardElement.current);
             const promiseResolveA = await setInViewport((prev) => {
                 if (prev === true) {
@@ -61,12 +59,20 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
                 </div>
                 <div className={`card-${classSuffix}-date`}>
                     <span className="date datePublished" >
+                        {datePublished? datePublished + ' > ' : ''}
+                    </span>
+                    <span className="date dateUpdated">
+                        { dateUpdated? dateUpdated : ''}
+                    </span>
+                </div>
+                {/* <div className={`card-${classSuffix}-date`}>
+                    <span className="date datePublished" >
                         {dateLoaded === true ? datePublished + ' > ' : ''}
                     </span>
                     <span className="date dateUpdated">
                         {dateLoaded === true ? dateUpdated : ''}
                     </span>
-                </div>
+                </div> */}
                 <p className={`card-${classSuffix}-paragraphs`}>{paragraphs}</p>
             </div>
         </div>
