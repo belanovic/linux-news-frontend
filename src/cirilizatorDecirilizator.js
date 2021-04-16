@@ -5,7 +5,7 @@ export default function cirilizatorDecirilizator(operacija, tekst) {
     console.log(tekst)
     function cirilizator(tekst) {
         let noviTekst = tekst.replace(/nj|lj|dž|[a-zđčćžš]/gi, function (x) {
-            if(!x) return x;
+            if(x === 'W') return 'W';
             let index = abeceda.indexOf(x.toLowerCase());
             return x[0] == x.toString()[0].toUpperCase() ? azbuka[index].toString().toUpperCase() : azbuka[index];
         });
@@ -13,7 +13,7 @@ export default function cirilizatorDecirilizator(operacija, tekst) {
     }
     function decirilizator(tekst) {
         let noviTekst = tekst.replace(/њ|љ|џ|ђ|ћ|[а-ш]/gi, function (x) {
-            if(!x) return x;
+            if(!x) return x[0];
             let index = azbuka.indexOf(x.toLowerCase());
             return x[0] == x.toString()[0].toUpperCase() ? abeceda[index].toString().toUpperCase() : abeceda[index];
         });
