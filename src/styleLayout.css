@@ -203,10 +203,15 @@ body {
 .article {
     padding: 0 0.8em 0 0.8em;
 }
+
 .article-category {
     display: inline-block;
     margin-top: 1em;
 }
+
+.article-title {
+    margin: 0.5em 0 0.5em 0;
+ }
 
 .article-image {
     display: block;
