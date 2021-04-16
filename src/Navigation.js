@@ -1,6 +1,8 @@
 import React, {useState, useContext} from 'react';
 import {context} from './newsContext.js';
+
 export default function Navigation({navVisible}) {
+
     let navDisplay = navVisible? '0' : '-150%';
 
     const {alphabet, setAlphabet} = useContext(context);
