@@ -203,6 +203,11 @@ body {
 .article {
     padding: 0 0.8em 0 0.8em;
 }
+.article-category {
+    display: inline-block;
+    margin-top: 1em;
+}
+
 .article-image {
     display: block;
 }
@@ -212,22 +217,8 @@ body {
     margin-bottom: 1em;
 }
 .article-origin-source,.article-date-published {
-    margin-bottom: 0.2em;
+    margin-bottom: 0.3em;
 }
-
-/* .article-title {
-    margin-left: 0.5em;
-    margin-right: 0.5em;
-}
-.article-subtitle {
-    margin-left: 1em;
-    margin-right: 1em;
-}
-.article-text {
-    margin-left: 1em;
-    margin-right: 1em;
-} */
-
 .article-image {
     width: 100%;
 }
