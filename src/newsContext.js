@@ -8,6 +8,7 @@ function Provider(props) {
     const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     const [dateLoaded, setDateLoaded] = useState(false);
     const [showCmsOverlay, setShowCmsOverlay] = useState('none');
+    const [alphabet, setAlphabet] = useState('cirilica');
 
     
     async function getAndSetFrontpageNews() {
@@ -27,6 +28,7 @@ function Provider(props) {
 
 
     useEffect(getAndSetFrontpageNews, [])
+    useEffect(() => console.log(alphabet), [alphabet])
     return (
         <context.Provider value={
             {
@@ -36,7 +38,9 @@ function Provider(props) {
                 dateLoaded,
                 setDateLoaded,
                 showCmsOverlay, 
-                setShowCmsOverlay
+                setShowCmsOverlay, 
+                alphabet,
+                setAlphabet
             }
         }>{props.children}</context.Provider>
     )

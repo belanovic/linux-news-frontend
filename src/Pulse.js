@@ -1,10 +1,13 @@
-import react from 'react';
+import react, {useContext} from 'react';
 import './styleIcuc.css';
+import {context} from './newsContext';
+import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Pulse() {
+    const {alphabet} = useContext(context)
     return (
         <div className="icuc">
-            <div className="icucText">Iz časa u čas</div>
+            <div className="icucText">{cirilizatorDecirilizator(alphabet, 'Iz časa u čas')}</div>
             <div className="pulseContainer">
                 <div className="pulseCircle" style={{
                     animationDelay: "-3s",

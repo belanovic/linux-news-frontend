@@ -4,10 +4,11 @@ import { context } from './newsContext.js';
 import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
+import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Card({ position, classSuffix, title, paragraphs, datePublished, dateUpdated, src, id }) {
 
-    const { dateLoaded, setDateLoaded } = useContext(context);
+    const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
     const [inViewport, setInViewport] = useState(false);
 
@@ -35,10 +36,6 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
         }
     }, [])
 
-    useEffect(() => {
-        console.log(inViewport);
-    }, [inViewport])
-
     return (
         <div className={`card card-${classSuffix}`}>
             <Link to={`/article/${id}`}
@@ -53,7 +50,7 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
                 <div className={`card-${classSuffix}-container-title`}>
                     <Link to={`/article/${id}`}>
                         <h3 className={`card-${classSuffix}-title`}>
-                            {shortenSentence(title, 70)}
+                            {cirilizatorDecirilizator(alphabet, shortenSentence(title, 70))}
                         </h3>
                     </Link>
                 </div>

@@ -2,9 +2,10 @@ import React, { useState, useContext } from 'react';
 import Navigation from './Navigation.js';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext.js';
+import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Header() {
-    const {getAndSetFrontpageNews} = useContext(context);
+    const {getAndSetFrontpageNews, alphabet} = useContext(context);
     const [navVisible, setNavVisible] = useState(false);
 
     const handleClick = () => {
@@ -21,7 +22,7 @@ export default function Header() {
                     <Link to = '/'>
                         <h1 className="title" onClick = {() => getAndSetFrontpageNews()}>
                         <i className="fab fa-react"></i>
-                            Vesti
+                            {cirilizatorDecirilizator(alphabet, 'Vesti')}
                         </h1>
                     </Link>
                     <div

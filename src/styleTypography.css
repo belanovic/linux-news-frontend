@@ -265,6 +265,23 @@ a {
     background: purple;
 }
 
+/* Alphabet */
+
+.alphabet-container {
+    background: black;
+    color: white ;
+    display: flex;
+    justify-content: flex-end;
+    font-size: 1.5em;
+}
+.cirilica, .latinica {
+    margin: 0.3em 0.5em 0.3em 0.3em;
+    caret-color: transparent;
+}
+.cirilica:hover, .latinica:hover {
+    cursor: pointer;
+}
+
 /* Footer */
 
 .footer {
