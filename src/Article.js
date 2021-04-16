@@ -24,13 +24,16 @@ export default function Article() {
         <article className="article">
             <div className = "article-category"> {formatCathegory(article.category)}</div>
             <h2 className = "article-title">{article.title}</h2>
-            <div className = "article-origin">
-                <div className = "article-origin-source">Izvor: {article.source}</div>
-                <div className = "article-origin-author">Autor: {article.author}</div>
-            </div>
-            <div>
-                <div>Objavljeno: {dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock')}</div>
-                <div>Poslednja izmena: {dateFormat(article.dateUpdated, 'month', 'dayMonth', 'comma', 'clock')}</div>
+            <div className = "article-metadata">
+                <div className = "article-date">
+                    <div className = "article-date-published">Objavljeno: <span>{dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
+                    <div className = "article-date-updated">Poslednja izmena: <span>{dateFormat(article.dateUpdated, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
+                </div>
+                <div className = "article-metadata-line"></div>
+                <div className = "article-origin">
+                    <div className = "article-origin-source">Izvor: <span>{article.source}</span></div>
+                    <div className = "article-origin-author">Autor: <span>{article.author}</span></div>
+                </div>
             </div>
             <div className = "article-imgDescription-container">
                 <img className = "article-image" src = {article.imgURL}></img>

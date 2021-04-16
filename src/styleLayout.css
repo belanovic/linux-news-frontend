@@ -206,6 +206,14 @@ body {
 .article-image {
     display: block;
 }
+.article-metadata {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.article-origin-source,.article-date-published {
+    margin-bottom: 0.2em;
+}
 
 /* .article-title {
     margin-left: 0.5em;
