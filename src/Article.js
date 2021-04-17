@@ -56,11 +56,11 @@ export default function Article() {
             <div className = "article-video-container">
                 <div className = "videoDescription">{cirilizatorDecirilizator(alphabet, article.videoDescription)}</div>{/* 
                  */}<video className = "article-video" key={URL} controls>
-            <h3 className = "article-subtitle">{cirilizatorDecirilizator(alphabet, article.subtitle)}</h3>
                     <source src={URL} type="video/mp4"/>
                 </video>
             </div>}
 
+            <h3 className = "article-subtitle">{cirilizatorDecirilizator(alphabet, article.subtitle)}</h3>
             <div className = "article-text">{article !== ''? article.paragraphs.map((prom, i) => {
                 /* return <p key = {i}>{prom.props.children}</p> */
                 return <p key = {i}>{cirilizatorDecirilizator(alphabet, prom)}</p>
