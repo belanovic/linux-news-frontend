@@ -227,16 +227,24 @@ body {
 .article-image {
     width: 100%;
 }
+.article-video-container {
+    background: black;
+}
 .article-video {
     width: 100%;
 }
 
 /* Line */
 
-.line {
+main .line {
     height: 1px;
     background-color: rgb(136, 136, 136);
     margin: 1em 1em 1em 1em;
+}
+.article .line {
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    margin: 1em 0em 1em 0em;
 }
 
 /* Footer */

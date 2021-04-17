@@ -4,6 +4,7 @@ import {useParams} from 'react-router-dom';
 import {getArticle} from './getNews';
 import dateFormat from './dateFormat.js';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
+import Line from './Line.js';
 
 export default function Article() {
     const {alphabet} = useContext(context);
@@ -31,6 +32,7 @@ export default function Article() {
         <article className="article">
             <div className = "article-category"> {cirilizatorDecirilizator(alphabet, formatCathegory(article.category))}</div>
             <h2 className = "article-title">{cirilizatorDecirilizator(alphabet, article.title)}</h2>
+            <Line />
             <div className = "article-metadata">
                 <div className = "article-date"> 
                     <div className = "article-date-published">{cirilizatorDecirilizator(alphabet, 'Objavljeno')}: <span>{dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
@@ -42,15 +44,23 @@ export default function Article() {
                     <div className = "article-origin-author">{cirilizatorDecirilizator(alphabet, 'Autor')}: <span>{cirilizatorDecirilizator(alphabet, article.author)}</span></div>
                 </div>
             </div>
-            {article.videoURL === 'none'? <div className = "article-imgDescription-container">
+            <Line />
+
+            {article.videoURL === 'none'? 
+            
+            <div className = "article-img-container">
                 <img className = "article-image" src = {article.imgURL}></img>
                 <div className = "imgDescription">{cirilizatorDecirilizator(alphabet, article.imgDescription)}</div>
             </div>
             :
-            <video className = "article-video" key={URL} controls>
-                <source src={URL} type="video/mp4"/>
-            </video>}
+            <div className = "article-video-container">
+                <div className = "videoDescription">{cirilizatorDecirilizator(alphabet, article.videoDescription)}</div>{/* 
+                 */}<video className = "article-video" key={URL} controls>
             <h3 className = "article-subtitle">{cirilizatorDecirilizator(alphabet, article.subtitle)}</h3>
+                    <source src={URL} type="video/mp4"/>
+                </video>
+            </div>}
+
             <div className = "article-text">{article !== ''? article.paragraphs.map((prom, i) => {
                 /* return <p key = {i}>{prom.props.children}</p> */
                 return <p key = {i}>{cirilizatorDecirilizator(alphabet, prom)}</p>
