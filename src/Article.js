@@ -7,7 +7,7 @@ import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 import Line from './Line.js';
 
 export default function Article() {
-    const {alphabet} = useContext(context);
+    const {alphabet, setShowCmsOverlay} = useContext(context);
     const [article, setArticle] = useState('');
     const {id} = useParams();
     const [URL, setURL] = useState('');
@@ -21,10 +21,11 @@ export default function Article() {
         if (category === 'sports') return 'Спорт'
     }
 
-    useEffect( async() => {
+    useEffect(async() => {
         const oneArticle = await getArticle(id);
         setArticle(oneArticle);
         setURL(oneArticle.videoURL);
+        setShowCmsOverlay('none');
         console.log(oneArticle);
     }, [])
 
