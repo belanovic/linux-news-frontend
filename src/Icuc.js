@@ -3,7 +3,7 @@ import './styleIcuc.css';
 import {context} from './newsContext';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
-export default function Pulse() {
+export default function Icuc() {
     const {alphabet} = useContext(context)
     return (
         <div className="icuc">

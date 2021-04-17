@@ -2,11 +2,13 @@ export default function cirilizatorDecirilizator(operacija, tekst) {
     if(!tekst) return;
     const abeceda = ['a', 'b', 'c', 'č', 'ć', 'd', 'dž', 'đ', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'lj', 'm', 'n', 'nj', 'o', 'p', 'r', 's', 'š', 't', 'u', 'v', 'z', 'ž'];
     const azbuka = ['а', 'б', 'ц', 'ч', 'ћ', 'д', 'џ', 'ђ', 'е', 'ф', 'г', 'х', 'и', 'ј', 'к', 'л', 'љ', 'м', 'н', 'њ', 'о', 'п', 'р', 'с', 'ш', 'т', 'у', 'в', 'з', 'ж'];
-    console.log(tekst)
     function cirilizator(tekst) {
         let noviTekst = tekst.replace(/nj|lj|dž|[a-zđčćžš]/gi, function (x) {
-            if(x === 'W') return 'W';
+            /* if(/[w, y, q, x]/i.test(x)) {
+                return x
+            } */
             let index = abeceda.indexOf(x.toLowerCase());
+            if(index === -1) return x;
             return x[0] == x.toString()[0].toUpperCase() ? azbuka[index].toString().toUpperCase() : azbuka[index];
         });
         return noviTekst;

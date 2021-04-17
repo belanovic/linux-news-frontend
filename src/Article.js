@@ -9,6 +9,8 @@ export default function Article() {
     const {alphabet} = useContext(context);
     const [article, setArticle] = useState('');
     const {id} = useParams();
+    const [URL, setURL] = useState('');
+    const [key, setKey] = useState(1);
 
     const formatCathegory = (category) => {
         if (category === 'politics') return 'Политика'
@@ -21,6 +23,8 @@ export default function Article() {
     useEffect( async() => {
         const oneArticle = await getArticle(id);
         setArticle(oneArticle);
+        setURL(oneArticle.videoURL);
+        console.log(oneArticle);
     }, [])
 
     return (
@@ -28,7 +32,7 @@ export default function Article() {
             <div className = "article-category"> {cirilizatorDecirilizator(alphabet, formatCathegory(article.category))}</div>
             <h2 className = "article-title">{cirilizatorDecirilizator(alphabet, article.title)}</h2>
             <div className = "article-metadata">
-                <div className = "article-date">
+                <div className = "article-date"> 
                     <div className = "article-date-published">{cirilizatorDecirilizator(alphabet, 'Objavljeno')}: <span>{dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
                     <div className = "article-date-updated">{cirilizatorDecirilizator(alphabet, 'Poslednja izmena')}: <span>{dateFormat(article.dateUpdated, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
                 </div>
@@ -38,10 +42,14 @@ export default function Article() {
                     <div className = "article-origin-author">{cirilizatorDecirilizator(alphabet, 'Autor')}: <span>{cirilizatorDecirilizator(alphabet, article.author)}</span></div>
                 </div>
             </div>
-            <div className = "article-imgDescription-container">
+            {article.videoURL === 'none'? <div className = "article-imgDescription-container">
                 <img className = "article-image" src = {article.imgURL}></img>
                 <div className = "imgDescription">{cirilizatorDecirilizator(alphabet, article.imgDescription)}</div>
             </div>
+            :
+            <video className = "article-video" key={URL} controls>
+                <source src={URL} type="video/mp4"/>
+            </video>}
             <h3 className = "article-subtitle">{cirilizatorDecirilizator(alphabet, article.subtitle)}</h3>
             <div className = "article-text">{article !== ''? article.paragraphs.map((prom, i) => {
                 /* return <p key = {i}>{prom.props.children}</p> */

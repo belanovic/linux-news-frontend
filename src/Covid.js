@@ -1,5 +1,5 @@
 import react, { useState, useEffect, useContext } from 'react';
-import Pulse from './Pulse.js';
+import Icuc from './Icuc.js';
 import {context} from './newsContext';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
@@ -37,7 +37,7 @@ export default function Covid() {
     return (
 
         <div className="covid">
-            <div className="covidTitle"><span>{cirilizatorDecirilizator(alphabet, 'Koronavirus')}</span><Pulse /></div>
+            <div className="covidTitle"><span>{cirilizatorDecirilizator(alphabet, 'Koronavirus')}</span><Icuc /></div>
             <div className="covidNavigation">
                 <div
                     className="covidNavigationItem covidNavigationSerbia"
