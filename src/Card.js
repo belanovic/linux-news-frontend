@@ -58,10 +58,10 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                 </div>
                 <div className={`card-${classSuffix}-date`}>
                     <span className="date datePublished" >
-                        {datePublished ? datePublished + ' > ' : ''}
+                        {datePublished ? cirilizatorDecirilizator(alphabet, datePublished) + ' > ' : ''}
                     </span>
                     <span className="date dateUpdated">
-                        {dateUpdated ? dateUpdated : ''}
+                        {dateUpdated ? cirilizatorDecirilizator(alphabet, dateUpdated) : ''}
                     </span>
                 </div>
                 {/* <div className={`card-${classSuffix}-date`}>

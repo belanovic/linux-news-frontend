@@ -28,7 +28,7 @@ function Provider(props) {
 
 
     useEffect(getAndSetFrontpageNews, [])
-    useEffect(() => console.log(alphabet), [alphabet])
+
     return (
         <context.Provider value={
             {
@@ -45,6 +45,5 @@ function Provider(props) {
         }>{props.children}</context.Provider>
     )
 }
-
 
 export { Provider, context };

@@ -25,7 +25,6 @@ export default function Article() {
         const oneArticle = await getArticle(id);
         setArticle(oneArticle);
         setURL(oneArticle.videoURL);
-        setShowCmsOverlay('none');
         console.log(oneArticle);
     }, [])
 
@@ -36,8 +35,8 @@ export default function Article() {
             <Line />
             <div className = "article-metadata">
                 <div className = "article-date"> 
-                    <div className = "article-date-published">{cirilizatorDecirilizator(alphabet, 'Objavljeno')}: <span>{dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
-                    <div className = "article-date-updated">{cirilizatorDecirilizator(alphabet, 'Poslednja izmena')}: <span>{dateFormat(article.dateUpdated, 'month', 'dayMonth', 'comma', 'clock')}</span></div>
+                    <div className = "article-date-published">{cirilizatorDecirilizator(alphabet, 'Objavljeno')}: <span>{cirilizatorDecirilizator(alphabet, dateFormat(article.datePublished, 'month', 'dayMonth', 'comma', 'clock'))}</span></div>
+                    <div className = "article-date-updated">{cirilizatorDecirilizator(alphabet, 'Poslednja izmena')}: <span>{cirilizatorDecirilizator(alphabet, dateFormat(article.dateUpdated, 'month', 'dayMonth', 'comma', 'clock'))}</span></div>
                 </div>
                 <div className = "article-metadata-line"></div>
                 <div className = "article-origin">

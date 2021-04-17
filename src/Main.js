@@ -13,7 +13,7 @@ import Line from './Line.js';
 
 export default function Main() {
 
-    const {frontpageNews, setFrontpageNews, setShowCmsOverlay} = useContext(context);
+    const {frontpageNews, setFrontpageNews} = useContext(context);
 
     /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]);
 
@@ -22,12 +22,6 @@ export default function Main() {
         n.sort((a, b) => a.position - b.position);
         setFrontpageNews(n);
     }, []) */
-
-    useEffect(() => {
-        return () => {
-            setShowCmsOverlay('block');
-        }
-    }, [])
 
     return (
         <main className="main">

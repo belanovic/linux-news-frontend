@@ -9,7 +9,7 @@ import NewsTicker1 from './NewsTicker1.js';
 
 export default function App() {
     const cmsOverlay = useRef(null);
-    const {showCmsOverlay, setShowCmsOverlay, frontpageNews} = useContext(context);
+    const {showCmsOverlay, setShowCmsOverlay} = useContext(context);
     return (
         <div className = "wrapper">
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
