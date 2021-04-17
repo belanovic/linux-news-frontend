@@ -4,14 +4,15 @@ import shortenSentence from './shortenSentence.js';
 import {context} from './newsContext';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
-export default function CardCarousel({ classSuffix, title, paragraphs, date, src, id}) {
+export default function CardCarousel({ classSuffix, title, paragraphs, 
+                                       date, src, id, videoURL}) {
 
     const {alphabet} = useContext(context);
 
     return (
         <Link to = {`/article/${id}`}>
             <div className={`card-${classSuffix}`}>
-                <div className="play"><i className="far fa-play-circle"></i></div>
+                {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
                 <img className={`card-${classSuffix}-img `} src={src}></img>
                 <div className={`card-${classSuffix}-text`}>
                     <h3 className={`card-${classSuffix}-title`}>{cirilizatorDecirilizator(alphabet, title)}</h3>

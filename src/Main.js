@@ -41,6 +41,7 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
+                    videoURL = {frontpageNews[5].videoURL}
                 />
                 <Line />
                 <Card 
@@ -53,6 +54,7 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
+                    videoURL = {frontpageNews[6].videoURL}
                 />
                 <Line />
                 <Card 
@@ -65,6 +67,7 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
+                    videoURL = {frontpageNews[7].videoURL}
                 />
                 <Line />
                 <Card 
@@ -77,16 +80,20 @@ export default function Main() {
                     id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
+                    videoURL = {frontpageNews[8].videoURL}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
                     classSuffix = 'magazin'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
+                    title = {frontpageNews[9].title}
+                    paragraphs = {frontpageNews[9].text}
                     datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}
-                    src = 'https://bit.ly/2LE1wdd'
-                 
+                    src = {frontpageNews[9].imgURL}
+                    id = {frontpageNews[9]._id}
+                    frontpageNews = {frontpageNews}
+                    position = {frontpageNews[9].position}
+                    videoURL = {frontpageNews[9].videoURL}
                 />
                 <Line />
                  <Card 

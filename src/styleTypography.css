@@ -193,6 +193,13 @@ a {
     overflow: hidden;
 }
 
+.card-magazin-title {
+    font-size: 1.75rem;
+}
+.card-magazin-paragraphs {
+    font-size: 1.25rem;
+}
+
 .card-sport {
     margin: 0 auto 1em auto;
 }

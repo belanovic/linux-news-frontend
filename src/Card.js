@@ -6,7 +6,8 @@ import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
-export default function Card({ position, classSuffix, title, paragraphs, datePublished, dateUpdated, src, id }) {
+export default function Card({ position, classSuffix, title, paragraphs, videoURL, 
+                               datePublished, dateUpdated, src, id }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
@@ -39,7 +40,7 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
     return (
         <div className={`card card-${classSuffix}`}>
             <Link to={`/article/${id}`}>
-                <div className="play"><i className="far fa-play-circle"></i></div>
+                {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
                 <img className={`card-${classSuffix}-img card-img 
                             ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
                     ref={cardElement}
@@ -71,7 +72,11 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
                         {dateLoaded === true ? dateUpdated : ''}
                     </span>
                 </div> */}
-                <p className={`card-${classSuffix}-paragraphs`}>{paragraphs}</p>
+                <p 
+                    className={`card-${classSuffix}-paragraphs`}
+                >
+                    {cirilizatorDecirilizator(alphabet, shortenSentence(paragraphs, 100))}
+                </p>
             </div>
         </div>
     )

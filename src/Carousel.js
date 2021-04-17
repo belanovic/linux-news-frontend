@@ -35,6 +35,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             src={frontpageNews[0].imgURL}
             id = {frontpageNews[0]._id}
             position = {frontpageNews[0].position}
+            videoURL = {frontpageNews[0].videoURL}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -46,6 +47,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             src={frontpageNews[1].imgURL}
             id = {frontpageNews[1]._id}
             position = {frontpageNews[1].position}
+            videoURL = {frontpageNews[1].videoURL}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -57,6 +59,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             src={frontpageNews[2].imgURL}
             id = {frontpageNews[2]._id}
             position = {frontpageNews[2].position}
+            videoURL = {frontpageNews[2].videoURL}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -68,6 +71,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             src={frontpageNews[3].imgURL}
             id = {frontpageNews[3]._id}
             position = {frontpageNews[3].position}
+            videoURL = {frontpageNews[3].videoURL}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -79,6 +83,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             src={frontpageNews[4].imgURL}
             id = {frontpageNews[4]._id}
             position = {frontpageNews[4].position}
+            videoURL = {frontpageNews[4].videoURL}
           />
         </SwiperSlide>
 
