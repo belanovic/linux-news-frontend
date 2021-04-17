@@ -194,7 +194,7 @@ a {
 }
 
 .card-sport {
-    margin-bottom: 1em;
+    margin: 0 auto 1em auto;
 }
 
 .card-sport-text {
@@ -262,7 +262,6 @@ a {
     background: green;
     color: white;
     padding: 0.4em 0.4em 0.4em 0.4em;
-    margin-bottom: 0.3em;
 }
 
 .partTitle-magazin {

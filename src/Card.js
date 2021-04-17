@@ -38,12 +38,13 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
 
     return (
         <div className={`card card-${classSuffix}`}>
-            <Link to={`/article/${id}`}
-            ><img className={`card-${classSuffix}-img card-img 
+            <Link to={`/article/${id}`}>
+                <div className="play"><i className="far fa-play-circle"></i></div>
+                <img className={`card-${classSuffix}-img card-img 
                             ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
-                ref={cardElement}
-                src={src}
-            >
+                    ref={cardElement}
+                    src={src}
+                >
                 </img>
             </Link>
             <div className={`card-${classSuffix}-text`}>
@@ -56,10 +57,10 @@ export default function Card({ position, classSuffix, title, paragraphs, datePub
                 </div>
                 <div className={`card-${classSuffix}-date`}>
                     <span className="date datePublished" >
-                        {datePublished? datePublished + ' > ' : ''}
+                        {datePublished ? datePublished + ' > ' : ''}
                     </span>
                     <span className="date dateUpdated">
-                        { dateUpdated? dateUpdated : ''}
+                        {dateUpdated ? dateUpdated : ''}
                     </span>
                 </div>
                 {/* <div className={`card-${classSuffix}-date`}>

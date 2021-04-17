@@ -119,10 +119,23 @@ body {
 
 /* Card */
 
+.card a {
+    position: relative;
+}
 .card-slide {
     position: relative;
 }
-
+.play {
+    position: absolute;
+    top: 0;
+    margin: 0.8em;
+    padding: 0.5em;
+    background: red;
+}
+.fa-play-circle {
+    color: white;
+    font-size: 2rem;
+}
 .card-slide img {
     width: 100%;
     height: 65vw;
@@ -143,7 +156,22 @@ body {
     justify-content: space-between;
     width: 95%;
 }
-
+.card-general a {
+    height: 30vw;
+    width: 50%;
+}
+.card-general-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card-general .play, .card-sport .play {
+    margin: 0.5em;
+    padding: 0.2em;
+}
+.card-general .fa-play-circle, .card-sport .fa-play-circle {
+    font-size: 1.5rem;
+}
 .card-general-text {
     display: flex;
     flex-direction: column;
@@ -156,42 +184,42 @@ body {
 .card-general-paragraphs {
     display: none;
 }
-.card-general a {
-    height: 30vw;
-    width: 50%;
-}
-.card-general-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
 
+.card-magazin {
+    display: flex;
+    flex-direction: column;
+}
 .card-magazin-text {
     margin-left: 1em;
 }
 
-.card-magazin-img {
+.card-magazin a {
     width: 100%;
     height: 65vw;
+}
+
+.card-magazin-img {
+    width: 100%;
+    height: 100%;
 }
 
 .card-sport {
     display: flex;
     justify-content: space-between;
+    width: 95%;
 }
 
 .card-sport a {
     width: 50%;
     height: 30vw;
 }
-
-.card-sport-text {
-    width: 48%;
-}
-
 .card-sport-img {
     width: 100%;
     height: 100%;
+}
+
+.card-sport-text {
+    width: 48%;
 }
 
 .card-sport-text p {
@@ -245,6 +273,12 @@ main .line {
     height: 1px;
     background-color: rgb(136, 136, 136);
     margin: 1em 0em 1em 0em;
+}
+
+/* Part */
+
+.partTitle {
+    margin-bottom: 0.5em;
 }
 
 /* Footer */

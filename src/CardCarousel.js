@@ -11,6 +11,7 @@ export default function CardCarousel({ classSuffix, title, paragraphs, date, src
     return (
         <Link to = {`/article/${id}`}>
             <div className={`card-${classSuffix}`}>
+                <div className="play"><i className="far fa-play-circle"></i></div>
                 <img className={`card-${classSuffix}-img `} src={src}></img>
                 <div className={`card-${classSuffix}-text`}>
                     <h3 className={`card-${classSuffix}-title`}>{cirilizatorDecirilizator(alphabet, title)}</h3>
