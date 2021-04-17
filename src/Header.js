@@ -33,7 +33,7 @@ export default function Header() {
                         <i className="fas fa-times" style = {{display: timesDisplay}}></i>
                     </div>
                 </div>
-                <Navigation navVisible = {navVisible} />
+                <Navigation navVisible = {navVisible} setNavVisible = {setNavVisible} />
             </div>
         </header>
     )

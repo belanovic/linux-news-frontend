@@ -37,7 +37,7 @@ function Provider(props) {
                 getAndSetFrontpageNews,
                 dateLoaded,
                 setDateLoaded,
-                showCmsOverlay, 
+                showCmsOverlay,
                 setShowCmsOverlay, 
                 alphabet,
                 setAlphabet

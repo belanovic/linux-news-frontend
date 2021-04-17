@@ -1,7 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {context} from './newsContext.js';
 
-export default function Navigation({navVisible}) {
+export default function Navigation({navVisible, setNavVisible}) {
 
     let navDisplay = navVisible? '0' : '-150%';
 
@@ -9,9 +9,11 @@ export default function Navigation({navVisible}) {
 
     const handleClickCir = (e) => {
         setAlphabet('cirilica');
+        setNavVisible(false);
     }
     const handleClickLat = (e) => {
         setAlphabet('latinica');
+        setNavVisible(false);
     }
 
     return (

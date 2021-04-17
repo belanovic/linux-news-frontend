@@ -3,7 +3,7 @@ export default function dateFormat() {
   
     const days = ['Nedelja', 'Ponedeljak', 'Utorak', 'Sreda', 'Četvrtak', 'Petak', 'Subota'];
     const months = ['Januar', 'Februar', 'Mart', 'April', 'Maj', 'Jun', 'Jul', 
-                    'Avgust', 'Septembar', 'Oktobar', 'Novembar', 'Decembar'];   
+                    'Avgust', 'Septembar', 'Oktobar', 'Novembar', 'Decembar'];
     let date = new Date(arguments[0]);
     const clock = date.toLocaleTimeString('sr-SR', {timeStyle: 'short'});
     const month = months[date.getMonth()];
