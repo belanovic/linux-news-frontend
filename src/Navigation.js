@@ -1,5 +1,6 @@
 import React, {useState, useContext} from 'react';
 import {context} from './newsContext.js';
+import {Link} from 'react-router-dom';
 
 export default function Navigation({navVisible, setNavVisible}) {
 
@@ -40,11 +41,11 @@ export default function Navigation({navVisible, setNavVisible}) {
                         >Lat</div>
                     </div>
                 </li>
-                <li className="nav-item"><a href={`#`} className="nav-link">Politika</a></li>
-                <li className="nav-item"><a href={`#`} className="nav-link">Svet</a></li>
-                <li className="nav-item"><a href={`#`} className="nav-link">Ekonomija</a></li>
-                <li className="nav-item"><a href={`#`} className="nav-link">Magazin</a></li>
-                <li className="nav-item"><a href={`#`} className="nav-link">Sport</a></li>
+                <Link to = '/cathegory/politics'><li className="nav-item"><span className="nav-link">Politika</span></li></Link>
+                <Link to = '/cathegory/technology'><li className="nav-item"><span className="nav-link">Svet</span></li></Link> 
+                <Link to = '/cathegory/business'><li className="nav-item"><span className="nav-link">Ekonomija</span></li></Link> 
+                <Link to = '/cathegory/entertainment'><li className="nav-item"><span className="nav-link">Magazin</span></li></Link> 
+                <Link to = '/cathegory/sports'><li className="nav-item"><span className="nav-link">Sport</span></li></Link> 
             </ul>
         </nav>
     )

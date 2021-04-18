@@ -20,3 +20,14 @@ export async function getArticle(id) {
         console.log(err);
     }
 }
+
+export async function getNewsByCategory(category) {
+    try {
+        const response = await fetch(`${HOST_BACKEND}/category/${category}`);
+        const newsByCategory = await response.json();
+        return newsByCategory
+    }
+    catch (err) {
+        console.log(err)
+    }
+}

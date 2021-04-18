@@ -3,6 +3,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import Article from './Article.js';
+import Cathegory from './Cathegory.js';
 import {Switch, Route} from 'react-router-dom';
 import {context} from './newsContext';
 import NewsTicker1 from './NewsTicker1.js';
@@ -17,6 +18,7 @@ export default function App() {
             <Switch>
                 <Route exact path = "/"><Main /></Route>
                 <Route path = "/article/:id"><Article /></Route>
+                <Route path = "/cathegory/:cathegory"><Cathegory /></Route>
             </Switch>
             <Footer />
             
