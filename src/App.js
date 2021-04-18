@@ -16,12 +16,21 @@ export default function App() {
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
             <Header />
             <Switch>
+
                 <Route exact path = "/"><Main /></Route>
+
                 <Route path = "/article/:id"><Article /></Route>
-                <Route path = "/cathegory/:cathegory"><Cathegory /></Route>
+
+                <Route path = "/politics/:cathegory"><Cathegory key = {1} /></Route>
+                <Route path = "/technology/:cathegory"><Cathegory key = {2}/></Route>
+                <Route path = "/business/:cathegory"><Cathegory key = {3}/></Route>
+                <Route path = "/entertainment/:cathegory"><Cathegory key = {4}/></Route>
+                <Route path = "/sports/:cathegory"><Cathegory key = {5}/></Route>
+
             </Switch>
             <Footer />
             
         </div>
     )
 }
+                

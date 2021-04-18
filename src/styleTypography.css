@@ -221,6 +221,22 @@ a {
     font-size: 1rem;
 }
 
+.card-cathegory {
+    margin: 0 auto 1em auto;
+}
+.card-cathegory-title {
+    color: black;
+    margin-top: 0;
+    font-size: 1.175rem;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.card-cathegory-text {
+    overflow: hidden;
+}
+
 /* Article */
 
 .article-category {

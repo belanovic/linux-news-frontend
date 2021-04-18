@@ -226,6 +226,40 @@ body {
     display: none
 }
 
+.card-cathegory {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.card-cathegory a {
+    height: 30vw;
+    width: 50%;
+}
+.card-cathegory-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.card-cathegory .play, .card-sport .play {
+    margin: 0.3em;
+    padding: 0.2em;
+}
+.card-cathegory .fa-play-circle, .card-sport .fa-play-circle {
+    font-size: 1.5rem;
+}
+.card-cathegory-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 48%;
+}
+.card-cathegory-container-title {
+   overflow: hidden;
+}
+.card-cathegory-paragraphs {
+    /* display: none; */
+}
+
 /* Article */
 
 .article {
@@ -270,6 +304,12 @@ main .line {
     margin: 1em 1em 1em 1em;
 }
 .article .line {
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    margin: 1em 0em 1em 0em;
+}
+
+.cathegory .line {
     height: 1px;
     background-color: rgb(136, 136, 136);
     margin: 1em 0em 1em 0em;

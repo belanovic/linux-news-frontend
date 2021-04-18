@@ -5,8 +5,7 @@ import {context} from './newsContext.js';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Header() {
-    const {getAndSetFrontpageNews, alphabet} = useContext(context);
-    const [navVisible, setNavVisible] = useState(false);
+    const {getAndSetFrontpageNews, alphabet, navVisible, setNavVisible} = useContext(context);
 
     const handleClick = () => {
         setNavVisible(prev => !prev);
