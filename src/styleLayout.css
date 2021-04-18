@@ -228,36 +228,20 @@ body {
 
 .card-cathegory {
     display: flex;
-    justify-content: space-between;
-    width: 95%;
-}
-.card-cathegory a {
-    height: 30vw;
-    width: 50%;
-}
-.card-cathegory-img {
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-}
-.card-cathegory .play, .card-sport .play {
-    margin: 0.3em;
-    padding: 0.2em;
-}
-.card-cathegory .fa-play-circle, .card-sport .fa-play-circle {
-    font-size: 1.5rem;
+    flex-direction: column;
 }
 .card-cathegory-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    width: 48%;
+    margin-left: 1em;
 }
-.card-cathegory-container-title {
-   overflow: hidden;
+
+.card-cathegory a {
+    width: 100%;
+    height: 65vw;
 }
-.card-cathegory-paragraphs {
-    /* display: none; */
+
+.card-cathegory-img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Article */
@@ -296,6 +280,14 @@ body {
     width: 100%;
 }
 
+/* Cathegory */
+
+.cathegory-type {
+    display: block;
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
 /* Line */
 
 main .line {
@@ -312,7 +304,7 @@ main .line {
 .cathegory .line {
     height: 1px;
     background-color: rgb(136, 136, 136);
-    margin: 1em 0em 1em 0em;
+    margin: 2em 0em 2em 0em;
 }
 
 /* Part */

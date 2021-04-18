@@ -1,14 +1,24 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getNewsByCategory } from './getNews.js';
+import {context} from './newsContext';
 import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
+import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Cathegory() {
-
+    const {alphabet} = useContext(context);
     const [newsByCathegory, setNewsByCathegory] = useState('');
     const { cathegory } = useParams();
+
+    const formatCathegory = (cathegory) => {
+        if (cathegory === 'politics') return 'Политика'
+        if (cathegory === 'business') return 'Економија'
+        if (cathegory === 'technology') return 'Технологија'
+        if (cathegory === 'entertainment') return 'Магазин'
+        if (cathegory === 'sports') return 'Спорт'
+    }
 
     useEffect(async () => {
         const n = await getNewsByCategory(cathegory);
@@ -18,7 +28,9 @@ export default function Cathegory() {
 
     return (
         <div className="cathegory">
-            {/* {newsByCathegory && newsByCathegory.map(prev => <li>{prev.title}</li>)} */}
+            <div className = 'cathegory-type'>
+                {cirilizatorDecirilizator(alphabet, formatCathegory(cathegory))}
+            </div>
             {newsByCathegory && newsByCathegory.map((prev, i) => {
                 return <>
                     <Card
