@@ -5,6 +5,7 @@ import {getArticle} from './getNews';
 import dateFormat from './dateFormat.js';
 import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 import Line from './Line.js';
+import Tags from './Tags.js';
 
 export default function Article() {
     const {alphabet, setShowCmsOverlay} = useContext(context);
@@ -65,6 +66,7 @@ export default function Article() {
                 /* return <p key = {i}>{prom.props.children}</p> */
                 return <p key = {i}>{cirilizatorDecirilizator(alphabet, prom)}</p>
             }) : ''}</div>
+            <Tags article = {article} />
         </article>
     )
 }
