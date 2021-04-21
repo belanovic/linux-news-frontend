@@ -262,6 +262,7 @@ body {
 .article-image {
     display: block;
 }
+
 .article-metadata {
     display: flex;
     justify-content: space-between;
