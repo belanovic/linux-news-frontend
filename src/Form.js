@@ -33,7 +33,7 @@ export default function Form() {
                                 <span 
                                     className= {`sign-up ${signUpisActive? 'isActive' : 'notActive'}`}
                                     onClick = {handleClickTab}
-                                >{cirilizatorDecirilizator(alphabet, 'Registracijaaaa')}</span>
+                                >{cirilizatorDecirilizator(alphabet, 'Registracija')}</span>
                             </div>
 
                             <div className="form-element username">
