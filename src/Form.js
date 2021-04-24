@@ -36,6 +36,22 @@ export default function Form() {
                                 >{cirilizatorDecirilizator(alphabet, 'Registracija')}</span>
                             </div>
 
+                            <div 
+                                className="form-element firstName"
+                                style = {{display: signUpisActive? 'block' : 'none'}}
+                            >
+                                <label htmlFor="firstName" className="firstName-label">{cirilizatorDecirilizator(alphabet, 'Ime')}</label>
+                                <input id="firstName" className="firstName-input" type="text"></input>
+                            </div>
+
+                            <div 
+                                className="form-element lastName"
+                                style = {{display: signUpisActive? 'block' : 'none'}}
+                            >
+                                <label htmlFor="lastName" className="lastName-label">{cirilizatorDecirilizator(alphabet, 'Prezime')}</label>
+                                <input id="lastName" className="lastName-input" type="text" ></input>
+                            </div>
+
                             <div className="form-element username">
                                 <label htmlFor="username" className="username-label">{cirilizatorDecirilizator(alphabet, 'Korisničko ime')}</label>
                                 <input id="username" className="username-input" type="text"></input>
@@ -46,7 +62,10 @@ export default function Form() {
                                 <input id="username" className="pasword-input" type="text" ></input>
                             </div>
 
-                            <div className="form-element email">
+                            <div 
+                                className="form-element email"
+                                style = {{display: signUpisActive? 'block' : 'none'}}
+                            >
                                 <label htmlFor="username" className="email-label">e-mail</label>
                                 <input id="username" className="email-input" type="email"></input>
                             </div>

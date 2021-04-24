@@ -14,7 +14,7 @@
     background: white;
 }
 .form-around1 {
-    padding: 5em 20em 5em 20em;
+    padding: 3em 20em 3em 20em;
     background: rgb(224, 224, 224);
 }
 
@@ -61,7 +61,7 @@
     background: rgb(211, 211, 211);
 }
 .form-element {
-    margin: 0 2em 3em 2em;
+    margin: 0 2em 1em 2em;
 }
 .form-element > * {
     display: block;
