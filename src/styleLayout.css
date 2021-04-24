@@ -270,6 +270,7 @@ body {
 .article-image {
     display: block;
 }
+
 .article-metadata {
     display: flex;
     justify-content: space-between;
@@ -313,6 +314,21 @@ main .line {
     height: 1px;
     background-color: rgb(136, 136, 136);
     margin: 2em 0em 2em 0em;
+}
+
+
+/* Tags */
+
+.tags {
+    display: flex;
+    margin-bottom: 1em;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.tag {
+    margin-bottom: 0.52em;
+    margin-right: 1em;
 }
 
 /* Part */
