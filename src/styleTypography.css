@@ -55,6 +55,15 @@ a {
     color: white;
 }
 
+.login {
+    cursor: pointer;
+}
+
+.fa-user-edit {
+    font-size: 1.5rem;
+    color: white;
+}
+
 /* Ticker */
 
 .newsTicker1 {

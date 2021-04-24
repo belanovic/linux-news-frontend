@@ -10,6 +10,7 @@ import dateFormat from './dateFormat.js';
 import {context} from './newsContext.js';
 import Covid from './Covid.js';
 import Line from './Line.js';
+import Form from './Form.js';
 
 export default function Main() {
 

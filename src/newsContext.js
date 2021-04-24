@@ -10,7 +10,7 @@ function Provider(props) {
     const [showCmsOverlay, setShowCmsOverlay] = useState('none');
     const [alphabet, setAlphabet] = useState('cirilica');
     const [navVisible, setNavVisible] = useState(false);    
-
+    const [formVisible, setFormVisible] = useState(false);
     
     async function getAndSetFrontpageNews() {
         try {
@@ -44,7 +44,9 @@ function Provider(props) {
                 alphabet,
                 setAlphabet,
                 navVisible, 
-                setNavVisible
+                setNavVisible,
+                formVisible, 
+                setFormVisible
             }
         }>{props.children}</context.Provider>
     )
