@@ -27,7 +27,7 @@ export default function Form() {
                         <form className="form">
                             <div className="form-title">
                                 <span 
-                                    className= {`sign-in ${signInisActive? 'isActive' : 'notActive'}`}
+                                    className= {`proba sign-in ${signInisActive? 'isActive' : 'notActive'}`}
                                     onClick = {handleClickTab}
                                 >{cirilizatorDecirilizator(alphabet, 'Prijava')}</span>
                                 <span 
