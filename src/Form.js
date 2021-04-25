@@ -26,7 +26,7 @@ export default function Form() {
 
     return (
         <>
-            <div className="form-container">
+            <div className="container form-container">
                 <div className="form-around2">
                     <div className="form-around1">
                         <form className="form">
