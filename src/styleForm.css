@@ -16,6 +16,7 @@
 .form-around1 {
     padding: 3em 20em 3em 20em;
     background: rgb(224, 224, 224);
+    min-height: 80vh;
 }
 
 .form {

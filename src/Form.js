@@ -14,9 +14,14 @@ export default function Form() {
     const handleClickSend = (e) => {
         e.preventDefault()
     }
-    const handleClickTab = () => {
-        setSignInIsActive(prev => !prev);
-        setSignUpIsActive(prev => !prev);
+    const handleClickTab = (tab) => {
+        if (tab === 'sign-up') {
+            setSignUpIsActive(true);
+            setSignInIsActive(false);
+        } else if(tab === 'sign-in') {
+            setSignUpIsActive(false);
+            setSignInIsActive(true);
+        }        
     }
 
     return (
@@ -28,11 +33,11 @@ export default function Form() {
                             <div className="form-title">
                                 <span 
                                     className= {`proba sign-in ${signInisActive? 'isActive' : 'notActive'}`}
-                                    onClick = {handleClickTab}
+                                    onClick = {() => handleClickTab('sign-in')}
                                 >{cirilizatorDecirilizator(alphabet, 'Prijava')}</span>
                                 <span 
                                     className= {`sign-up ${signUpisActive? 'isActive' : 'notActive'}`}
-                                    onClick = {handleClickTab}
+                                    onClick = {() => handleClickTab('sign-up')}
                                 >{cirilizatorDecirilizator(alphabet, 'Registracija')}</span>
                             </div>
 
