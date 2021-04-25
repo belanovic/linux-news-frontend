@@ -3,13 +3,14 @@
 .form-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    /* justify-content: center; */
     align-items: center;
     padding: 2em 2em 2em 2em;
-    background: rgb(211, 211, 211);
+   /*  background: rgba(214, 214, 214, 0.5); */
+    min-height: 80vh;
 }
 
-.form-around2 {
+/* .form-around2 {
     padding: 2em 2em 2em 2em;
     background: white;
 }
@@ -18,7 +19,7 @@
     background: rgb(224, 224, 224);
     min-height: 80vh;
 }
-
+ */
 .form {
     display: flex;
     flex-direction: column;
@@ -59,7 +60,7 @@
     color: green;
 }
 .form-title .notActive {
-    background: rgb(211, 211, 211);
+    background: rgba(214, 214, 214, 0.5);
 }
 .form-element {
     margin: 0 2em 1em 2em;
