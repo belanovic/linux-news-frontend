@@ -36,7 +36,7 @@ export default function Header() {
                             <i className="fas fa-times" style = {{display: timesDisplay}}></i>
                         </div>
                         <div className="login">
-                            <Link to = "/form"><i class="fas fa-user-edit" onClick = {() => setFormVisible(prev => !prev)}></i></Link>
+                            <Link to = "/form"><i className="fas fa-user-edit" onClick = {() => setFormVisible(prev => !prev)}></i></Link>
                         </div>
                     </div>
                 </div>
