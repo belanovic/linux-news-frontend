@@ -7,7 +7,7 @@ import Form from './Form.js';
 
 export default function Header() {
     const {getAndSetFrontpageNews, alphabet, navVisible, 
-        setNavVisible, setLoginIsVisible, setFormVisible} = useContext(context);
+        setNavVisible, setFormVisible} = useContext(context);
 
     const handleClickMenu = () => {
         setNavVisible(prev => !prev);
