@@ -18,7 +18,7 @@ export default function App() {
             <Header />
             <Switch>
 
-                <Route exact path = "/"><Main /></Route>
+                <Route exact path = "/"><Main /></Route> 
 
                 <Route path = "/article/:id"><Article /></Route>
 
