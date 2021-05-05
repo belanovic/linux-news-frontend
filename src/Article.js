@@ -7,7 +7,7 @@ import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 import Line from './Line.js';
 import Tags from './Tags.js';
 
-export default function Article() {
+export default function Article() { 
     const {alphabet, setShowCmsOverlay} = useContext(context);
     const [article, setArticle] = useState('');
     const {id} = useParams();
