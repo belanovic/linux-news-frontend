@@ -20,14 +20,13 @@ export default function App() {
 
                 <Route exact path = "/"><Main /></Route> 
 
-                <Route path = "/article/:id"><Article /></Route>
+                <Route path = "/article/:id"><Article /></Route> 
 
                 <Route path = "/politics/:cathegory"><Cathegory key = {1} /></Route>
                 <Route path = "/technology/:cathegory"><Cathegory key = {2}/></Route>
                 <Route path = "/business/:cathegory"><Cathegory key = {3}/></Route>
                 <Route path = "/entertainment/:cathegory"><Cathegory key = {4}/></Route>
                 <Route path = "/sports/:cathegory"><Cathegory key = {5}/></Route>
-                
                 
                 <Route path = "/form"><Form /></Route>
 
