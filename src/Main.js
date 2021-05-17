@@ -16,9 +16,9 @@ export default function Main() {
 
     const {frontpageNews, setFrontpageNews} = useContext(context);
 
-    /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]);
+    /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]); */
 
-    useEffect(async () => {
+    /* useEffect(async () => {
         const n = await getFrontpageNews();
         n.sort((a, b) => a.position - b.position);
         setFrontpageNews(n);
