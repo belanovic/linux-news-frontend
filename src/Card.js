@@ -4,7 +4,6 @@ import { context } from './newsContext.js';
 import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Card({ position, classSuffix, title, paragraphs, videoURL, 
                                datePublished, dateUpdated, src, id }) {
@@ -52,16 +51,16 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                 <div className={`card-${classSuffix}-container-title`}>
                     <Link to={`/article/${id}`}>
                         <h3 className={`card-${classSuffix}-title`}>
-                            {cirilizatorDecirilizator(alphabet, shortenSentence(title, 70))}
+                            {shortenSentence(title, 70)}
                         </h3>
                     </Link>
                 </div>
                 <div className={`card-${classSuffix}-date`}>
                     <span className="date datePublished" >
-                        {datePublished ? cirilizatorDecirilizator(alphabet, datePublished) + ' > ' : ''}
+                        {datePublished ? datePublished + ' > ' : ''}
                     </span>
                     <span className="date dateUpdated">
-                        {dateUpdated ? cirilizatorDecirilizator(alphabet, dateUpdated) : ''}
+                        {dateUpdated ? dateUpdated : ''}
                     </span>
                 </div>
                 {/* <div className={`card-${classSuffix}-date`}>
@@ -75,7 +74,7 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                 <p 
                     className={`card-${classSuffix}-paragraphs`}
                 >
-                    {cirilizatorDecirilizator(alphabet, shortenSentence(paragraphs, 100))}
+                    {shortenSentence(paragraphs, 100)}
                 </p>
             </div>
         </div>

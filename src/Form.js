@@ -1,5 +1,4 @@
 import react, { useState, useEffect, useContext } from 'react';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 import { context } from './newsContext';
 import './styleForm.css';
 import {registerUser} from './getUser.js';
@@ -56,18 +55,18 @@ export default function Form() {
                                 <span 
                                     className= {`proba sign-in ${signInisActive? 'isActive' : 'notActive'}`}
                                     onClick = {() => handleClickTab('sign-in')}
-                                >{cirilizatorDecirilizator(alphabet, 'Prijava')}</span>
+                                >{'Prijava'}</span>
                                 <span 
                                     className= {`sign-up ${signUpisActive? 'isActive' : 'notActive'}`}
                                     onClick = {() => handleClickTab('sign-up')}
-                                >{cirilizatorDecirilizator(alphabet, 'Registracija')}</span>
+                                >{'Registracija'}</span>
                             </div>
 
                             <div 
                                 className="form-element firstName"
                                 style = {{display: signUpisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="firstName" className="firstName-label">{cirilizatorDecirilizator(alphabet, 'Ime')}</label>
+                                <label htmlFor="firstName" className="firstName-label">{'Ime'}</label>
                                 <input 
                                     id="firstName" 
                                     className="firstName-input" 
@@ -81,7 +80,7 @@ export default function Form() {
                                 className="form-element lastName"
                                 style = {{display: signUpisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="lastName" className="lastName-label">{cirilizatorDecirilizator(alphabet, 'Prezime')}</label>
+                                <label htmlFor="lastName" className="lastName-label">{'Prezime'}</label>
                                 <input 
                                     id="lastName" 
                                     className="lastName-input" 
@@ -95,7 +94,7 @@ export default function Form() {
                                 className="form-element usernameSignIn"
                                 style = {{display: signInisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="usernameSignIn" className="usernameSignIn-label">{cirilizatorDecirilizator(alphabet, 'Korisničko ime')}</label>
+                                <label htmlFor="usernameSignIn" className="usernameSignIn-label">{'Korisničko ime'}</label>
                                 <input 
                                     id="usernameSignIn" 
                                     className="usernameSignIn-input" 
@@ -108,7 +107,7 @@ export default function Form() {
                                 className="form-element usernameSignUp"
                                 style = {{display: signUpisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="usernameSignUp" className="usernameSignUp-label">{cirilizatorDecirilizator(alphabet, 'Korisničko ime')}</label>
+                                <label htmlFor="usernameSignUp" className="usernameSignUp-label">{'Korisničko ime'}</label>
                                 <input 
                                     id="usernameSignUp" 
                                     className="usernameSignUp-input" 
@@ -122,7 +121,7 @@ export default function Form() {
                                 className="form-element paswordSignIn"
                                 style = {{display: signInisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="passwordSignIn" className="pasword-label">{cirilizatorDecirilizator(alphabet, 'Šifra')}</label>
+                                <label htmlFor="passwordSignIn" className="pasword-label">{'Šifra'}</label>
                                 <input 
                                     id="passwordSignIn" 
                                     className="paswordSignIn-input" 
@@ -135,7 +134,7 @@ export default function Form() {
                                 className="form-element paswordSignUp"
                                 style = {{display: signUpisActive? 'block' : 'none'}}
                             >
-                                <label htmlFor="passwordSignUp" className="paswordSignUp-label">{cirilizatorDecirilizator(alphabet, 'Šifra')}</label>
+                                <label htmlFor="passwordSignUp" className="paswordSignUp-label">{'Šifra'}</label>
                                 <input 
                                     id="passwordSignUp" 
                                     className="paswordSignUp-input" 
@@ -162,7 +161,7 @@ export default function Form() {
                                 <button 
                                     className="form-send-button"
                                     onClick = {signInisActive? handleClickSignIn : handleClickSignUp}
-                                >{cirilizatorDecirilizator(alphabet, `${signInisActive? 'Prijavi se' : 'Registruj se'}`)}</button>
+                                >{alphabet, `${signInisActive? 'Prijavi se' : 'Registruj se'}`}</button>
                             </div>
                         </form>
             </div>

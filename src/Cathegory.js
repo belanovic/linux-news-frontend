@@ -5,7 +5,6 @@ import {context} from './newsContext';
 import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Cathegory() {
     const {alphabet} = useContext(context);
@@ -29,7 +28,7 @@ export default function Cathegory() {
     return (
         <div className="cathegory">
             <div className = 'cathegory-type'>
-                {cirilizatorDecirilizator(alphabet, formatCathegory(cathegory))}
+                {formatCathegory(cathegory)}
             </div>
             {newsByCathegory && newsByCathegory.map((prev, i) => {
                 return <>

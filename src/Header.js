@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import Navigation from './Navigation.js';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext.js';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 import Form from './Form.js';
 
 export default function Header() {
@@ -24,7 +23,7 @@ export default function Header() {
                     <Link to = '/'>
                         <h1 className="title" onClick = {() => getAndSetFrontpageNews()}>
                         <i className="fab fa-react"></i>
-                            {cirilizatorDecirilizator(alphabet, 'Vesti')}
+                            {'Vesti'}
                         </h1>
                     </Link>
                     <div className="header-icons">

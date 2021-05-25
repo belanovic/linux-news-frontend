@@ -1,7 +1,6 @@
 import react, {useState, useEffect, useRef, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function NewsTicker1({frontpageNews}) {
 
@@ -58,21 +57,21 @@ export default function NewsTicker1({frontpageNews}) {
                     animationDuration: `${duration}s`
                 }}
             >
-                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[5].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[0].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[1]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[1].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[1]._id}`}><div className = "tickerTitle">{frontpageNews[1].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[2].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[3]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[3].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[3]._id}`}><div className = "tickerTitle">{frontpageNews[3].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[4]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[4].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[4]._id}`}><div className = "tickerTitle">{frontpageNews[4].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[5].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{cirilizatorDecirilizator(alphabet, frontpageNews[0].title)}</div></Link>
+                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
                 <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
             </div>
         </div>

@@ -1,7 +1,6 @@
 import react, { useState, useEffect, useContext } from 'react';
 import Icuc from './Icuc.js';
 import {context} from './newsContext';
-import cirilizatorDecirilizator from './cirilizatorDecirilizator.js';
 
 export default function Covid() {
 
@@ -37,7 +36,7 @@ export default function Covid() {
     return (
 
         <div className="covid">
-            <div className="covidTitle"><span>{cirilizatorDecirilizator(alphabet, 'Koronavirus')}</span><Icuc /></div>
+            <div className="covidTitle"><span>{'Koronavirus'}</span><Icuc /></div>
             <div className="covidNavigation">
                 <div
                     className="covidNavigationItem covidNavigationSerbia"
@@ -46,7 +45,7 @@ export default function Covid() {
                         borderBottom: covidNavigationSerbiaDisplay === 'flex' && '3px solid red',
                         opacity: covidNavigationSerbiaDisplay === 'flex'? '1' : '0.5'
                     }}
-                >{cirilizatorDecirilizator(alphabet, 'Srbija')}
+                >{'Srbija'}
                 </div>
                 <div
                     className="covidNavigationItem covidNavigationWorld"
@@ -55,7 +54,7 @@ export default function Covid() {
                         borderBottom: covidNavigationWorldDisplay === 'flex' && '3px solid red',
                         opacity: covidNavigationWorldDisplay === 'flex'? '1' : '0.5'
                     }}
-                >{cirilizatorDecirilizator(alphabet, 'Svet')}
+                >{'Svet'}
                 </div>
             </div>
             <div
@@ -63,7 +62,7 @@ export default function Covid() {
                 style={{ display: covidNavigationSerbiaDisplay }}
             >
                 <div className="covidData">
-                    <div className="covidDataName">{cirilizatorDecirilizator(alphabet, 'Zaraženi')}: </div>
+                    <div className="covidDataName">Zaraženi: </div>
                 <div className = "covidDataNumber">
                     <span className="covidDataNumberAll">
                         {covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].confirmed)}
@@ -74,7 +73,7 @@ export default function Covid() {
                 </div>
                 </div>
                 <div className="covidData">
-                    <div className="covidDataName">{cirilizatorDecirilizator(alphabet, 'Preminuli')}:</div>
+                    <div className="covidDataName">{'Preminuli'}:</div>
                     <div className = "covidDataNumber">
                         <span className="covidDataNumberAll">
                             {covidSerbia && covidSerbia && new Intl.NumberFormat('sr-SR').format(covidSerbia.timeline[0].deaths)}
@@ -96,7 +95,7 @@ export default function Covid() {
                 style={{ display: covidNavigationWorldDisplay }}
             >
                 <div className="covidData">
-                    <div className="covidDataName">{cirilizatorDecirilizator(alphabet, 'Zaraženi')}: </div>
+                    <div className="covidDataName">{'Zaraženi'}: </div>
                     <div className = "covidDataNumber">
                         <span className="covidDataNumberAll">
                             {covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].confirmed)}
@@ -107,7 +106,7 @@ export default function Covid() {
                     </div>
                 </div>
                 <div className="covidData">
-                    <div className="covidDataName">{cirilizatorDecirilizator(alphabet, 'Preminuli')}:</div>
+                    <div className="covidDataName">{'Preminuli'}:</div>
                     <div className = "covidDataNumber">
                         <span className="covidDataNumberAll">{covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].deaths)}</span>
                         <span className="covidDataNumberPlus">{` (+${covidWorld && new Intl.NumberFormat('sr-SR').format(covidWorld[0].new_deaths)})`}</span>

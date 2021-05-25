@@ -21,7 +21,7 @@ export default function Navigation({navVisible, setNavVisible}) {
             style = {{left: navVisible? '0' : '-150%'}}
         >
             <ul className="nav-list">
-                <li className="nav-item">
+             {/*    <li className="nav-item">
                     <div className = "alphabet-container">
                         <div 
                             className = "cirilica" 
@@ -38,7 +38,7 @@ export default function Navigation({navVisible, setNavVisible}) {
                             }}
                         >Lat</div>
                     </div>
-                </li>
+                </li> */}
                 <Link to = '/politics/politics'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Politika</span></li></Link>
                 <Link to = '/technology/technology'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Svet</span></li></Link> 
                 <Link to = '/business/business'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Ekonomija</span></li></Link> 
