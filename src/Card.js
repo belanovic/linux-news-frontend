@@ -54,13 +54,13 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                             {shortenSentence(title, 70)}
                         </h3>
                     </Link>
-                </div>
+                </div> 
                 <div className={`card-${classSuffix}-date`}>
                     <span className="date datePublished" >
                         {datePublished ? datePublished + ' > ' : ''}
                     </span>
-                    <span className="date dateUpdated">
-                        {dateUpdated ? dateUpdated : ''}
+                    <span className="date dateUpdated"> 
+                        {dateUpdated ? dateUpdated : ''} 
                     </span>
                 </div>
                 {/* <div className={`card-${classSuffix}-date`}>
