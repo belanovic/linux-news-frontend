@@ -254,6 +254,10 @@ body {
 
 /* Article */
 
+p img {
+    width: 100%;
+}
+
 .article {
     padding: 0 0.8em 0 0.8em;
 }
@@ -330,6 +334,8 @@ main .line {
     margin-bottom: 0.52em;
     margin-right: 1em;
 }
+
+
 
 /* Part */
 
