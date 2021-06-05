@@ -63,14 +63,6 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                         {dateUpdated ? dateUpdated : ''} 
                     </span>
                 </div>
-                {/* <div className={`card-${classSuffix}-date`}>
-                    <span className="date datePublished" >
-                        {dateLoaded === true ? datePublished + ' > ' : ''}
-                    </span>
-                    <span className="date dateUpdated">
-                        {dateLoaded === true ? dateUpdated : ''}
-                    </span>
-                </div> */}
                 <p 
                     className={`card-${classSuffix}-paragraphs`}
                 >
