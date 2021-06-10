@@ -10,7 +10,7 @@ import NewsTicker1 from './NewsTicker1.js';
 import Form from './Form'
 
 export default function App() {
-    const cmsOverlay = useRef(null);
+    const cmsOverlay = useRef(null); 
     const {showCmsOverlay, setShowCmsOverlay} = useContext(context);
     return (
         <div className = "wrapper">
