@@ -5,6 +5,7 @@ import {context} from './newsContext';
 import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
+import GenericThumb from './GenericThumb';
 
 export default function Cathegory() {
     const {alphabet} = useContext(context);
@@ -42,7 +43,9 @@ export default function Cathegory() {
                         dateUpdated = {dateFormat(prev.dateUpdated,'clock')}
                         src={prev.imgURL}
                         id={prev._id}
-                        key = {i} 
+                        key = {i}
+                        cathegory = {cathegory}
+                        
                     />
                     <Line key = {i+1} />
                 </>

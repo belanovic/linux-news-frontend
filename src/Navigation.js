@@ -39,11 +39,11 @@ export default function Navigation({navVisible, setNavVisible}) {
                         >Lat</div>
                     </div>
                 </li> */}
-                <Link to = '/politics/politics'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Politika</span></li></Link>
                 <Link to = '/technology/technology'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Svet</span></li></Link> 
                 <Link to = '/business/business'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Ekonomija</span></li></Link> 
                 <Link to = '/entertainment/entertainment'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Magazin</span></li></Link> 
                 <Link to = '/sports/sports'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Sport</span></li></Link> 
+                <Link to = '/politics/politics'><li className="nav-item" onClick = {() => setNavVisible(false)}><span className="nav-link">Politika</span></li></Link>
             </ul>
         </nav>
     )

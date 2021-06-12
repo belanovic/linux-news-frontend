@@ -43,6 +43,8 @@ export default function Main() {
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
                     videoURL = {frontpageNews[5].videoURL}
+
+                    cathegory = {frontpageNews[5].category}
                 />
                 <Line />
                 <Card 
@@ -56,6 +58,8 @@ export default function Main() {
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
                     videoURL = {frontpageNews[6].videoURL}
+
+                    cathegory = {frontpageNews[6].category}
                 />
                 <Line />
                 <Card 
@@ -69,6 +73,8 @@ export default function Main() {
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
                     videoURL = {frontpageNews[7].videoURL}
+
+                    cathegory = {frontpageNews[7].category}
                 />
                 <Line />
                 <Card 
@@ -82,6 +88,8 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
                     videoURL = {frontpageNews[8].videoURL}
+
+                    cathegory = {frontpageNews[8].category}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
@@ -95,6 +103,8 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[9].position}
                     videoURL = {frontpageNews[9].videoURL}
+
+                    cathegory = {frontpageNews[9].category}
                 />
                 <Line />
                  <Card 

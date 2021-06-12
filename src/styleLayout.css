@@ -127,12 +127,6 @@ body {
 
 /* Card */
 
-.card a {
-    position: relative;
-}
-.card-slide {
-    position: relative;
-}
 .play {
     position: absolute;
     top: 0;
@@ -144,9 +138,41 @@ body {
     color: white;
     font-size: 2.5rem;
 }
-.card-slide img {
+
+.card-slide {
+    position: relative;
+}
+.card-slide-container-img {
     width: 100%;
     height: 65vw;
+}
+.card-slide-container-img a {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.generic-thumb {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: red;
+}
+.generic-thumb span {
+    color: white;
+    font-style: italic;
+    font-weight: bold;
+}
+.generic-thumb.card-slide span {
+    font-size: 7rem;
+}
+.generic-thumb.card span {
+    font-size: 3rem;
+}
+.card-slide img {
+    width: 100%;
+    height: 100%;
     max-height: 350px;
     object-fit: cover;
 }
@@ -164,9 +190,14 @@ body {
     justify-content: space-between;
     width: 95%;
 }
-.card-general a {
+.card-general-container-img {
     height: 30vw;
     width: 50%;
+}
+.card-general a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
 }
 .card-general-img {
     object-fit: cover;
@@ -197,18 +228,21 @@ body {
     display: flex;
     flex-direction: column;
 }
-.card-magazin-text {
-    margin-left: 1em;
-}
-
-.card-magazin a {
+.card-magazin-container-img {
     width: 100%;
     height: 65vw;
 }
-
+.card-magazin-container-img a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
 .card-magazin-img {
     width: 100%;
     height: 100%;
+}
+.card-magazin-text {
+    margin-left: 1em;
 }
 
 .card-sport {
@@ -216,20 +250,21 @@ body {
     justify-content: space-between;
     width: 95%;
 }
-
-.card-sport a {
+.card-sport-container-img {
     width: 50%;
     height: 30vw;
+}
+.card-sport a {
+    width: 100%;
+    height: 100%;
 }
 .card-sport-img {
     width: 100%;
     height: 100%;
 }
-
 .card-sport-text {
     width: 48%;
 }
-
 .card-sport-text p {
     display: none
 }
@@ -238,18 +273,22 @@ body {
     display: flex;
     flex-direction: column;
 }
-.card-cathegory-text {
-    margin-left: 1em;
+.card-cathegory-container-img {
+    width: 100%;
+    height: 65vw;
 }
 
 .card-cathegory a {
     width: 100%;
-    height: 65vw;
+    height: 100%;
 }
 
 .card-cathegory-img {
     width: 100%;
     height: 100%;
+}
+.card-cathegory-text {
+    margin-left: 1em;
 }
 
 /* Article */

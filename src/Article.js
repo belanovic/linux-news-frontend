@@ -48,11 +48,19 @@ export default function Article() {
             <Line />
 
             {article.videoURL === 'none'? 
-            
-            <div className = "article-img-container">
-                <img className = "article-image" src = {article.imgURL}></img>
-                <div className = "imgDescription">{article.imgDescription}</div>
-            </div>
+                <div className = "article-img-container">
+                    {article.imgURL === 'generic'?
+                        <div className = "generic-thumb"></div>
+                        :
+                        <img className = "article-image" src = {article.imgURL}></img>
+                    }
+                    {article.imgURL === 'generic'?
+                        <div className = "generic-thumb"></div>
+                        :
+                        <div className = "imgDescription">{article.imgDescription}</div>
+                    }
+
+                </div>
             :
             <div className = "article-video-container">
                 <div className = "videoDescription">{article.videoDescription}</div>{/* 
@@ -62,10 +70,6 @@ export default function Article() {
             </div>}
 
             <h3 className = "article-subtitle">{article.subtitle}</h3>
-           {/*  <div className = "article-text">{article !== ''? article.paragraphs.map((prom, i) => {
-                return <p key = {i}>{prom)}</p>
-            }) : ''}</div> */}
-            {/* <div className = "article-text">{Parser(article.text)}</div> */}
             <div dangerouslySetInnerHTML={{__html: article.text}} />
             <Tags article = {article} />
         </article>

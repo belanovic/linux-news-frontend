@@ -36,6 +36,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[0]._id}
             position = {frontpageNews[0].position}
             videoURL = {frontpageNews[0].videoURL}
+            cathegory = {frontpageNews[0].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -48,6 +49,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[1]._id}
             position = {frontpageNews[1].position}
             videoURL = {frontpageNews[1].videoURL}
+            cathegory = {frontpageNews[1].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -60,6 +62,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[2]._id}
             position = {frontpageNews[2].position}
             videoURL = {frontpageNews[2].videoURL}
+            cathegory = {frontpageNews[2].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -72,6 +75,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[3]._id}
             position = {frontpageNews[3].position}
             videoURL = {frontpageNews[3].videoURL}
+            cathegory = {frontpageNews[3].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -84,22 +88,11 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[4]._id}
             position = {frontpageNews[4].position}
             videoURL = {frontpageNews[4].videoURL}
+            cathegory = {frontpageNews[4].category}
           />
         </SwiperSlide>
 
       </Swiper>
-
-      {/* { <Swiper
-        id="thumbs"
-        onSwiper={setThumbsSwiper}
-        slidesPerView={5}
-        spaceBetween={1}>
-        <SwiperSlide tag='li'><img src={frontpageNews[0].imgURL} className="imgThumb"></img></SwiperSlide>
-        <SwiperSlide tag='li'><img src={frontpageNews[1].imgURL} className="imgThumb"></img></SwiperSlide>
-        <SwiperSlide tag='li'><img src={frontpageNews[2].imgURL} className="imgThumb"></img></SwiperSlide>
-        <SwiperSlide tag='li'><img src={frontpageNews[3].imgURL} className="imgThumb"></img></SwiperSlide>
-        <SwiperSlide tag='li'><img src={frontpageNews[4].imgURL} className="imgThumb"></img></SwiperSlide>
-      </Swiper> } */}
     </>
   )
 }

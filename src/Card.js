@@ -4,9 +4,10 @@ import { context } from './newsContext.js';
 import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
+import GenericThumb from './GenericThumb';
 
 export default function Card({ position, classSuffix, title, paragraphs, videoURL, 
-                               datePublished, dateUpdated, src, id }) {
+                               datePublished, dateUpdated, src, id, cathegory }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
@@ -38,15 +39,20 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
 
     return (
         <div className={`card card-${classSuffix}`}>
-            <Link to={`/article/${id}`}>
-                {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
-                <img className={`card-${classSuffix}-img card-img 
-                            ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
-                    ref={cardElement}
-                    src={src}
-                >
-                </img>
-            </Link>
+            <div className = {`card-${classSuffix}-container-img`}>
+                <Link to={`/article/${id}`}>
+                    {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
+                    {src === 'generic'?
+                    <GenericThumb className = {`generic-thumb card ${cathegory}`} cathegory = {cathegory}/>
+                    :
+                    <img className={`card-${classSuffix}-img card-img 
+                                ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
+                        ref={cardElement}
+                        src={src = src}
+                    >
+                    </img>}
+                </Link>
+            </div>
             <div className={`card-${classSuffix}-text`}>
                 <div className={`card-${classSuffix}-container-title`}>
                     <Link to={`/article/${id}`}>
