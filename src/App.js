@@ -16,7 +16,7 @@ export default function App() {
         <div className = "wrapper">
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
             <Header />
-            <Switch>
+            <Switch> 
 
                 <Route exact path = "/"><Main /></Route> 
 
