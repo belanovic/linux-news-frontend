@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import shortenSentence from './shortenSentence.js';
 import {context} from './newsContext';
 import GenericThumb from './GenericThumb'
+import './style/layout/carousel.css';
+import './style/typography/carousel.css';
 
 export default function CardCarousel({ classSuffix, title, paragraphs, 
                                        date, src, id, videoURL, cathegory}) {

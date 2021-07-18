@@ -6,6 +6,8 @@ import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
 import GenericThumb from './GenericThumb';
+import './style/layout/cathegory.css';
+import './style/typography/cathegory.css';
 
 export default function Cathegory() {
     const {alphabet} = useContext(context);

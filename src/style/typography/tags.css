@@ -1,0 +1,15 @@
+.tag {
+    font-size: 1.5rem;
+    padding: 0.2em 0.6em 0.2em 0.6em;
+    letter-spacing: 1px;
+    background: rgb(211, 211, 211);
+    border-radius: 30%;
+}
+.tag:hover {
+    color: white;
+    background:rgb(253, 106, 48);
+    cursor: pointer;
+}
+.tag::before {
+    content: '#';
+}

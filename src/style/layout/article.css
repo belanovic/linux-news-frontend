@@ -1,0 +1,38 @@
+p img {
+    width: 100%;
+}
+
+.article {
+    padding: 0 0.8em 0 0.8em;
+}
+
+.article-category {
+    display: inline-block;
+    margin-top: 1em;
+}
+
+.article-title {
+    margin: 0.5em 0 0.5em 0;
+ }
+
+.article-image {
+    display: block;
+}
+
+.article-metadata {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em;
+}
+.article-origin-source,.article-date-published {
+    margin-bottom: 0.3em;
+}
+.article-image {
+    width: 100%;
+}
+.article-video-container {
+    background: black;
+}
+.article-video {
+    width: 100%;
+}

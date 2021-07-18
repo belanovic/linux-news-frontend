@@ -4,6 +4,8 @@ import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
 import 'swiper/swiper-bundle.css';
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
+import './style/layout/carousel.css';
+import './style/typography/carousel.css';
 
 SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
 

@@ -1,0 +1,27 @@
+.header {
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 4;
+}
+
+.titleBox {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0
+}
+.menuToggle {
+    display: inline-block;
+}
+.menuToggle:hover {
+    cursor: pointer;
+}
+.fa-times {
+    display: none;
+}
+
+.login {
+    display: inline-block;
+    margin-left: 1.5em;
+}

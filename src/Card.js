@@ -5,6 +5,8 @@ import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
 import GenericThumb from './GenericThumb';
+import './style/layout/card.css';
+import './style/typography/card.css';
 
 export default function Card({ position, classSuffix, title, paragraphs, videoURL, 
                                datePublished, dateUpdated, src, id, cathegory }) {

@@ -1,6 +1,8 @@
 import react, { useState, useEffect, useContext } from 'react';
 import Icuc from './Icuc.js';
 import {context} from './newsContext';
+import './style/layout/covid.css';
+import './style/typography/covid.css';
 
 export default function Covid() {
 

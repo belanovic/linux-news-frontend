@@ -1,0 +1,16 @@
+main .line {
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    margin: 1em 1em 1em 1em;
+}
+.article .line {
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    margin: 1em 0em 1em 0em;
+}
+
+.cathegory .line {
+    height: 1px;
+    background-color: rgb(136, 136, 136);
+    margin: 2em 0em 2em 0em;
+}

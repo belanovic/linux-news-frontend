@@ -1,5 +1,4 @@
 import react, {useContext} from 'react';
-import './styleIcuc.css';
 import {context} from './newsContext';
 
 export default function Icuc() {

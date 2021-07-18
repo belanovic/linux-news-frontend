@@ -1,4 +1,6 @@
 import react, {useContext, useEffect, useState} from 'react';
+import './style/layout/tags.css';
+import './style/typography/tags.css';
 
 export default function Tags({article}) {
     

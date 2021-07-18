@@ -1,0 +1,26 @@
+.footer {
+    color: white;
+    background: rgb(46, 46, 46);
+    padding: 1em 0 1em 0;
+}
+.footer-social {
+    font-size: 3rem;
+    text-align: center;
+}
+.footer-social .fab {
+    margin: 0.2em;
+}
+.footer-links {
+    list-style-type: none;
+    padding: 0;
+    font-size: 2rem;
+}
+
+.footer-item-link {
+    text-align: center;
+    color: white;
+}
+.footer-copyright {
+    text-align: center;
+    font-size: 1rem;
+}

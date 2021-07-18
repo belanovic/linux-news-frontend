@@ -3,6 +3,8 @@ import Navigation from './Navigation.js';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext.js';
 import Form from './Form.js';
+import './style/layout/header.css';
+import './style/typography/header.css';
 
 export default function Header() {
     const {getAndSetFrontpageNews, alphabet, navVisible, 

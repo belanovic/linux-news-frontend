@@ -1,0 +1,18 @@
+.imgThumb {
+    width: 100%;
+}
+.imgThumb:hover {
+    cursor: pointer;
+}
+
+#thumbs .swiper-slide {
+    transition: all 0.25s;
+    transform: scale(0.7, 0.7);
+}
+#thumbs .swiper-slide-thumb-active {
+    transform: scale(1, 1);
+}
+.swiper-pagination {
+    position: absolute;
+    bottom: -100%;
+}

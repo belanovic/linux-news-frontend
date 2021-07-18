@@ -1,0 +1,23 @@
+@keyframes ticker {
+    from {transform: translateX(0%)}
+    to {transform: translateX(-100%)}
+}
+
+.newsTicker1 {
+    overflow: hidden;
+    padding-left: 100%;
+    margin-bottom: 1em;
+}
+.newsTicker1Container {
+    background: 'yellow';
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    white-space: nowrap;
+    animation-name: ticker;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+.newsTicker1Container:hover {
+    animation-play-state: paused;
+}

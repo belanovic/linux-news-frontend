@@ -1,6 +1,5 @@
 import react, { useState, useEffect, useContext } from 'react';
 import { context } from './newsContext';
-import './styleForm.css';
 import {registerUser} from './getUser.js';
 import {loginUser} from './getUser.js';
 

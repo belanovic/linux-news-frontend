@@ -1,0 +1,8 @@
+.cathegory-type {
+    padding: 0.3em 0.5em 0.3em 0.5em;
+    font-size: 2rem;
+    text-align: center;
+    color: white;
+    caret-color: transparent;
+    background: rgb(251, 29, 0);
+}

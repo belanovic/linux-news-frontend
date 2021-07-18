@@ -1,0 +1,11 @@
+.partTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    background: green;
+    color: white;
+    padding: 0.4em 0.4em 0.4em 0.4em;
+}
+
+.partTitle-magazin {
+    background: purple;
+}

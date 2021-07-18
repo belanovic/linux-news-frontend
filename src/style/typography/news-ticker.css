@@ -1,0 +1,23 @@
+.newsTicker1 {
+    background: black;
+}
+
+.tickerTitle {
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 0.5em 0 0.5em 0;
+    color: white;
+    letter-spacing: 1px;
+}
+.tickerTitle:hover {
+    color: #ffe17d
+}
+
+.tickerStars {
+    padding: 0 0.5em 0 0.5em ;
+}
+
+.fa-asterisk {
+    font-size: 0.7rem;
+    color: white;
+}

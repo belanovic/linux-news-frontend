@@ -1,0 +1,80 @@
+.card a {
+    color: black;
+}
+.card a:hover {
+    text-decoration: underline;
+}
+
+.card-slide {
+    padding-left: 0;
+}
+
+.card-slide-text {
+    color: white;
+    background: linear-gradient(180deg, rgba(33,33,92,0) 0%, rgba(0,0,0,1) 100%);
+    padding: 0.5em;
+}
+
+.card-slide-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 1px;
+    margin-bottom: 0;
+}
+.card-img {
+    opacity: 0.2;
+    transition: 250ms opacity;
+    transition-timing-function: linear;
+}
+.opacityOne {
+    opacity: 1;
+}
+.card-general {
+    margin: 0 auto 1em auto;
+}
+.card-general-title {
+    color: black;
+    margin-top: 0;
+    font-size: 1.175rem;
+    font-weight: bold;
+    line-height: 1.2;
+    letter-spacing: 1px;
+}
+
+.card-general-text {
+    overflow: hidden;
+}
+
+.card-magazin-title {
+    font-size: 1.75rem;
+}
+.card-magazin-paragraphs {
+    font-size: 1.25rem;
+}
+
+.card-sport {
+    margin: 0 auto 1em auto;
+}
+
+.card-sport-text {
+    overflow: hidden;
+    width: 48%;
+}
+
+.card-sport-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-sport-paragraphs {
+    margin-top: 0;
+    font-size: 1rem;
+}
+
+.card-cathegory-title {
+    font-size: 1.75rem;
+}
+.card-cathegory-paragraphs {
+    font-size: 1.25rem;
+}

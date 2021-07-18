@@ -2,6 +2,9 @@ import react, {useState, useEffect, useRef, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext';
 
+import './style/layout/news-ticker.css';
+import './style/typography/news-ticker.css';
+
 export default function NewsTicker1({frontpageNews}) {
 
     const {alphabet} = useContext(context);

@@ -6,6 +6,8 @@ import dateFormat from './dateFormat.js';
 import Line from './Line.js';
 import Tags from './Tags.js';
 import Parser from 'html-react-parser';
+import './style/layout/article.css';
+import './style/typography/article.css';
 
 export default function Article() { 
     const {alphabet, setShowCmsOverlay} = useContext(context);
