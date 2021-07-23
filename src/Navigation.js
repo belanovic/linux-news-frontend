@@ -1,6 +1,7 @@
 import React, {useState, useContext} from 'react';
 import {context} from './newsContext.js';
 import {Link} from 'react-router-dom';
+import './style/navigation.css';
 
 export default function Navigation({navVisible, setNavVisible}) {
 

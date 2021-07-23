@@ -2,6 +2,7 @@ import react, { useState, useEffect, useContext } from 'react';
 import { context } from './newsContext';
 import {registerUser} from './getUser.js';
 import {loginUser} from './getUser.js';
+import './style/form.css';
 
 export default function Form() {
 
