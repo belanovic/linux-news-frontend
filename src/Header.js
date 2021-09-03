@@ -2,7 +2,6 @@ import React, { useState, useContext } from 'react';
 import Navigation from './Navigation.js';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext.js';
-import Form from './Form.js';
 import './style/layout/header.css';
 import './style/typography/header.css';
 
@@ -36,9 +35,9 @@ export default function Header() {
                             <i className="fas fa-bars" style = {{display: barsDisplay}}></i>
                             <i className="fas fa-times" style = {{display: timesDisplay}}></i>
                         </div>
-                        <div className="login">
+                     {/*    <div className="login">
                             <Link to = "/form"><i className="fas fa-user-edit" onClick = {() => setFormVisible(prev => !prev)}></i></Link>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
                 <Navigation navVisible = {navVisible} setNavVisible = {setNavVisible} />

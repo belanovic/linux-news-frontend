@@ -87,14 +87,22 @@
 .card-general-text {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     width: 48%;
 }
 .card-general-container-title {
    overflow: hidden;
 }
-.card-general-paragraphs {
-    display: none;
+.card-general-container-paragraph {
+    margin-top: auto;
+}
+.card-general-paragraph {
+    margin-bottom: 0;
+    
+}
+.card-general-date {
+    font-weight: bold;
+    opacity: 0.5;
 }
 
 .card-magazin {

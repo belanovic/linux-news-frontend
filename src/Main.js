@@ -35,6 +35,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[5].title}
+                    subtitle = {frontpageNews[5].subtitle}
                     paragraphs = {frontpageNews[5].text}
                     datePublished = {dateFormat(frontpageNews[5].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[5].dateUpdated, 'clock')}
@@ -50,6 +51,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[6].title}
+                    subtitle = {frontpageNews[6].subtitle}
                     paragraphs = {frontpageNews[6].text}
                     datePublished = {dateFormat(frontpageNews[6].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[6].dateUpdated, 'clock')}
@@ -65,6 +67,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[7].title}
+                    subtitle = {frontpageNews[7].subtitle}
                     paragraphs = {frontpageNews[7].text}
                     datePublished = {dateFormat(frontpageNews[7].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[7].dateUpdated, 'clock')}
@@ -80,6 +83,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[8].title}
+                    subtitle = {frontpageNews[8].subtitle}
                     paragraphs = {frontpageNews[8].text}
                     datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[8].dateUpdated, 'clock')}
@@ -95,6 +99,7 @@ export default function Main() {
                 <Card 
                     classSuffix = 'magazin'
                     title = {frontpageNews[9].title}
+                    subtitle = {frontpageNews[9].subtitle}
                     paragraphs = {frontpageNews[9].text}
                     datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}

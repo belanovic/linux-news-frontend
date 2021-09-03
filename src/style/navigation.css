@@ -4,7 +4,7 @@
     position: absolute;
     width: 100%;
     height: 90%;
-    z-index: 2;
+    z-index: 1235;
     transition: left 0.5s;
 }
 .nav-list {

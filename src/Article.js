@@ -72,7 +72,10 @@ export default function Article() {
             </div>}
 
             <h3 className = "article-subtitle">{article.subtitle}</h3>
-            <div dangerouslySetInnerHTML={{__html: article.text}} />
+            <div 
+                className = "article-text"
+                dangerouslySetInnerHTML={{__html: article.text}}
+            />
             <Tags article = {article} />
         </article>
     )

@@ -8,7 +8,7 @@ import GenericThumb from './GenericThumb';
 import './style/layout/card.css';
 import './style/typography/card.css';
 
-export default function Card({ position, classSuffix, title, paragraphs, videoURL, 
+export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL, 
                                datePublished, dateUpdated, src, id, cathegory }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
@@ -71,11 +71,15 @@ export default function Card({ position, classSuffix, title, paragraphs, videoUR
                         {dateUpdated ? dateUpdated : ''} 
                     </span>
                 </div>
-                <p 
-                    className={`card-${classSuffix}-paragraphs`}
-                >
-                    {shortenSentence(paragraphs, 100)}
-                </p>
+                <div className={`card-${classSuffix}-container-paragraph`}>
+                    <Link to={`/article/${id}`}>
+                        <p 
+                            className={`card-${classSuffix}-paragraph`}
+                        >
+                            {shortenSentence(subtitle, 100)}
+                        </p>
+                    </Link>
+                </div> 
             </div>
         </div>
     )
