@@ -39,7 +39,7 @@ export default function Main() {
                     paragraphs = {frontpageNews[5].text}
                     datePublished = {dateFormat(frontpageNews[5].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[5].dateUpdated, 'clock')}
-                    src = {frontpageNews[5].imgURL}
+                    src = {frontpageNews[5].imgURL2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
@@ -55,7 +55,7 @@ export default function Main() {
                     paragraphs = {frontpageNews[6].text}
                     datePublished = {dateFormat(frontpageNews[6].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[6].dateUpdated, 'clock')}
-                    src = {frontpageNews[6].imgURL}
+                    src = {frontpageNews[6].imgURL2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
@@ -71,7 +71,7 @@ export default function Main() {
                     paragraphs = {frontpageNews[7].text}
                     datePublished = {dateFormat(frontpageNews[7].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[7].dateUpdated, 'clock')}
-                    src = {frontpageNews[7].imgURL}
+                    src = {frontpageNews[7].imgURL2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
@@ -87,7 +87,7 @@ export default function Main() {
                     paragraphs = {frontpageNews[8].text}
                     datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[8].dateUpdated, 'clock')}
-                    src = {frontpageNews[8].imgURL}
+                    src = {frontpageNews[8].imgURL2}
                     id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
