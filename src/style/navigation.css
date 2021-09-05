@@ -2,23 +2,28 @@
 
 .navigation {
     position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: black;
     width: 100%;
-    height: 90%;
+    height: 100vh;
     z-index: 1235;
     transition: left 0.5s;
 }
 .nav-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
 }
 .nav-item {
     margin: 0;
     padding: 0;
     margin-bottom: 0.5em;
+
 }
 .nav-item:active {
     background: rgb(73, 73, 73);
@@ -28,7 +33,6 @@
     font-size: 2rem;
     padding: 0.7em 0 0.7em 0;
     display: block;
-    background: black;
     color: white;
     text-decoration: none;
     text-align: center;
