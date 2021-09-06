@@ -36,7 +36,7 @@ export default function Cathegory() {
             {newsByCathegory && newsByCathegory.map((prev, i) => {
                 return <>
                     <Card
-                        position={prev.position}
+                        position={prev.position} 
                         classSuffix={'cathegory'}
                         title={prev.title}
                         paragraphs={prev.text}
