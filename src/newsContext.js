@@ -3,6 +3,7 @@ import { getFrontpageNews } from './getNews.js';
 
 const context = React.createContext();
 
+
 function Provider(props) {
 
     const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);

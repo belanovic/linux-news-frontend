@@ -40,6 +40,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[5].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[5].dateUpdated, 'clock')}
                     src = {frontpageNews[5].imgURL2}
+                    filter = {frontpageNews[5].imgFilter2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
@@ -56,6 +57,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[6].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[6].dateUpdated, 'clock')}
                     src = {frontpageNews[6].imgURL2}
+                    filter = {frontpageNews[6].imgFilter2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
@@ -72,6 +74,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[7].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[7].dateUpdated, 'clock')}
                     src = {frontpageNews[7].imgURL2}
+                    filter = {frontpageNews[7].imgFilter2}
                     frontpageNews = {frontpageNews}
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
@@ -88,6 +91,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[8].dateUpdated, 'clock')}
                     src = {frontpageNews[8].imgURL2}
+                    filter = {frontpageNews[8].imgFilter2}
                     id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
@@ -104,6 +108,7 @@ export default function Main() {
                     datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}
                     src = {frontpageNews[9].imgURL}
+                    filter = {frontpageNews[9].imgFilter2}
                     id = {frontpageNews[9]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[9].position}

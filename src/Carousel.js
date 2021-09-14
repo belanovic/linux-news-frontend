@@ -12,6 +12,8 @@ SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
 export default function BootstrapCarousel({ frontpageNews }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
+  useEffect(() => console.log(frontpageNews), [])
+
   return (
     <>
       <Swiper
@@ -32,9 +34,10 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[0].title}
-            ss={frontpageNews[0].text}
+            paragraphs={frontpageNews[0].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[0].imgURL}
+            filter = {frontpageNews[0].imgFilter}
             id = {frontpageNews[0]._id}
             position = {frontpageNews[0].position}
             videoURL = {frontpageNews[0].videoURL}
@@ -45,9 +48,10 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[1].title}
-            ss={frontpageNews[1].text}
+            paragraphs={frontpageNews[1].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[1].imgURL}
+            filter = {frontpageNews[1].imgFilter}
             id = {frontpageNews[1]._id}
             position = {frontpageNews[1].position}
             videoURL = {frontpageNews[1].videoURL}
@@ -58,9 +62,10 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[2].title}
-            ss={frontpageNews[2].text}
+            paragraphs={frontpageNews[2].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[2].imgURL}
+            filter = {frontpageNews[2].imgFilter}
             id = {frontpageNews[2]._id}
             position = {frontpageNews[2].position}
             videoURL = {frontpageNews[2].videoURL}
@@ -71,9 +76,10 @@ export default function BootstrapCarousel({ frontpageNews }) {
           <CardCarousel
             classSuffix='slide'
             title={frontpageNews[3].title}
-            ss={frontpageNews[3].text}
+            paragraphs ={frontpageNews[3].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[3].imgURL}
+            filter = {frontpageNews[3].imgFilter}
             id = {frontpageNews[3]._id}
             position = {frontpageNews[3].position}
             videoURL = {frontpageNews[3].videoURL}
@@ -87,6 +93,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             paragraphs={frontpageNews[4].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
             src={frontpageNews[4].imgURL}
+            filter = {frontpageNews[4].imgFilter}
             id = {frontpageNews[4]._id}
             position = {frontpageNews[4].position}
             videoURL = {frontpageNews[4].videoURL}

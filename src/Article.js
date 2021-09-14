@@ -15,6 +15,8 @@ export default function Article() {
     const {id} = useParams();
     const [URL, setURL] = useState('');
     const [key, setKey] = useState(1);
+    const [filter, setFilter] = useState('');
+    const [filterStyle, setFilterStyle] = useState('none');
 
     const formatCathegory = (category) => {
         if (category === 'politics') return 'Politika'
@@ -24,11 +26,28 @@ export default function Article() {
         if (category === 'sports') return 'Sport'
     }
 
+
+
+    useEffect(() => {
+        if (filter) {
+            setFilterStyle(() => {
+                return `blur(${filter[0].blur}px) brightness(${filter[0].brightness}%) 
+                            contrast(${filter[0].contrast}%) grayscale(${filter[0].grayscale}%) 
+                            hue-rotate(${filter[0].huRotate}deg) invert(${filter[0].invert}%) 
+                            opacity(${filter[0].opacity}%) saturate(${filter[0].saturate}%) 
+                            sepia(${filter[0].sepia}%)`
+            })
+        } else {
+            setFilterStyle('none')
+        }
+    }, [filter])
+
     useEffect(async() => {
         const oneArticle = await getArticle(id);
         setArticle(oneArticle);
         setURL(oneArticle.videoURL);
-        console.log(oneArticle.text);
+        setFilter(oneArticle.imgFilter);
+        console.log(oneArticle);
     }, [])
 
     return (
@@ -54,7 +73,11 @@ export default function Article() {
                     {article.imgURL === 'generic'?
                         <div className = "generic-thumb"></div>
                         :
-                        <img className = "article-image" src = {article.imgURL}></img>
+                        <img 
+                            className = "article-image" 
+                            src = {article.imgURL}
+                            style = {{filter: filterStyle}}
+                        ></img>
                     }
                     {article.imgURL === 'generic'?
                         <div className = "generic-thumb"></div>

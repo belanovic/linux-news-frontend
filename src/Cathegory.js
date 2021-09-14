@@ -47,6 +47,7 @@ export default function Cathegory() {
                         id={prev._id}
                         key = {i}
                         cathegory = {cathegory}
+                        filter = {prev.imgFilter}
                         
                     />
                     <Line key = {i+1} />
