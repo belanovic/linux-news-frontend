@@ -32,7 +32,15 @@
 .article-video {
     width: 100%;
 }
-.article-text img {
+.article-text figure {
+    width: 100%;
+    margin: 0;
+}
+.article-text p img, .article-text figure img {
     display: block;
+    width: 100%;
+    height: auto;
+}
+.article-text iframe {
     width: 100%;
 }
