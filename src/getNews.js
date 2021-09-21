@@ -2,7 +2,7 @@ import HOST_BACKEND from './hostBackend.js';
 
 export async function getFrontpageNews() {
     try {
-        const response = await fetch(`${HOST_BACKEND}/frontpageArticles`);
+        const response = await fetch(`${HOST_BACKEND}/frontpageArticlesFE`);
         const newsFrontpage = await response.json();
         return newsFrontpage
     }
@@ -12,7 +12,7 @@ export async function getFrontpageNews() {
 }
 export async function getArticle(id) {
     try {
-        const response = await fetch(`${HOST_BACKEND}/oneArticle/${id}`);
+        const response = await fetch(`${HOST_BACKEND}/oneArticleFE/${id}`);
         const oneArticle = await response.json();
         return oneArticle
     }
