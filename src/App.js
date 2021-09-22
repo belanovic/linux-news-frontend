@@ -13,7 +13,7 @@ import './style/index.css';
 export default function App() {
     const cmsOverlay = useRef(null);  
     const {showCmsOverlay, setShowCmsOverlay} = useContext(context);
-    return (
+    return (   
         <div className = "wrapper">
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
             <Header />
