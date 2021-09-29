@@ -9,7 +9,7 @@ import './style/layout/card.css';
 import './style/typography/card.css';
 
 export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL,
-    datePublished, dateUpdated, src, filter, id, cathegory, frontpageNews }) {
+    datePublished, dateUpdated, src, filter, id, cathegory, frontpageNews, thumbShape }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
@@ -19,8 +19,6 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
 
     useEffect(() => {
         if (filter) {
-            console.log('ovo je filter')
-            console.log(filterStyle)
             setFilterStyle(() => {
                 return `blur(${filter[0].blur}px) brightness(${filter[0].brightness}%) 
                             contrast(${filter[0].contrast}%) grayscale(${filter[0].grayscale}%) 
@@ -32,8 +30,6 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
             setFilterStyle('none')
         }
     }, [filter])
-
-
 
     useEffect(() => {
 
@@ -65,7 +61,12 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
                 <Link to={`/article/${id}`}>
                     {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
                     {src === 'generic' ?
-                        <GenericThumb className={`generic-thumb card ${cathegory}`} cathegory={cathegory} />
+                        <GenericThumb 
+                            className={`card-${classSuffix}-img card-img 
+                            ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
+                            shape = {thumbShape} 
+                            cathegory={cathegory} 
+                        />
                         :
                         <img className={`card-${classSuffix}-img card-img 
                                 ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}

@@ -45,7 +45,7 @@ export default function Main() {
                     id = {frontpageNews[5]._id}
                     position = {frontpageNews[5].position}
                     videoURL = {frontpageNews[5].videoURL}
-
+                    thumbShape = 'square'
                     cathegory = {frontpageNews[5].category}
                 />
                 <Line />
@@ -62,7 +62,7 @@ export default function Main() {
                     id = {frontpageNews[6]._id}
                     position = {frontpageNews[6].position}
                     videoURL = {frontpageNews[6].videoURL}
-
+                    thumbShape = 'square'
                     cathegory = {frontpageNews[6].category}
                 />
                 <Line />
@@ -79,7 +79,7 @@ export default function Main() {
                     id = {frontpageNews[7]._id}
                     position = {frontpageNews[7].position}
                     videoURL = {frontpageNews[7].videoURL}
-
+                    thumbShape = 'square'
                     cathegory = {frontpageNews[7].category}
                 />
                 <Line />
@@ -96,7 +96,7 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
                     videoURL = {frontpageNews[8].videoURL}
-
+                    thumbShape = 'square'
                     cathegory = {frontpageNews[8].category}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
@@ -113,7 +113,7 @@ export default function Main() {
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[9].position}
                     videoURL = {frontpageNews[9].videoURL}
-
+                    thumbShape = 'wide'
                     cathegory = {frontpageNews[9].category}
                 />
                 <Line />

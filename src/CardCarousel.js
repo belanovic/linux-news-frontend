@@ -33,7 +33,11 @@ export default function CardCarousel({ classSuffix, title, paragraphs,
                 {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
                 <div className = {`card-${classSuffix}-container-img`}>
                 {src === 'generic'?
-                <GenericThumb className = {`generic-thumb card-slide ${cathegory}`} cathegory = {cathegory}/>
+                    <GenericThumb 
+                        className = {`card-${classSuffix}-img `}  
+                        shape = 'wide'
+                        cathegory = {cathegory}
+                    />
                     :
                     <img 
                         className={`card-${classSuffix}-img `} 
