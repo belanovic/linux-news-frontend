@@ -14,7 +14,7 @@ export default function App() {
     const cmsOverlay = useRef(null);  
     const {showCmsOverlay, setShowCmsOverlay} = useContext(context);
     return (   
-        <div className = "wrapper">
+        <div className = "wrapper">    
             <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
             <Header />
             <Switch> 
