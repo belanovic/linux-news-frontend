@@ -38,7 +38,7 @@ export default function Form() {
     const handleClickSignIn = async (e) => {
         e.preventDefault();
         const user = await loginUser(usernameSignIn, passwordSignIn);
-        console.log(user);
+        console.log(user);  
     }
     
     const handleClickSignUp = async (e) => {
