@@ -6,7 +6,7 @@ import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
 import GenericThumb from './GenericThumb';
 import './style/layout/card.css';
-import './style/typography/card.css';
+import './style/typography/card.css';  
 
 export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL,
     datePublished, dateUpdated, src, filter, id, cathegory, frontpageNews, thumbShape }) {
@@ -17,6 +17,7 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
 
     const [filterStyle, setFilterStyle] = useState('none');
 
+    
     useEffect(() => {
         if (filter) {
             setFilterStyle(() => {
