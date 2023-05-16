@@ -39,6 +39,7 @@ export default function Article() {
             })
         } else {
             setFilterStyle('none')
+            setFilterStyle('none')
         }
     }, [filter])
 
