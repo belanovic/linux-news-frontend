@@ -18,6 +18,8 @@ function Provider(props) {
             setShowCmsOverlay('block');
             console.log('getAndSetFrontpageNews called')
             const n = await getFrontpageNews();
+            
+    
             n.sort((a, b) => a.position - b.position);        
             setFrontpageNews(n);
             setDateLoaded(true);
