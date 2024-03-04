@@ -18,7 +18,7 @@ export default function Article() {
     const [filter, setFilter] = useState('');
     const [filterStyle, setFilterStyle] = useState('none');
 
-    const formatCathegory = (category) => {
+    const formatCategory = (category) => {
         if (category === 'politics') return 'Politika'
         if (category === 'business') return 'Ekonomija'
         if (category === 'technology') return 'Tehnologija'
@@ -53,7 +53,7 @@ export default function Article() {
 
     return (
         <article className="article">
-            <div className = "article-category"> {formatCathegory(article.category)}</div>
+            <div className = "article-category"> {formatCategory(article.category)}</div>
             <h2 className = "article-title">{article.title}</h2>
             <Line />
             <div className = "article-metadata">

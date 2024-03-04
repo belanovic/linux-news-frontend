@@ -15,7 +15,7 @@ function Provider(props) {
     
     async function getAndSetFrontpageNews() {
         try {
-            setShowCmsOverlay('block');
+            setShowCmsOverlay('flex');
             console.log('getAndSetFrontpageNews called')
             const n = await getFrontpageNews();
             

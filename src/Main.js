@@ -46,7 +46,7 @@ export default function Main() {
                     position = {frontpageNews[5].position}
                     videoURL = {frontpageNews[5].videoURL}
                     thumbShape = 'square'
-                    cathegory = {frontpageNews[5].category}
+                    category = {frontpageNews[5].category}
                 />
                 <Line />
                 <Card 
@@ -63,7 +63,7 @@ export default function Main() {
                     position = {frontpageNews[6].position}
                     videoURL = {frontpageNews[6].videoURL}
                     thumbShape = 'square'
-                    cathegory = {frontpageNews[6].category}
+                    category = {frontpageNews[6].category}
                 />
                 <Line />
                 <Card 
@@ -80,7 +80,7 @@ export default function Main() {
                     position = {frontpageNews[7].position}
                     videoURL = {frontpageNews[7].videoURL}
                     thumbShape = 'square'
-                    cathegory = {frontpageNews[7].category}
+                    category = {frontpageNews[7].category}
                 />
                 <Line />
                 <Card 
@@ -97,7 +97,7 @@ export default function Main() {
                     position = {frontpageNews[8].position}
                     videoURL = {frontpageNews[8].videoURL}
                     thumbShape = 'square'
-                    cathegory = {frontpageNews[8].category}
+                    category = {frontpageNews[8].category}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
@@ -114,7 +114,7 @@ export default function Main() {
                     position = {frontpageNews[9].position}
                     videoURL = {frontpageNews[9].videoURL}
                     thumbShape = 'wide'
-                    cathegory = {frontpageNews[9].category}
+                    category = {frontpageNews[9].category}
                 />
                 <Line />
                  <Card 

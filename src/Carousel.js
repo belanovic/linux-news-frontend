@@ -41,7 +41,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[0]._id}
             position = {frontpageNews[0].position}
             videoURL = {frontpageNews[0].videoURL}
-            cathegory = {frontpageNews[0].category}
+            category = {frontpageNews[0].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -55,7 +55,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[1]._id}
             position = {frontpageNews[1].position}
             videoURL = {frontpageNews[1].videoURL}
-            cathegory = {frontpageNews[1].category}
+            category = {frontpageNews[1].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -69,7 +69,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[2]._id}
             position = {frontpageNews[2].position}
             videoURL = {frontpageNews[2].videoURL}
-            cathegory = {frontpageNews[2].category}
+            category = {frontpageNews[2].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -83,7 +83,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[3]._id}
             position = {frontpageNews[3].position}
             videoURL = {frontpageNews[3].videoURL}
-            cathegory = {frontpageNews[3].category}
+            category = {frontpageNews[3].category}
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
@@ -97,7 +97,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
             id = {frontpageNews[4]._id}
             position = {frontpageNews[4].position}
             videoURL = {frontpageNews[4].videoURL}
-            cathegory = {frontpageNews[4].category}
+            category = {frontpageNews[4].category}
           />
         </SwiperSlide>
 

@@ -1,43 +1,43 @@
 import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getNewsByCategory } from './getNews.js';
-import {context} from './newsContext';
+import {context} from './newsContext.js';
 import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
-import GenericThumb from './GenericThumb';
-import './style/layout/cathegory.css';
-import './style/typography/cathegory.css';
+import GenericThumb from './GenericThumb.js';
+import './style/layout/category.css';
+import './style/typography/category.css';
 
-export default function Cathegory() {
+export default function Category() {
     const {alphabet} = useContext(context);
-    const [newsByCathegory, setNewsByCathegory] = useState('');
-    const { cathegory } = useParams();
+    const [newsByCategory, setNewsByCategory] = useState('');
+    const { category } = useParams();
 
-    const formatCathegory = (cathegory) => {
-        if (cathegory === 'politics') return 'Политика'
-        if (cathegory === 'business') return 'Економија'
-        if (cathegory === 'technology') return 'Технологија'
-        if (cathegory === 'entertainment') return 'Магазин'
-        if (cathegory === 'sports') return 'Спорт'
+    const formatCategory = (category) => {
+        if (category === 'politics') return 'Политика'
+        if (category === 'business') return 'Економија'
+        if (category === 'technology') return 'Технологија'
+        if (category === 'entertainment') return 'Магазин'
+        if (category === 'sports') return 'Спорт'
     }
 
     useEffect(async () => {
-        const n = await getNewsByCategory(cathegory);
+        const n = await getNewsByCategory(category);
         n.sort((a, b) => a.datePublished - b.datePublished);
-        setNewsByCathegory(n);
+        setNewsByCategory(n);
     }, [])
 
     return (
-        <div className="cathegory">
-            <div className = 'cathegory-type'>
-                {formatCathegory(cathegory)}
+        <div className="category">
+            <div className = 'category-type'>
+                {formatCategory(category)}
             </div>
-            {newsByCathegory && newsByCathegory.map((prev, i) => {
+            {newsByCategory && newsByCategory.map((prev, i) => {
                 return <>
                     <Card
                         position={prev.position} 
-                        classSuffix={'cathegory'}
+                        classSuffix={'category'}
                         title={prev.title}
                         paragraphs={prev.text}
                         videoURL={prev.videoURL}
@@ -46,7 +46,7 @@ export default function Cathegory() {
                         src={prev.imgURL}
                         id={prev._id}
                         key = {i}
-                        cathegory = {cathegory}
+                        category = {category}
                         filter = {prev.imgFilter}
                         
                     />

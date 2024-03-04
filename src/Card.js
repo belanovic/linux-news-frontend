@@ -9,7 +9,7 @@ import './style/layout/card.css';
 import './style/typography/card.css';  
 
 export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL,
-    datePublished, dateUpdated, src, filter, id, cathegory, frontpageNews, thumbShape }) {
+    datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
@@ -66,7 +66,7 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
                             className={`card-${classSuffix}-img card-img 
                             ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
                             shape = {thumbShape} 
-                            cathegory={cathegory} 
+                            category={category} 
                         />
                         :
                         <img className={`card-${classSuffix}-img card-img 

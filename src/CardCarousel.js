@@ -7,7 +7,7 @@ import './style/layout/carousel.css';
 import './style/typography/carousel.css';  
 
 export default function CardCarousel({ classSuffix, title, paragraphs,
-                                       date, src, filter, id, videoURL, cathegory}) {
+                                       date, src, filter, id, videoURL, category}) {
 
     const {alphabet} = useContext(context);
 
@@ -36,7 +36,7 @@ export default function CardCarousel({ classSuffix, title, paragraphs,
                     <GenericThumb 
                         className = {`card-${classSuffix}-img `}  
                         shape = 'wide'
-                        cathegory = {cathegory}
+                        category = {category}
                     />
                     :
                     <img 

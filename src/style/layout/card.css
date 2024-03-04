@@ -134,26 +134,26 @@
     display: none
 }
 
-.card-cathegory {
+.card-category {
     display: flex;
     flex-direction: column;
 }
-.card-cathegory-container-img {
+.card-category-container-img {
     width: 100%;
     height: 65vw;
     overflow: hidden;
 }
 
-.card-cathegory a {
+.card-category a {
     width: 100%;
     height: 100%;
 }
 
-.card-cathegory-img {
+.card-category-img {
     width: 100%;
     height: 100%;
 }
-.card-cathegory-text {
+.card-category-text {
     margin-left: 1em;
 }
 

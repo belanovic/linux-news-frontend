@@ -3,7 +3,7 @@ import Header from './Header.js';
 import Main from './Main.js';
 import Footer from './Footer.js';
 import Article from './Article.js';
-import Cathegory from './Cathegory.js';
+import Category from './Category.js';
 import {Switch, Route} from 'react-router-dom';
 import {context} from './newsContext';
 import NewsTicker1 from './NewsTicker1.js';
@@ -26,11 +26,11 @@ export default function App() {
 
                 <Route path = "/article/:id"><Article /></Route>  
 
-                <Route path = "/politics/:cathegory"><Cathegory key = {1} /></Route>
-                <Route path = "/technology/:cathegory"><Cathegory key = {2}/></Route>
-                <Route path = "/business/:cathegory"><Cathegory key = {3}/></Route>
-                <Route path = "/entertainment/:cathegory"><Cathegory key = {4}/></Route>
-                <Route path = "/sports/:cathegory"><Cathegory key = {5}/></Route>
+                <Route path = "/politics/:category"><Category key = {1} /></Route>
+                <Route path = "/technology/:category"><Category key = {2}/></Route>
+                <Route path = "/business/:category"><Category key = {3}/></Route>
+                <Route path = "/entertainment/:category"><Category key = {4}/></Route>
+                <Route path = "/sports/:category"><Category key = {5}/></Route>
                 
                 <Route path = "/form"><Form /></Route> 
 
