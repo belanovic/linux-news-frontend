@@ -44,11 +44,17 @@ export default function Article() {
     }, [filter])
 
     useEffect(async() => {
-        const oneArticle = await getArticle(id);
-        setArticle(oneArticle);
-        setURL(oneArticle.videoURL);
-        setFilter(oneArticle.imgFilter);
-        console.log(oneArticle);
+        const articleFound = await getArticle(id);
+
+        if(articleFound == null) {
+            window.location.href = '/'
+            return
+        }
+
+        setArticle(articleFound);
+        setURL(articleFound.videoURL);
+        setFilter(articleFound.imgFilter);
+        console.log(articleFound);
     }, [])
 
     return (

@@ -16,8 +16,9 @@ function Provider(props) {
     async function getAndSetFrontpageNews() {
         try {
             setShowCmsOverlay('block');
-            console.log('getAndSetFrontpageNews called')
             const n = await getFrontpageNews();
+            console.log('getAndSetFrontpageNews called')
+            console.log(n);
             n.sort((a, b) => a.position - b.position);        
             setFrontpageNews(n);
             setDateLoaded(true);
