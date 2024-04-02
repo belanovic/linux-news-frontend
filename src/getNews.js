@@ -10,24 +10,49 @@ export async function getFrontpageNews() {
         console.log(err)
     }
 }
+
 export async function getArticle(id) {
     try {
         const response = await fetch(`${HOST_BACKEND}/oneArticleFE/${id}`);
-        const oneArticle = await response.json();
-        return oneArticle
+        const responseBody = await response.json();
+        if(responseBody.error) {
+            alert(responseBody.error.message);
+            return null
+        }
+        if(responseBody.articleFound) {
+            return responseBody.articleFound;
+        }
     }
-    catch(err) {
-        console.log(err);
+    catch(error) {
+        alert(error.message);
+        return null;
     }
 }
 
 export async function getNewsByCategory(category) {
     try {
         const response = await fetch(`${HOST_BACKEND}/category/${category}`);
-        const newsByCategory = await response.json();
-        return newsByCategory
+        const responseBody = await response.json();
+        return responseBody
     }
-    catch (err) {
-        console.log(err)
+    catch (error) {
+        alert(error.message)
+        return null
     }
+
+    /* try {
+        const response = await fetch(`${HOST_BACKEND}/${pageNum.isLast == true? 'lastPage' : 'allArticles'}`, options);
+        checkStatus(response);
+        const responseBody = await response.json();
+        if(responseBody.error) {
+            alert(responseBody.error.message);
+            return null
+        }
+        return responseBody.articlesMsg
+    }
+    catch (error) {
+        alert(error.message)
+        return null
+    } */
+
 }

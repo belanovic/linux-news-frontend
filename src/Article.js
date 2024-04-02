@@ -7,7 +7,7 @@ import Line from './Line.js';
 import Tags from './Tags.js';
 import Parser from 'html-react-parser';
 import './style/layout/article.css';
-import './style/typography/article.css';
+import './style/typography/article.css';  
 
 export default function Article() { 
     const {alphabet, setShowCmsOverlay} = useContext(context);
@@ -18,7 +18,7 @@ export default function Article() {
     const [filter, setFilter] = useState('');
     const [filterStyle, setFilterStyle] = useState('none');
 
-    const formatCategory = (category) => {
+    const formatCathegory = (category) => {
         if (category === 'politics') return 'Politika'
         if (category === 'business') return 'Ekonomija'
         if (category === 'technology') return 'Tehnologija'
@@ -44,16 +44,22 @@ export default function Article() {
     }, [filter])
 
     useEffect(async() => {
-        const oneArticle = await getArticle(id);
-        setArticle(oneArticle);
-        setURL(oneArticle.videoURL);
-        setFilter(oneArticle.imgFilter);
-        console.log(oneArticle);
+        const articleFound = await getArticle(id);
+
+        if(articleFound == null) {
+            window.location.href = '/'
+            return
+        }
+
+        setArticle(articleFound);
+        setURL(articleFound.videoURL);
+        setFilter(articleFound.imgFilter);
+        console.log(articleFound);
     }, [])
 
     return (
         <article className="article">
-            <div className = "article-category"> {formatCategory(article.category)}</div>
+            <div className = "article-category"> {formatCathegory(article.category)}</div>
             <h2 className = "article-title">{article.title}</h2>
             <Line />
             <div className = "article-metadata">
