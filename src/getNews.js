@@ -28,7 +28,7 @@ export async function getArticle(id) {
         return null;
     }
 }
-
+//////
 export async function getNewsByCategory(category) {
     try {
         const response = await fetch(`${HOST_BACKEND}/category/${category}`);
