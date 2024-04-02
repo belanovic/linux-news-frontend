@@ -15,10 +15,11 @@ function Provider(props) {
     
     async function getAndSetFrontpageNews() {
         try {
-            setShowCmsOverlay('block');
-            const n = await getFrontpageNews();
+            setShowCmsOverlay('flex');
             console.log('getAndSetFrontpageNews called')
-            console.log(n);
+            const n = await getFrontpageNews();
+            
+    
             n.sort((a, b) => a.position - b.position);        
             setFrontpageNews(n);
             setDateLoaded(true);
