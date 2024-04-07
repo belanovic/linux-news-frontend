@@ -10,7 +10,7 @@ import './style/layout/article.css';
 import './style/typography/article.css';  
 
 export default function Article() { 
-    const {alphabet, setShowCmsOverlay} = useContext(context);
+    const {alphabet, setShowSiteOverlay} = useContext(context);
     const [article, setArticle] = useState('');
     const {id} = useParams();
     const [URL, setURL] = useState('');
@@ -44,8 +44,9 @@ export default function Article() {
     }, [filter])
 
     useEffect(async() => {
+        setShowSiteOverlay('flex');
         const articleFound = await getArticle(id);
-
+        setShowSiteOverlay('none');
         if(articleFound == null) {
             window.location.href = '/'
             return
@@ -54,7 +55,6 @@ export default function Article() {
         setArticle(articleFound);
         setURL(articleFound.videoURL);
         setFilter(articleFound.imgFilter);
-        console.log(articleFound);
     }, [])
 
     return (

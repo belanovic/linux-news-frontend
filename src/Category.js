@@ -6,13 +6,18 @@ import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
 import GenericThumb from './GenericThumb.js';
+import Pagination from './Pagination.js';
 import './style/layout/category.css';
 import './style/typography/category.css';
 
 export default function Category() {
-    const {alphabet} = useContext(context);
-    const [newsByCategory, setNewsByCategory] = useState('');
+
+    const {alphabet, setShowSiteOverlay } = useContext(context);
+    const [articlesByCategory, setArticlesByCategory] = useState('');
+    
     const { category } = useParams();
+    const [pageNum, setPageNum] = useState({number: 1, isLast: false, numOfPages: ''});
+   
 
     const formatCategory = (category) => {
         if (category === 'politics') return 'Политика'
@@ -22,20 +27,15 @@ export default function Category() {
         if (category === 'sports') return 'Спорт'
     }
 
-    useEffect(async () => {
-        const n = await getNewsByCategory(category);
-        n.sort((a, b) => a.datePublished - b.datePublished);
-        setNewsByCategory(n);
-    }, [])
-
     return (
         <div className="category">
             <div className = 'category-type'>
                 {formatCategory(category)}
             </div>
-            {newsByCategory && newsByCategory.map((prev, i) => {
+            {articlesByCategory && articlesByCategory.map((prev, i) => {
                 return <>
                     <Card
+                        key = {i}
                         position={prev.position} 
                         classSuffix={'category'}
                         title={prev.title}
@@ -45,7 +45,6 @@ export default function Category() {
                         dateUpdated = {dateFormat(prev.dateUpdated,'clock')}
                         src={prev.imgURL}
                         id={prev._id}
-                        key = {i}
                         category = {category}
                         filter = {prev.imgFilter}
                         
@@ -53,6 +52,13 @@ export default function Category() {
                     <Line key = {i+1} />
                 </>
             })}
+            <Pagination 
+                category = {category} 
+                articlesByCategory = {articlesByCategory}
+                setArticlesByCategory = {setArticlesByCategory}
+                pageNum = {pageNum}
+                setPageNum = {setPageNum}
+            />
         </div>
     )
 }

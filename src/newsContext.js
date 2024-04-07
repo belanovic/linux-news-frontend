@@ -3,35 +3,30 @@ import { getFrontpageNews } from './getNews.js';
 
 const context = React.createContext();
 
-
 function Provider(props) {
 
     const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
     const [dateLoaded, setDateLoaded] = useState(false);
-    const [showCmsOverlay, setShowCmsOverlay] = useState('none');
+    const [showSiteOverlay, setShowSiteOverlay] = useState('none');
     const [alphabet, setAlphabet] = useState('cirilica');
     const [navVisible, setNavVisible] = useState(false);
     const [formVisible, setFormVisible] = useState(false);
     
     async function getAndSetFrontpageNews() {
         try {
-            setShowCmsOverlay('block');
+            setShowSiteOverlay('flex');
             const n = await getFrontpageNews();
-            console.log('getAndSetFrontpageNews called')
-            console.log(n);
-            n.sort((a, b) => a.position - b.position);        
+            setShowSiteOverlay('none');
+            n.sort((a, b) => a.position - b.position);
             setFrontpageNews(n);
             setDateLoaded(true);
-            setShowCmsOverlay('none');
-        } catch (err) {
+        } catch (error) {
             setDateLoaded(false)
-            console.log(err)
+            alert(error.message);
         }
     }
 
-
     useEffect(getAndSetFrontpageNews, [])
-    useEffect(() => console.log(navVisible), [navVisible])
 
     return (
         <context.Provider value={
@@ -41,14 +36,15 @@ function Provider(props) {
                 getAndSetFrontpageNews,
                 dateLoaded,
                 setDateLoaded,
-                showCmsOverlay,
-                setShowCmsOverlay, 
+                showSiteOverlay,
+                setShowSiteOverlay, 
                 alphabet,
                 setAlphabet,
                 navVisible, 
                 setNavVisible,
                 formVisible, 
                 setFormVisible
+
             }
         }>{props.children}</context.Provider>
     )

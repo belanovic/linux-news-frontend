@@ -8,17 +8,17 @@ import {Switch, Route} from 'react-router-dom';
 import {context} from './newsContext';
 import NewsTicker1 from './NewsTicker1.js';
 import Form from './Form';
-import './style/index.css'; 
+
 
 
 //////  ff 
 
 export default function App() {
     const cmsOverlay = useRef(null);  
-    const {showCmsOverlay, setShowCmsOverlay} = useContext(context);
+    const {showSiteOverlay, setShowSiteOverlay} = useContext(context);
     return (   
-        <div className = "wrapper">    
-            <div className = "cmsOverlay" ref = {cmsOverlay} style = {{display: showCmsOverlay}}></div>
+        <div className = "wrapper"> 
+            <div className = "siteOverlay" ref = {cmsOverlay} style = {{display: showSiteOverlay}}></div>
             <Header />
             <Switch> 
 

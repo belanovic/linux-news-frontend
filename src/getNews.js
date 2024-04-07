@@ -3,11 +3,19 @@ import HOST_BACKEND from './hostBackend.js';
 export async function getFrontpageNews() {
     try {
         const response = await fetch(`${HOST_BACKEND}/frontpageArticlesFE`);
-        const newsFrontpage = await response.json();
-        return newsFrontpage
+        const responseBody = await response.json();
+
+        if(responseBody.error) {
+            alert(responseBody.error.message);
+            return null
+        }
+        if(responseBody.frontpageArticles) {
+            return responseBody.frontpageArticles;
+        }
     }
-    catch (err) {
-        console.log(err)
+    catch(error) {
+        alert(error.message);
+        return null;
     }
 }
 
@@ -28,12 +36,31 @@ export async function getArticle(id) {
         return null;
     }
 }
-//////
-export async function getNewsByCategory(category) {
+
+export async function getNewsByCategory(category, pageNum) {
+
+    const options = { 
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            category: category,
+            pageNum: pageNum
+        })
+    }
+
     try {
-        const response = await fetch(`${HOST_BACKEND}/category/${category}`);
+        const response = await fetch(`${HOST_BACKEND}/${pageNum.isLast == true? 'lastPageFE' : 'category'}`, options);
         const responseBody = await response.json();
-        return responseBody
+        console.log(responseBody)
+        if(responseBody.error) {
+            alert(responseBody.error.message)
+            return null
+        }
+        if(responseBody.newsMsg) {
+            return responseBody.newsMsg
+        }
     }
     catch (error) {
         alert(error.message)
