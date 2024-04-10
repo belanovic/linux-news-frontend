@@ -20,10 +20,6 @@ a {
 /* Wrapper */
 
 
-.header {
-    background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
-    caret-color: transparent;
-}
 .main {
     background: white;
 }

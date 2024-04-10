@@ -1,3 +1,10 @@
+
+.header {
+    background: linear-gradient(90deg, rgb(251, 29, 0), rgb(253, 106, 48));
+    background: rgb(54, 54, 54);
+    caret-color: transparent;
+}
+
 .titleBox a {
     text-decoration: none;
 }

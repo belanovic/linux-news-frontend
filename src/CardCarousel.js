@@ -6,6 +6,9 @@ import GenericThumb from './GenericThumb'
 import './style/layout/carousel.css';
 import './style/typography/carousel.css';  
 
+import './style/layout/card-slide.css';
+import './style/typography/card-slide.css';
+
 export default function CardCarousel({ classSuffix, title, paragraphs,
                                        date, src, filter, id, videoURL, category}) {
 

@@ -1,6 +1,8 @@
 import React, {useState, useEffect, useContext} from 'react';
 import NewsTicker from './NewsTicker.js';
 import NewsTicker1 from './NewsTicker1.js';
+import './style/layout/central.css';
+import './style/typography/central.css';
 import Carousel from './Carousel.js';
 import Card from './Card.js';
 import PartTitle from './PartTitle.js';
@@ -30,7 +32,29 @@ export default function Main() {
                 <NewsTicker1 frontpageNews = {frontpageNews} />
                 {/* <Covid /> */}
                 {/* <NewsTicker /> */}
-                <Carousel frontpageNews = {frontpageNews} />
+                <section className='central'>
+                    <Carousel frontpageNews = {frontpageNews} />
+                    <div className='latest'>
+                        dsfsdfsdfsdf
+                    </div>
+                </section>
+                <Line />
+                <Card 
+                    classSuffix = 'general'
+                    title = {frontpageNews[4].title}
+                    subtitle = {frontpageNews[4].subtitle}
+                    paragraphs = {frontpageNews[4].text}
+                    datePublished = {dateFormat(frontpageNews[4].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
+                    dateUpdated = {dateFormat(frontpageNews[4].dateUpdated, 'clock')}
+                    src = {frontpageNews[4].imgURL2}
+                    filter = {frontpageNews[4].imgFilter2}
+                    frontpageNews = {frontpageNews}
+                    id = {frontpageNews[4]._id}
+                    position = {frontpageNews[4].position}
+                    videoURL = {frontpageNews[4].videoURL}
+                    thumbShape = 'square'
+                    category = {frontpageNews[4].category}
+                />
                 <Line />
                 <Card 
                     classSuffix = 'general'
@@ -48,6 +72,7 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[5].category}
                 />
+                
                 <Line />
                 <Card 
                     classSuffix = 'general'

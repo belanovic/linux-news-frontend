@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay } from 'swiper';
-import 'swiper/swiper-bundle.css';
+import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay, EffectCube} from 'swiper';
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
+import 'swiper/swiper-bundle.css';
+
+
 import './style/layout/carousel.css';
 import './style/typography/carousel.css';
 
@@ -12,24 +14,23 @@ SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
 export default function BootstrapCarousel({ frontpageNews }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-  useEffect(() => console.log(frontpageNews), [])
-
   return (
     <>
       <Swiper
         id="main"
         autoplay={{
-          delay: '3000'
+          delay: 2000,
+          disableOnInteraction: false,
         }}
+        speed={1500}
         pagination= {{clickable: true}}
         loop={true}
         tag='section'
-        navigation 
+        navigation
         grabCursor={true}
         wrapperTag='ul' 
         thumbs={{ swiper: thumbsSwiper }}
       >
-
         <SwiperSlide tag='li'>
           <CardCarousel
             classSuffix='slide'
@@ -86,21 +87,6 @@ export default function BootstrapCarousel({ frontpageNews }) {
             category = {frontpageNews[3].category}
           />
         </SwiperSlide>
-        <SwiperSlide tag='li'>
-          <CardCarousel
-            classSuffix='slide'
-            title={frontpageNews[4].title}
-            paragraphs={frontpageNews[4].text}
-            // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-            src={frontpageNews[4].imgURL}
-            filter = {frontpageNews[4].imgFilter}
-            id = {frontpageNews[4]._id}
-            position = {frontpageNews[4].position}
-            videoURL = {frontpageNews[4].videoURL}
-            category = {frontpageNews[4].category}
-          />
-        </SwiperSlide>
-
       </Swiper>
     </>
   )
