@@ -1,0 +1,25 @@
+
+.card-sport {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+}
+.card-sport-container-img {
+    width: 50%;
+    height: 30vw;
+    overflow: hidden;
+}
+.card-sport a {
+    width: 100%;
+    height: 100%;
+}
+.card-sport-img {
+    width: 100%;
+    height: 100%;
+}
+.card-sport-text {
+    width: 48%;
+}
+.card-sport-text p {
+    display: none
+}

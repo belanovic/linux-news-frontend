@@ -7,9 +7,19 @@ import shortenSentence from './shortenSentence.js';
 import GenericThumb from './GenericThumb';
 import './style/layout/card.css';
 import './style/typography/card.css';  
+import './style/layout/card-general.css';
+import './style/typography/card-general.css';  
+import './style/layout/card-magazin.css';
+import './style/typography/card-magazin.css';  
+import './style/layout/card-sport.css';
+import './style/typography/card-sport.css';  
+import './style/layout/card-category.css';
+import './style/typography/card-category.css'; 
+import './style/layout/card-latest.css';
+import './style/typography/card-latest.css'; 
 
 export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL,
-    datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape }) {
+    datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
     const cardElement = useRef(null);
@@ -81,18 +91,22 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
             <div className={`card-${classSuffix}-text`}>
                 <div className={`card-${classSuffix}-container-title`}>
                     <Link to={`/article/${id}`}>
-                        <h3 className={`card-${classSuffix}-title`}>
+                        <div className={`card-${classSuffix}-title`}>
                             {shortenSentence(title, 70)}
-                        </h3>
+                        </div>
                     </Link>
                 </div>
-                <div className={`card-${classSuffix}-date`}>
-                    <span className="date datePublished" >
-                        {datePublished ? datePublished + ' > ' : ''}
-                    </span>
-                    <span className="date dateUpdated">
-                        {dateUpdated ? dateUpdated : ''}
-                    </span>
+                <div className={`card-${classSuffix}-info`}>
+                    <div className='card-category'>{category} / </div>
+                    <div className={`card-date`}>
+                        <span className="date datePublished" >
+                            {datePublished ? datePublished: ''}
+                        </span>
+                        <span>{hasDateArrow? ' > ' : ''}</span>
+                        <span className="date dateUpdated">
+                            {dateUpdated ? dateUpdated : ''}
+                        </span>
+                    </div>
                 </div>
                 <div className={`card-${classSuffix}-container-paragraph`}>
                     <Link to={`/article/${id}`}>

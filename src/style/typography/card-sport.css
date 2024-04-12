@@ -1,0 +1,20 @@
+
+
+.card-sport {
+    margin: 0 auto 1em auto;
+}
+
+.card-sport-text {
+    overflow: hidden;
+    width: 48%;
+}
+
+.card-sport-title {
+    margin-top: 0;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.card-sport-paragraphs {
+    margin-top: 0;
+    font-size: 1rem;
+}

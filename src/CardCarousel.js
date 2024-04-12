@@ -9,7 +9,7 @@ import './style/typography/carousel.css';
 import './style/layout/card-slide.css';
 import './style/typography/card-slide.css';
 
-export default function CardCarousel({ classSuffix, title, paragraphs,
+export default function CardCarousel({ title, paragraphs,
                                        date, src, filter, id, videoURL, category}) {
 
     const {alphabet} = useContext(context);
@@ -32,27 +32,27 @@ export default function CardCarousel({ classSuffix, title, paragraphs,
 
     return (
         <Link to = {`/article/${id}`}>
-            <div className={`card-${classSuffix}`}>
+            <div className={`card-slide`}>
                 {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
-                <div className = {`card-${classSuffix}-container-img`}>
+                <div className = {`card-slide-container-img`}>
                 {src === 'generic'?
                     <GenericThumb 
-                        className = {`card-${classSuffix}-img `}  
+                        className = {`card-slide-img `}  
                         shape = 'wide'
                         category = {category}
                     />
                     :
                     <img 
-                        className={`card-${classSuffix}-img `} 
+                        className={`card-slide-img `} 
                         src={src}
                         style = {{filter: filterStyle}}
                     >
                     </img>
                 }
                 </div>
-                <div className={`card-${classSuffix}-text`}>
-                    <h3 className={`card-${classSuffix}-title`}>{title}</h3>
-                    <p className={`card-${classSuffix}-paragraphs`}>{paragraphs}</p>
+                <div className={`card-slide-text`}>
+                    <h3 className={`card-slide-title`}>{title}</h3>
+                    <p className={`card-slide-paragraphs`}>{paragraphs}</p>
                 </div>
             </div>
         </Link>

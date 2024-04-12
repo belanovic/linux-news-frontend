@@ -47,6 +47,7 @@ export default function Category() {
                         id={prev._id}
                         category = {category}
                         filter = {prev.imgFilter}
+                        hasDateArrow={true}
                         
                     />
                     <Line key = {i+1} />

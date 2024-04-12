@@ -1,10 +1,12 @@
 import React, {useState, useEffect, useContext} from 'react';
 import NewsTicker from './NewsTicker.js';
 import NewsTicker1 from './NewsTicker1.js';
-import './style/layout/central.css';
-import './style/typography/central.css';
+import './style/layout/main.css';
+import './style/typography/main.css';
 import Carousel from './Carousel.js';
+import Latest from './Latest.js';
 import Card from './Card.js';
+
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
@@ -34,9 +36,7 @@ export default function Main() {
                 {/* <NewsTicker /> */}
                 <section className='central'>
                     <Carousel frontpageNews = {frontpageNews} />
-                    <div className='latest'>
-                        dsfsdfsdfsdf
-                    </div>
+                   <Latest />
                 </section>
                 <Line />
                 <Card 
@@ -54,6 +54,7 @@ export default function Main() {
                     videoURL = {frontpageNews[4].videoURL}
                     thumbShape = 'square'
                     category = {frontpageNews[4].category}
+                    hasDateArrow={true}
                 />
                 <Line />
                 <Card 
@@ -71,6 +72,7 @@ export default function Main() {
                     videoURL = {frontpageNews[5].videoURL}
                     thumbShape = 'square'
                     category = {frontpageNews[5].category}
+                    hasDateArrow={true}
                 />
                 
                 <Line />
@@ -89,6 +91,7 @@ export default function Main() {
                     videoURL = {frontpageNews[6].videoURL}
                     thumbShape = 'square'
                     category = {frontpageNews[6].category}
+                    hasDateArrow={true}
                 />
                 <Line />
                 <Card 
@@ -106,6 +109,7 @@ export default function Main() {
                     videoURL = {frontpageNews[7].videoURL}
                     thumbShape = 'square'
                     category = {frontpageNews[7].category}
+                    hasDateArrow={true}
                 />
                 <Line />
                 <Card 
@@ -123,6 +127,7 @@ export default function Main() {
                     videoURL = {frontpageNews[8].videoURL}
                     thumbShape = 'square'
                     category = {frontpageNews[8].category}
+                    hasDateArrow={true}
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
@@ -140,6 +145,7 @@ export default function Main() {
                     videoURL = {frontpageNews[9].videoURL}
                     thumbShape = 'wide'
                     category = {frontpageNews[9].category}
+                    hasDateArrow={true}
                 />
                 <Line />
                  <Card 

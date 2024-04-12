@@ -4,8 +4,6 @@ import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay, EffectCube} from 
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
 import 'swiper/swiper-bundle.css';
-
-
 import './style/layout/carousel.css';
 import './style/typography/carousel.css';
 
@@ -15,7 +13,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
-    <>
+    <div className='carousel'>
       <Swiper
         id="main"
         autoplay={{
@@ -33,7 +31,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
       >
         <SwiperSlide tag='li'>
           <CardCarousel
-            classSuffix='slide'
+            
             title={frontpageNews[0].title}
             paragraphs={frontpageNews[0].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
@@ -43,11 +41,12 @@ export default function BootstrapCarousel({ frontpageNews }) {
             position = {frontpageNews[0].position}
             videoURL = {frontpageNews[0].videoURL}
             category = {frontpageNews[0].category}
+        
           />
         </SwiperSlide>
         <SwiperSlide tag='li'>
           <CardCarousel
-            classSuffix='slide'
+            
             title={frontpageNews[1].title}
             paragraphs={frontpageNews[1].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
@@ -61,7 +60,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
         </SwiperSlide>
         <SwiperSlide tag='li'>
           <CardCarousel
-            classSuffix='slide'
+            
             title={frontpageNews[2].title}
             paragraphs={frontpageNews[2].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
@@ -75,7 +74,7 @@ export default function BootstrapCarousel({ frontpageNews }) {
         </SwiperSlide>
         <SwiperSlide tag='li'>
           <CardCarousel
-            classSuffix='slide'
+            
             title={frontpageNews[3].title}
             paragraphs ={frontpageNews[3].text}
             // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
@@ -88,6 +87,6 @@ export default function BootstrapCarousel({ frontpageNews }) {
           />
         </SwiperSlide>
       </Swiper>
-    </>
+    </div>
   )
 }

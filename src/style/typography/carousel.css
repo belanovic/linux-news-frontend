@@ -1,15 +1,5 @@
-#main.swiper-container {
-    margin-bottom: 1em;
-}
 
-.swiper-wrapper {
-    padding-inline-start: 0;
-    margin: 0;
-}
-
-.swiper-slide {
-    padding: 0px;
-    margin: 0;
+.carousel {
 }
 
 #main .swiper-button-prev, #main .swiper-button-next {
@@ -23,22 +13,10 @@
 #main .swiper-button-prev:active, #main .swiper-button-next:active {
     opacity: 1;
 }
-#thumbs .swiper-wrapper {
-    margin-bottom: 1em;
-}
-
-
 
 .swiper-pagination {
     background-color: white;
-    bottom: 0 !important;
-    height: 20px !important;
 }
 .swiper-pagination:hover {
     cursor:initial
-}
-.swiper-pagination-bullet {
-    width: 1em !important;
-    height: 1em !important;
-    margin: 7px 10px 0 10px !important;
 }

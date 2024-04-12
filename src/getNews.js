@@ -67,19 +67,35 @@ export async function getNewsByCategory(category, pageNum) {
         return null
     }
 
-    /* try {
-        const response = await fetch(`${HOST_BACKEND}/${pageNum.isLast == true? 'lastPage' : 'allArticles'}`, options);
-        checkStatus(response);
+}
+
+export async function getLatestNews(count) {
+
+    const options = {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            count: count
+        })
+
+    }
+
+    try {
+        const response = await fetch(`${HOST_BACKEND}/getLatestNews`, options);
         const responseBody = await response.json();
+
         if(responseBody.error) {
             alert(responseBody.error.message);
             return null
         }
-        return responseBody.articlesMsg
+        if(responseBody.latestNews) {
+            return responseBody.latestNews;
+        }
     }
-    catch (error) {
-        alert(error.message)
-        return null
-    } */
-
+    catch(error) {
+        alert(error.message);
+        return null;
+    }
 }
