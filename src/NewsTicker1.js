@@ -44,8 +44,8 @@ export default function NewsTicker1({frontpageNews}) {
                 frontpageNews[4].title.length + 
                 frontpageNews[5].title.length +
                 frontpageNews[0].title.length
-                console.log(length)
-                return length/5
+  
+                return length/10
             } else {
                 return 0
             }

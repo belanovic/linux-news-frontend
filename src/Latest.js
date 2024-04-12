@@ -28,6 +28,10 @@ export default function Latest() {
                     className = {`popular ${activeTab == 'popular'? 'active' : ''}`}
                     onClick = {()=> setActiveTab('popular')}>Popular
                 </div>
+                <div 
+                    className = {`trending ${activeTab == 'trending'? 'active' : ''}`}
+                    onClick = {()=> setActiveTab('trending')}>Trending
+                </div>
             </div>
             <div className='latest-news'>
             {latestNews && latestNews.map((article, i) => {
