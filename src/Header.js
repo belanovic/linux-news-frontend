@@ -7,7 +7,7 @@ import './style/typography/header.css';
 
 export default function Header() {
     const {getAndSetFrontpageNews, alphabet, navVisible, 
-        setNavVisible, setFormVisible} = useContext(context);
+        setNavVisible, setFormVisible, frontpageNews} = useContext(context);
 
     const handleClickMenu = () => {
         setNavVisible(prev => !prev);
@@ -40,6 +40,7 @@ export default function Header() {
                         </div> */}
                     </div>
                 </div>
+                
                 <Navigation navVisible = {navVisible} setNavVisible = {setNavVisible} />
             </div>
         </header>

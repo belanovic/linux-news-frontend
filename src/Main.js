@@ -1,12 +1,11 @@
-import React, {useState, useEffect, useContext} from 'react';
-import NewsTicker from './NewsTicker.js';
+import React, {useState, useEffect, useContext, useRef} from 'react';
 import NewsTicker1 from './NewsTicker1.js';
 import './style/layout/main.css';
 import './style/typography/main.css';
+import './style/play.css';
 import Carousel from './Carousel.js';
 import Latest from './Latest.js';
 import Card from './Card.js';
-
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
@@ -19,6 +18,7 @@ import Form from './Form.js';
 export default function Main() {
 
     const {frontpageNews } = useContext(context);
+    const mainOverlay = useRef(null);
 
     /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]); */
 
@@ -28,12 +28,11 @@ export default function Main() {
         setFrontpageNews(n);
     }, []) */
 
+
     return (
         <main className="main">
             <div className="container main-container">
                 <NewsTicker1 frontpageNews = {frontpageNews} />
-                {/* <Covid /> */}
-                {/* <NewsTicker /> */}
                 <section className='central'>
                     <Carousel frontpageNews = {frontpageNews} />
                    <Latest />
@@ -55,8 +54,8 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[4].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
-                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[5].title}
@@ -73,9 +72,8 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[5].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
-                
-                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[6].title}
@@ -92,8 +90,8 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[6].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
-                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[7].title}
@@ -110,8 +108,8 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[7].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
-                <Line />
                 <Card 
                     classSuffix = 'general'
                     title = {frontpageNews[8].title}
@@ -128,6 +126,7 @@ export default function Main() {
                     thumbShape = 'square'
                     category = {frontpageNews[8].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
                 <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
@@ -146,8 +145,8 @@ export default function Main() {
                     thumbShape = 'wide'
                     category = {frontpageNews[9].category}
                     hasDateArrow={true}
+                    line = 'bottom'
                 />
-                <Line />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
@@ -155,9 +154,9 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
+                    line = 'bottom'
          
                 />
-                <Line />
                  <Card 
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
@@ -165,6 +164,7 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2LE1wdd'
+                    line = 'bottom'
                 
                 />
                 <PartTitle title = "Sport" classSuffix = "sport" />
@@ -175,9 +175,9 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/2Y1Vyp1'
+                    line = 'bottom'
 
                 />
-                <Line />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
@@ -185,9 +185,9 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3qH7Dfn'
+                    line = 'bottom'
               
                 />
-                <Line />
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
@@ -195,9 +195,10 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/39XvfFN'
+                    line = 'bottom'
           
                 />
-                <Line />
+
                 <Card 
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
@@ -205,7 +206,6 @@ export default function Main() {
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3sI8COt'
-                    
                 />
             </div>
         </main>

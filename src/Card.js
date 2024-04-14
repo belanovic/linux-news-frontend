@@ -5,6 +5,7 @@ import isInViewport from './isInViewport';
 import debounce from './debounce.js';
 import shortenSentence from './shortenSentence.js';
 import GenericThumb from './GenericThumb';
+import Line from './Line.js';
 import './style/layout/card.css';
 import './style/typography/card.css';  
 import './style/layout/card-general.css';
@@ -18,7 +19,7 @@ import './style/typography/card-category.css';
 import './style/layout/card-latest.css';
 import './style/typography/card-latest.css'; 
 
-export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL,
+export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL, line,
     datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
@@ -67,6 +68,8 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
     }, [])
 
     return (
+        <>
+        {line == 'top'? <Line /> : ''}
         <div className={`card card-${classSuffix}`}>
             <div className={`card-${classSuffix}-container-img`}>
                 <Link to={`/article/${id}`}>
@@ -119,5 +122,7 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
                 </div>
             </div>
         </div>
+        {line == 'bottom'? <Line /> : ''}
+        </>
     )
 }

@@ -1,18 +1,31 @@
 
-.card-slide {
-    padding-left: 0;
-}
-
 .card-slide-text {
     color: white;
-    background: linear-gradient(180deg, rgba(33,33,92,0) 0%, rgba(0,0,0,1) 100%);
-    padding: 0.5em;
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+
 }
 
 .card-slide-title {
-    font-size: 1.5rem;
-    font-weight: bold;
-    line-height: 1.2;
+    font-size: 3rem;
+    line-height: 1.25;
     letter-spacing: 1px;
-    margin-bottom: 0;
+}
+
+.card-slide-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
+.card-slide-info .card-category {
+    /* background-color: rgba(57, 57, 57, 0.1); */
+    font-size: 1.5rem;
+    font-family: sans-serif, Arial, Helvetica;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.card-slide-info .card-date {
+    /* background-color: rgba(57, 57, 57, 0.1); */
+    font-size: 1.5rem;
+    text-transform: capitalize;
 }

@@ -37,7 +37,7 @@ function Provider(props) {
                 dateLoaded,
                 setDateLoaded,
                 showSiteOverlay,
-                setShowSiteOverlay, 
+                setShowSiteOverlay,
                 alphabet,
                 setAlphabet,
                 navVisible, 

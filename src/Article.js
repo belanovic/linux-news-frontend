@@ -10,7 +10,7 @@ import './style/layout/article.css';
 import './style/typography/article.css';  
 
 export default function Article() { 
-    const {alphabet, setShowSiteOverlay} = useContext(context);
+    const {alphabet, setShowSiteOverlay, frontpageNews} = useContext(context);
     const [article, setArticle] = useState('');
     const {id} = useParams();
     const [URL, setURL] = useState('');

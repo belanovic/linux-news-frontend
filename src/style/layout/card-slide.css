@@ -1,6 +1,8 @@
 .card-slide {
     position: relative;
+    padding-left: 0;
 }
+
 .card-slide-container-img {
     overflow: hidden;
 }
@@ -25,12 +27,36 @@
     transform: scale(1.1, 1.1);
 }
 
+.card-slide-info {
+    margin-bottom: 1em;
+}
+
 .card-slide-text {
     position: absolute;
     bottom: 20px;
     width: 100%;
+    padding: 4em 4em 1em 4em;
 }
-.card-slide-paragraphs {
-    display: none;
+.card-slide-title {
+    margin-bottom: 0.25em;
+    margin-top: 0em;
+}
+.card-slide-subtitle {
+    margin-top: 0em;
 }
 
+
+.card-slide-info .card-category {
+    display: inline-block;
+}
+.card-slide-info .card-category {
+    padding-right: 0.5em;
+}
+
+.card-slide-info .card-date {
+    display: inline-block;
+}
+
+.card-slide-info  .fa-arrow-right {
+    margin: 0 5px 0 7px;
+}

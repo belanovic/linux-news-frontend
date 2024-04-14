@@ -2,14 +2,14 @@ import React, {useState, useEffect, useContext}  from 'react';
 import { Link } from 'react-router-dom';
 import shortenSentence from './shortenSentence.js';
 import {context} from './newsContext';
-import GenericThumb from './GenericThumb'
+import GenericThumb from './GenericThumb';
 import './style/layout/carousel.css';
 import './style/typography/carousel.css';  
 
 import './style/layout/card-slide.css';
 import './style/typography/card-slide.css';
 
-export default function CardCarousel({ title, paragraphs,
+export default function CardCarousel({ title, subtitle, datePublished, dateUpdated,
                                        date, src, filter, id, videoURL, category}) {
 
     const {alphabet} = useContext(context);
@@ -50,10 +50,24 @@ export default function CardCarousel({ title, paragraphs,
                     </img>
                 }
                 </div>
+
                 <div className={`card-slide-text`}>
-                    <h3 className={`card-slide-title`}>{title}</h3>
-                    <p className={`card-slide-paragraphs`}>{paragraphs}</p>
+                    <div className={`card-slide-info`}>
+                        <div className='card-category'>{category} / </div>
+                        <div className={`card-date`}>
+                            <span className="date datePublished" >
+                                {datePublished}
+                            </span>
+                            <i className="fa-solid fa-arrow-right"></i>
+                            <span className="date dateUpdated">
+                                {dateUpdated}
+                            </span>
+                        </div>
+                    </div>
+                    <h3 className={`card-slide-title`}>{shortenSentence(title, 500)}</h3>
+                    <p className={`card-slide-subtitle`}>{shortenSentence(subtitle, 180)}</p>
                 </div>
+                
             </div>
         </Link>
     )

@@ -9,10 +9,6 @@ import {context} from './newsContext';
 import NewsTicker1 from './NewsTicker1.js';
 import Form from './Form';
 
-
-
-//////  ff 
-
 export default function App() {
     const cmsOverlay = useRef(null);  
     const {showSiteOverlay, setShowSiteOverlay} = useContext(context);

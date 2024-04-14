@@ -1,0 +1,27 @@
+.play {
+    position: absolute;
+    top: 0;
+    margin: 1em;
+    background: rgb(0, 0, 0, 0.2);
+    background: red;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px 0px grey;
+    z-index: 1;
+}
+
+.fa-play-circle {
+    color: white;
+    font-size: 4rem;
+}
+
+.card-latest .fa-play-circle {
+    font-size: 1.3rem;
+}
+
+.card-general .play, .card-sport .play {
+    margin: 0.3em;
+    padding: 0.2em;
+}
+.card-general .fa-play-circle, .card-sport .fa-play-circle {
+    font-size: 1.5rem;
+}

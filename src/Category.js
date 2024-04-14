@@ -48,9 +48,9 @@ export default function Category() {
                         category = {category}
                         filter = {prev.imgFilter}
                         hasDateArrow={true}
-                        
+                        line = 'bottom'
                     />
-                    <Line key = {i+1} />
+                    
                 </>
             })}
             <Pagination 

@@ -15,9 +15,6 @@
 .card-latest-container-title {
     order: 1;
 }
-.card-latest-title  {
-    font-size: 1.5rem;  
-}
 
 .card-latest-text {
     flex: 0 0 67%;
@@ -25,26 +22,10 @@
     flex-direction: column;
 }
 
-.card-latest-text a {
-
-    transition: color 0.5s;
-}
-
-.card-latest-text a:hover {
-    text-decoration: none;
-    color: rgb(61, 170, 237);
-}
-
 .card-latest-info {
     display: flex;
     justify-content: space-between;
-    font-size: 1.25rem;
     margin-bottom: 0.5em;
-}
-.card-latest-info .card-category {
-    text-transform: uppercase;
-    color: rgb(61, 170, 237);
-    letter-spacing: 1px;
 }
 
 .card-latest-container-paragraph {
@@ -53,8 +34,4 @@
 
 .card-latest .play {
     margin: 0.2em;
-}
-
-.card-latest .fa-play-circle {
-    font-size: 1.3rem;
 }
