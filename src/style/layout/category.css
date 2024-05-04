@@ -1,5 +1,22 @@
-.category-type {
-    display: block;
-    margin-top: 1em;
-    margin-bottom: 1em;
+.category {
+    display: flex;
+    justify-content: space-between;
+}
+.category-articles {
+    flex: 0 0 60%;
+}
+.category-sidebar {
+    flex: 0 0 35%;
+}
+.category-sidebar iframe {
+    width: 100%;
+    background-color: black;
+}
+
+.category .news-feed-title {
+    padding: 0.25em;
+}
+
+.category-sidebar .latest {
+    margin-bottom: 5em;
 }

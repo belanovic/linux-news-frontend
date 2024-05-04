@@ -1,20 +1,35 @@
-.article-category {
-    padding: 0.2em 0.5em 0.2em 0.5em;
-    font-size: 1.5rem;
+.article .news-feed {
+}
+
+.article .news-feed-title {
+    font-size: 2rem;
+    text-align: center;
+    background-color: black;
     color: white;
-    caret-color: transparent;
-    background: rgb(251, 29, 0);
+}
+
+.article-category {
+    font-size: 1.5rem;
+}
+.article-category a {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+.article-category a:hover {
+    color: rgb(32, 148, 249);
 }
 .article-title {
-   font-size: 2.25rem;
+   font-size: 3rem;
+   line-height: 1.25;
 }
 .article-subtitle {
     font-size: 1.75rem;
-    line-height: 1.2;
+    font-weight: lighter;
+    line-height: 1.25;
 }
 .article-text p {
     font-size: 1.5rem;
-    line-height: 1.3;
+    line-height: 1.5;
 }
 .imgDescription, .videoDescription {
     background: black;
@@ -22,16 +37,19 @@
     font-size: 1.25em;
     padding: 0.4em 0.8em 0.5em 0.8em;
 }
-.article-origin-source span {
-    color: red;
+.article-metadata {
+    font-size: 1.25rem;
+}
+.source span {
+    font-size: 1.5rem;
     font-weight: bold;
 }
-.article-origin-author span {
-    color: red;
+.author span {
+    font-size: 1.5rem;
     font-weight: bold;
 }
-.article-date-published span, .article-date-updated span {
-    font-weight: bold;
+.date-published span, .date-updated span {
+
 }
 
 .article-video {

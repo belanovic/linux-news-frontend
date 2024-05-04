@@ -1,12 +1,10 @@
-.central-up {
+.general {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 2em;
 }
 
 @media all and (max-width: 768px) {
-    .central-up {
+    .general {
         flex-direction: column;
     }
-
 }

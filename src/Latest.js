@@ -9,22 +9,17 @@ import './style/typography/latest.css'
 
 export default function Latest() {
 
-    const {frontpageNews} = useContext(context);
-
+    const {frontpageNews, activeTab, setActiveTab} = useContext(context);
     const [latestNews, setLatestNews] = useState('');
     const [popularNews, setPopularNews] = useState('');
     const [trendingNews, setTrendingNews] = useState('');
-    const [activeTab, setActiveTab] = useState('recent');
-
+    
     useEffect(async () => {
         const articles = await getLatestNews(4);
-        if(articles == null) setLatestNews([]);
+        if(articles == null) return;
         setLatestNews(articles);
-    }, [])
-
-    useEffect(async () => {
         setPopularNews(frontpageNews.slice(1, 5));
-        setTrendingNews([frontpageNews[4], latestNews[2], frontpageNews[2], latestNews[1]]);
+        setTrendingNews([frontpageNews[5], articles[2], frontpageNews[4], articles[1]]);
     }, [frontpageNews])
 
     return (
@@ -32,11 +27,11 @@ export default function Latest() {
             <div className='latest-tabs'>
                 <div 
                     className = {`recent ${activeTab == 'recent'? 'active' : ''}`}
-                    onClick = {()=> setActiveTab('recent')}>Latest
+                    onClick = {()=> setActiveTab('recent')}>Najnovije
                 </div>
                 <div 
                     className = {`popular ${activeTab == 'popular'? 'active' : ''}`}
-                    onClick = {()=> setActiveTab('popular')}>Popular
+                    onClick = {()=> setActiveTab('popular')}>Najčitanije
                 </div>
                 <div 
                     className = {`trending ${activeTab == 'trending'? 'active' : ''}`}
@@ -47,15 +42,17 @@ export default function Latest() {
             {latestNews && latestNews.map((article, i) => {
                 return  <Card 
                         key = {i}
+                        path = {`/articleRecent${i}/${article._id}`}
                         classSuffix={'latest'}
                         title={article.title}
                         videoURL={article.videoURL}
                         datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
-                        src={article.imgURL}
-                        id={article._id}
+                        src={article.imgURL2}
                         category = {article.category}
-                        filter = {article.imgFilter} 
+                        filter = {article.imgFilter2} 
+                        thumbShape = 'square'
                         line = 'top'
+                        readMore = {false}
                     />                
             })}
             </div>}
@@ -63,31 +60,36 @@ export default function Latest() {
             {popularNews && popularNews.map((article, i) => {
                 return  <Card 
                         key = {i}
+                        path = {`/articlePopular${i}/${article._id}`}
                         classSuffix={'latest'}
-                        title={article.title}
+                        src={article.imgURL2}
                         videoURL={article.videoURL}
-                        datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
-                        src={article.imgURL}
-                        id={article._id}
+                        filter = {article.imgFilter2} 
+                        title={article.title}
                         category = {article.category}
-                        filter = {article.imgFilter} 
+                        datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
+                        thumbShape = 'square'
                         line = 'top'
+                        readMore = {false}
                     />                
             })}
             </div>}
             {activeTab == 'trending' && <div className='latest-news'>
             {trendingNews && trendingNews.map((article, i) => {
+
                 return  <Card 
                         key = {i}
+                        path = {`/articleTrending${i}/${article._id}`}
                         classSuffix={'latest'}
                         title={article.title}
                         videoURL={article.videoURL}
                         datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
-                        src={article.imgURL}
-                        id={article._id}
+                        src={article.imgURL2}
                         category = {article.category}
-                        filter = {article.imgFilter} 
+                        filter = {article.imgFilter2} 
+                        thumbShape = 'square'
                         line = 'top'
+                        readMore = {false}
                     />                
             })}
             </div>}

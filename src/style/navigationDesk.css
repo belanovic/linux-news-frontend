@@ -1,0 +1,61 @@
+/* ========== NavigationDesk ============= */
+
+.navigationDesk-container{
+    margin-bottom: 2em;
+}
+
+.navigationDesk-container.positioned {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
+.navigationDesk {
+    display: block;
+    width: 63%;
+}
+
+.navDesk-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navDesk-item {
+    flex: 1 1 0;
+    padding: 0.5em 2em 0.5em 2em;
+    text-align: center;
+    border-right: 1px solid black;
+}
+
+.navDesk-item.active {
+    /* background-color: rgb(32, 148, 249); */
+
+}
+
+.navDesk-item:first-child {
+    border-left: 1px solid black;
+}
+
+.navDesk-label {
+    font-weight: bold;
+    font-size: 1.5rem;
+
+    transition: color 0.25s;
+}
+
+.navDesk-label:hover {
+    cursor: pointer;
+    color: rgb(32, 148, 249);
+ }
+
+ .navDesk-item.active .navDesk-label {
+    color: rgb(32, 148, 249);
+ }
+
+
+@media all and (max-width: 768px) {
+    .navigationDesk-container  {
+        display: none;
+    }
+}

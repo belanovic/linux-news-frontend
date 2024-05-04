@@ -1,5 +1,5 @@
 
-.ticker-wrapper {
+.newsTicker1 {
     background-color: white;
 }
 
@@ -14,7 +14,6 @@
 }
 
 .tickerDate {
-    background: black;
     background: rgb(34, 153, 227);
     color: white;
     margin-right: 0.5em;
@@ -25,16 +24,14 @@
 /* ticker day */
 
 .ticker-label {
-    background: rgb(15, 141, 250);
     background: rgb(209, 1, 1);
-    user-select: none;
+    color: white;
     border-radius: 0% 0% 0% 0%;
     box-shadow: 5px 0 20px 0 rgb(98, 98, 98);
     z-index: 1;
 }
 .ticker-label .text {
     color: white;
-
     font-size: 1.5rem;
 }
 

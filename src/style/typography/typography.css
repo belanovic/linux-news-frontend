@@ -13,16 +13,17 @@ body {
 
 a {
     text-decoration: none;
+    color: black;
+}
+a:hover {
+    text-decoration: none;
+    color: black;
 }
 
 /* ========== TYPOGRAPHY =========== */
 
 /* Wrapper */
 
-
-.main {
-    background: white;
-}
 .footer {
     background: black;
     caret-color: transparent;

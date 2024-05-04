@@ -11,6 +11,8 @@ function Provider(props) {
     const [alphabet, setAlphabet] = useState('cirilica');
     const [navVisible, setNavVisible] = useState(false);
     const [formVisible, setFormVisible] = useState(false);
+    const [activeTab, setActiveTab] = useState('recent');
+    const [activeCategory, setActiveCategory] = useState('');
     
     async function getAndSetFrontpageNews() {
         try {
@@ -43,7 +45,11 @@ function Provider(props) {
                 navVisible, 
                 setNavVisible,
                 formVisible, 
-                setFormVisible
+                setFormVisible,
+                activeTab, 
+                setActiveTab,
+                activeCategory, 
+                setActiveCategory
 
             }
         }>{props.children}</context.Provider>

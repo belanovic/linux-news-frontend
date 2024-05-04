@@ -5,7 +5,9 @@ import './style/typography/main.css';
 import './style/play.css';
 import Carousel from './Carousel.js';
 import Latest from './Latest.js';
+import General from './General.js';
 import Card from './Card.js';
+import NavigationDesk from './NavigationDesk.js';
 import PartTitle from './PartTitle.js';
 import lorem from './text.js';
 import {getFrontpageNews} from './getNews.js';
@@ -17,119 +19,47 @@ import Form from './Form.js';
 
 export default function Main() {
 
-    const {frontpageNews } = useContext(context);
+    const {frontpageNews, setActiveTab } = useContext(context);
     const mainOverlay = useRef(null);
 
-    /* const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8 , 9, 10]); */
-
-    /* useEffect(async () => {
-        const n = await getFrontpageNews();
-        n.sort((a, b) => a.position - b.position);
-        setFrontpageNews(n);
-    }, []) */
-
+    useEffect(() => {setActiveTab('recent')}, [])
 
     return (
         <main className="main">
             <div className="container main-container">
-                <NewsTicker1 frontpageNews = {frontpageNews} />
+                {/* <NewsTicker1 frontpageNews = {frontpageNews} /> */}
                 <section className='central'>
-                    <Carousel frontpageNews = {frontpageNews} />
-                   <Latest />
+                    <div className='central-up'>
+                        <Carousel frontpageNews = {frontpageNews} />
+                        <Latest />
+                    </div>
+                    <div className='central-down'>
+                        <General />
+                    </div>
                 </section>
                 <Line />
+                <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
-                    classSuffix = 'general'
-                    title = {frontpageNews[4].title}
-                    subtitle = {frontpageNews[4].subtitle}
-                    paragraphs = {frontpageNews[4].text}
-                    datePublished = {dateFormat(frontpageNews[4].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[4].dateUpdated, 'clock')}
-                    src = {frontpageNews[4].imgURL2}
-                    filter = {frontpageNews[4].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    id = {frontpageNews[4]._id}
-                    position = {frontpageNews[4].position}
-                    videoURL = {frontpageNews[4].videoURL}
-                    thumbShape = 'square'
-                    category = {frontpageNews[4].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                />
-                <Card 
-                    classSuffix = 'general'
-                    title = {frontpageNews[5].title}
-                    subtitle = {frontpageNews[5].subtitle}
-                    paragraphs = {frontpageNews[5].text}
-                    datePublished = {dateFormat(frontpageNews[5].datePublished, 'month', 'dayMonth', 'comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[5].dateUpdated, 'clock')}
-                    src = {frontpageNews[5].imgURL2}
-                    filter = {frontpageNews[5].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    id = {frontpageNews[5]._id}
-                    position = {frontpageNews[5].position}
-                    videoURL = {frontpageNews[5].videoURL}
-                    thumbShape = 'square'
-                    category = {frontpageNews[5].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                />
-                <Card 
-                    classSuffix = 'general'
-                    title = {frontpageNews[6].title}
-                    subtitle = {frontpageNews[6].subtitle}
-                    paragraphs = {frontpageNews[6].text}
-                    datePublished = {dateFormat(frontpageNews[6].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[6].dateUpdated, 'clock')}
-                    src = {frontpageNews[6].imgURL2}
-                    filter = {frontpageNews[6].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    id = {frontpageNews[6]._id}
-                    position = {frontpageNews[6].position}
-                    videoURL = {frontpageNews[6].videoURL}
-                    thumbShape = 'square'
-                    category = {frontpageNews[6].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                />
-                <Card 
-                    classSuffix = 'general'
-                    title = {frontpageNews[7].title}
-                    subtitle = {frontpageNews[7].subtitle}
-                    paragraphs = {frontpageNews[7].text}
-                    datePublished = {dateFormat(frontpageNews[7].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[7].dateUpdated, 'clock')}
-                    src = {frontpageNews[7].imgURL2}
-                    filter = {frontpageNews[7].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    id = {frontpageNews[7]._id}
-                    position = {frontpageNews[7].position}
-                    videoURL = {frontpageNews[7].videoURL}
-                    thumbShape = 'square'
-                    category = {frontpageNews[7].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                />
-                <Card 
-                    classSuffix = 'general'
+                    path = {`/article/${frontpageNews[8]._id}`}
+                    classSuffix = 'magazin'
                     title = {frontpageNews[8].title}
                     subtitle = {frontpageNews[8].subtitle}
                     paragraphs = {frontpageNews[8].text}
                     datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
                     dateUpdated = {dateFormat(frontpageNews[8].dateUpdated, 'clock')}
-                    src = {frontpageNews[8].imgURL2}
+                    src = {frontpageNews[8].imgURL}
                     filter = {frontpageNews[8].imgFilter2}
-                    id = {frontpageNews[8]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[8].position}
                     videoURL = {frontpageNews[8].videoURL}
-                    thumbShape = 'square'
+                    thumbShape = 'wide'
                     category = {frontpageNews[8].category}
                     hasDateArrow={true}
                     line = 'bottom'
+                    readMore = {false}
                 />
-                <PartTitle title = "Magazin" classSuffix = "magazin"/>
                 <Card 
+                    path = {`/article/${frontpageNews[9]._id}`}
                     classSuffix = 'magazin'
                     title = {frontpageNews[9].title}
                     subtitle = {frontpageNews[9].subtitle}
@@ -138,7 +68,6 @@ export default function Main() {
                     dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}
                     src = {frontpageNews[9].imgURL}
                     filter = {frontpageNews[9].imgFilter2}
-                    id = {frontpageNews[9]._id}
                     frontpageNews = {frontpageNews}
                     position = {frontpageNews[9].position}
                     videoURL = {frontpageNews[9].videoURL}
@@ -146,8 +75,10 @@ export default function Main() {
                     category = {frontpageNews[9].category}
                     hasDateArrow={true}
                     line = 'bottom'
+                    readMore = {false}
                 />
-                 <Card 
+                 {/* <Card 
+
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
                     paragraphs = {lorem(0, 150)}
@@ -158,6 +89,7 @@ export default function Main() {
          
                 />
                  <Card 
+
                     classSuffix = 'magazin'
                     title = "Naslov prve kartice"
                     paragraphs = {lorem(0, 150)}
@@ -200,13 +132,14 @@ export default function Main() {
                 />
 
                 <Card 
+
                     classSuffix = 'sport'
                     title = "Naslov prve kartice"
                     paragraphs = {lorem(0, 150)}
                     // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
                     src = 'https://bit.ly/3sI8COt'
-                />
+                /> */}
             </div>
         </main>
     )

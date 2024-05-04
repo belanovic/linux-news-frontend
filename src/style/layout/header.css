@@ -1,29 +1,82 @@
 .header {
     width: 100%;
-    position: sticky;
-    top: 0;
-    margin-bottom: 5px;
-    z-index: 4;
+    margin-bottom: 2em;
 }
 
-.titleBox {
+.header-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin: 0;
-    padding: 1em;
-}
-.menuToggle {
-    display: inline-block;
-}
-.menuToggle:hover {
-    cursor: pointer;
-}
-.fa-times {
-    display: none;
 }
 
-.login {
+
+/* .header-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-right: 2em;
+}
+
+.header-title a .title {
+    margin: 0;
+} */
+
+.header-title .title {
+    margin: 0;
+}
+
+.title-img {
+    height: 1.5em;
+}
+
+.header-icons {
+ 
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+}
+
+.header-images {
+    display: flex;
+}
+
+.header-images .react-image, .header-images  .mern-image  {
+    height: 7em;
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    margin-right: 1em;
+}
+.menu-toggle:hover {
+    cursor: pointer;
+}
+.header .fa-times.hide, .fa-bars.hide {
+    display: none;
+}
+.header .fa-times.show, .fa-bars.show {
+    display: inline;
+}
+/* .login {
     display: inline-block;
     margin-left: 1.5em;
+} */
+
+@media all and (max-width: 768px) {
+
+   
+    .header-icons {
+        justify-content: flex-end;
+    }
+
+    .header-icons .menu-toggle  {
+        display: block;
+    }
+
+    .header-images {
+        display: none;
+    }
 }

@@ -2,15 +2,18 @@
 .card-slide-text {
     color: white;
     background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
-
 }
 
 .card-slide-title {
     font-size: 3rem;
     line-height: 1.25;
     letter-spacing: 1px;
+    transition: color 0.25s;
 }
 
+.card-slide-title:hover {
+    color: rgb(15, 141, 250);
+}
 .card-slide-subtitle {
     font-size: 1.5rem;
     line-height: 1.5;
@@ -28,4 +31,26 @@
     /* background-color: rgba(57, 57, 57, 0.1); */
     font-size: 1.5rem;
     text-transform: capitalize;
+}
+
+
+@media all and (max-width: 768px) {
+    .card-slide-title {
+        font-size: 2rem;
+        line-height: 1.25;
+        letter-spacing: 1px;
+    }
+ 
+    .card-slide-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card-slide-info .card-category {
+        font-size: 1rem;
+    }
+    
+    .card-slide-info .card-date {
+        font-size: 1rem;
+    }
 }

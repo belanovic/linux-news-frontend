@@ -19,7 +19,7 @@ import './style/typography/card-category.css';
 import './style/layout/card-latest.css';
 import './style/typography/card-latest.css'; 
 
-export default function Card({ position, classSuffix, title, subtitle, paragraphs, videoURL, line,
+export default function Card({ position, classSuffix, title, subtitle, videoURL, line, path, readMore,
     datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
     const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
@@ -43,84 +43,59 @@ export default function Card({ position, classSuffix, title, subtitle, paragraph
         }
     }, [filter])
 
-    useEffect(() => {
-
-        const efficientFunction = debounce(async function () {
-
-            const v = isInViewport(cardElement.current);
-            const promiseResolveA = await setInViewport((prev) => {
-                if (prev === true) {
-                    return true
-                } else {
-                    return v
-                }
-            });
-        }, 50)
-
-        document.addEventListener('scroll', efficientFunction);
-        efficientFunction();
-
-
-        return function () {
-            document.removeEventListener('scroll', efficientFunction);
-            setDateLoaded(false);
-        }
-    }, [])
-
     return (
         <>
         {line == 'top'? <Line /> : ''}
         <div className={`card card-${classSuffix}`}>
-            <div className={`card-${classSuffix}-container-img`}>
-                <Link to={`/article/${id}`}>
-                    {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
-                    {src === 'generic' ?
+            {src && <div className={`card-${classSuffix}-container-img`}>
+                <Link to={path}>
+                    {videoURL && (videoURL !== 'none') && <div className="play"><i className="far fa-play-circle"></i></div>}
+                    {src == 'generic' ?
                         <GenericThumb 
-                            className={`card-${classSuffix}-img card-img 
-                            ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
+                            className={`card-${classSuffix}-img card-img`}
                             shape = {thumbShape} 
                             category={category} 
                         />
                         :
-                        <img className={`card-${classSuffix}-img card-img 
-                                ${inViewport === true || (position > 5 && position < 10) ? 'opacityOne' : ''}`}
+                        <img className={`card-img card-${classSuffix}-img`}
                             ref={cardElement}
                             src={src = src}
                             style={{ filter: filterStyle }}
                         >
                         </img>}
                 </Link>
-            </div>
-            <div className={`card-${classSuffix}-text`}>
-                <div className={`card-${classSuffix}-container-title`}>
-                    <Link to={`/article/${id}`}>
+            </div>}
+            {(title || subtitle) && <div className={`card-${classSuffix}-text`}>
+                {title && <div className={`card-${classSuffix}-container-title`}>
+                    <Link to={path}>
                         <div className={`card-${classSuffix}-title`}>
-                            {shortenSentence(title, 70)}
+                            {shortenSentence(title, 170)}
                         </div>
                     </Link>
-                </div>
-                <div className={`card-${classSuffix}-info`}>
-                    <div className='card-category'>{category} / </div>
-                    <div className={`card-date`}>
-                        <span className="date datePublished" >
+                </div>}
+                {(category || datePublished || dateUpdated) && <div className={`card-${classSuffix}-info`}>
+                    {category && <div className='card-category'>{category} / </div>}
+                    {(datePublished || dateUpdated) && <div className={`card-date`}>
+                        {datePublished && <span className="date datePublished" >
                             {datePublished ? datePublished: ''}
-                        </span>
+                        </span>}
                         <span>{hasDateArrow? ' > ' : ''}</span>
-                        <span className="date dateUpdated">
+                        {dateUpdated && <span className="date dateUpdated">
                             {dateUpdated ? dateUpdated : ''}
-                        </span>
-                    </div>
-                </div>
-                <div className={`card-${classSuffix}-container-paragraph`}>
-                    <Link to={`/article/${id}`}>
+                        </span>}
+                    </div>}
+                </div>}
+               {subtitle && <div className={`card-${classSuffix}-container-subtitle`}>
+                    <Link to={path}>
                         <p
-                            className={`card-${classSuffix}-paragraph`}
+                            className={`card-${classSuffix}-subtitle`}
                         >
-                            {shortenSentence(subtitle, 100)}
+                            {shortenSentence(subtitle, 170)}
                         </p>
                     </Link>
-                </div>
-            </div>
+                </div>}
+                {readMore && <div className='read-more'> <Link to={path}>Pročitaj</Link></div>}
+            </div>}
         </div>
         {line == 'bottom'? <Line /> : ''}
         </>

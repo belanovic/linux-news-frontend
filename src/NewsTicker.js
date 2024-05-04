@@ -1,44 +1,61 @@
-import React, {useState} from 'react';
-import Ticker from 'react-ticker'
+import react, {useState, useEffect, useRef, useContext} from 'react';
 import {Link} from 'react-router-dom';
 import {context} from './newsContext';
-
+import dateFormat from './dateFormat';
+import Weather from './Weather';
+import Ticker from 'react-ticker';
 import './style/layout/news-ticker.css';
 import './style/typography/news-ticker.css';
- 
-function NewsTicker({frontpageNews}) {
 
-    return (<Ticker>
-        {({ index }) => (
-            <> 
-                <h1 className = "tickerTitle">vxvxxcv</h1>
-                <h1 className = "tickerTitle">ssssssssss</h1>
-                <h1 className = "tickerTitle">iiiiiiiiii</h1>
-               {/*  <h1 className = "tickerTitleLink to={`/article/${frontpageNews[1]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1>
-                <h1 className = "tickerTitle"><Link to={`/article/${frontpageNews[2]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1>
-                <h1 className = "tickerTitle"><Link to={`/article/${frontpageNews[0]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1>
-                <h1 className = "tickerTitle"><Link to={`/article/${frontpageNews[3]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1>
-                <h1 className = "tickerTitle"><Link to={`/article/${frontpageNews[4]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1>
-                <h1 className = "tickerTitle"><Link to={`/article/${frontpageNews[5]._id}`}><div className = "">{frontpageNews[5].title}</div></Link></h1> */}
-              {/*   <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[1]._id}`}><div className = "tickerTitle">{frontpageNews[1].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[3]._id}`}><div className = "tickerTitle">{frontpageNews[3].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[4]._id}`}><div className = "tickerTitle">{frontpageNews[4].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[5]._id}`}><div className = "tickerTitle">{frontpageNews[5].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div>
-                <Link to={`/article/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
-                <div className = "tickerStars"><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i><i className="fas fa-asterisk"></i></div> */}
-            </>
-        )}
-    </Ticker>)
+ 
+function NewsTicker({positioned}) {
+
+    const {frontpageNews} = useContext(context);
+
+    return (<div className={`container ticker-wrapper ${positioned? 'positioned' : ''}`}>
+                <div
+                    className='ticker-label'
+                >
+                    <span className='text'>Najvažnije</span>
+                </div>
+               {frontpageNews.length > 10 && <Ticker>
+                    {({ index }) => (
+                        <>
+                        <div className='ticker-container'>
+                            <div className='ticker-item'>
+                                <div className = "tickerDate">{dateFormat(frontpageNews[0].datePublished, 'clock')}</div>
+                                <Link to={`/article0/${frontpageNews[0]._id}`}><div className = "tickerTitle">{frontpageNews[0].title}</div></Link>
+                            </div>
+
+                            <div className='ticker-item'>
+                                <div className = "tickerDate">{dateFormat(frontpageNews[1].datePublished, 'clock')}</div>
+                                <Link to={`/article1/${frontpageNews[1]._id}`}><div className = "tickerTitle">{frontpageNews[1].title}</div></Link>
+                            </div>
+
+                            <div className='ticker-item'>
+                                <div className = "tickerDate">{dateFormat(frontpageNews[2].datePublished, 'clock')}</div>
+                                <Link to={`/article2/${frontpageNews[2]._id}`}><div className = "tickerTitle">{frontpageNews[2].title}</div></Link>
+                            </div>
+
+                            <div className='ticker-item'>
+                                <div className = "tickerDate">{dateFormat(frontpageNews[3].datePublished, 'clock')}</div>
+                                <Link to={`/article3/${frontpageNews[3]._id}`}><div className = "tickerTitle">{frontpageNews[3].title}</div></Link>
+                            </div>
+
+                            <div className='ticker-item'>
+                                <div className = "tickerDate">{dateFormat(frontpageNews[4].datePublished, 'clock')}</div>
+                                <Link to={`/article4/${frontpageNews[4]._id}`}><div className = "tickerTitle">{frontpageNews[4].title}</div></Link>
+                            </div>
+                        </div>
+                        </>
+                    )}
+                </Ticker>}
+                <div className='ticker-day'>
+                    <div className='ticker-date'><span>{dateFormat(new Date(), 'dayWeek', 'comma', 'month', 'dayMonth')}</span></div>
+                    <Weather />
+                </div>
+            </div>
+        )
 }
  
 export default NewsTicker

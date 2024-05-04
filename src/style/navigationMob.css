@@ -1,8 +1,9 @@
-/* ========== Navigation ============= */
+/* ========== NavigationMob ============= */
 
-.navigation {
+
+.navigationMob {
+    display: none;
     position: absolute;
-    display: flex;
     flex-direction: column;
     justify-content: center;
     background: black;
@@ -11,7 +12,7 @@
     z-index: 1235;
     transition: left 0.5s;
 }
-.nav-list {
+.navMob-list {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,17 +20,17 @@
     margin: 0;
     padding: 0;
 }
-.nav-item {
+.navMob-item {
     margin: 0;
     padding: 0;
     margin-bottom: 0.5em;
 
 }
-.nav-item:active {
+.navMob-item:active {
     background: rgb(73, 73, 73);
     border-radius: 15px;
 }
-.nav-link {
+.navMob-link {
     font-size: 2rem;
     padding: 0.7em 0 0.7em 0;
     display: block;
@@ -38,10 +39,17 @@
     text-align: center;
     border-radius: 15px;
 }
-.nav-link:active {
+.navMob-link:active {
     color: white;
     background: rgb(54, 54, 54);
 }
-.nav-link:visited {
+.navMob-link:visited {
     color: white;
+}
+
+
+@media all and (max-width: 768px) {
+    .navigationMob {
+        display: flex;
+    }
 }

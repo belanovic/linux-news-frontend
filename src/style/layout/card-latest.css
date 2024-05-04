@@ -1,10 +1,11 @@
 .card-latest {
     display: flex;
     justify-content: space-between;
+    overflow: hidden;
 }
 
 .card-latest-container-img {
-    flex: 0 0 30%;
+    flex: 0 0 15%;
     overflow: hidden;
 }
 
@@ -17,7 +18,7 @@
 }
 
 .card-latest-text {
-    flex: 0 0 67%;
+    flex: 0 0 80%;
     display: flex;
     flex-direction: column;
 }
@@ -28,7 +29,7 @@
     margin-bottom: 0.5em;
 }
 
-.card-latest-container-paragraph {
+.card-latest-container-subtitle {
     display: none;
 }
 
