@@ -5,6 +5,12 @@
 .category-articles {
     flex: 0 0 60%;
 }
+.category-articles .pagination {
+    margin-bottom: 2em;
+}
+.articles-list {
+    margin-bottom: 2em;
+}
 .category-sidebar {
     flex: 0 0 35%;
 }

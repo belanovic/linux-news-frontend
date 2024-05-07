@@ -1,9 +1,9 @@
 import react from 'react';
 import './style/layout/line.css';
 
-export default function Line({key}) {
+export default function Line({key, className}) {
     return (
-        <div className = "line">
+        <div className = {`line ${className}`}>
         </div>
     )
 }

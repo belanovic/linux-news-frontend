@@ -1,8 +1,104 @@
+/* .card-magazinBig **************** */
 
+
+.magazin-title {
+    color: white;
+}
+
+.card-magazinBig-title  {
+    font-size: 3rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.5s;
+    color: white;
+}
+
+.card-magazinBig-title:hover {
+    text-decoration: none;
+    color: rgb(93, 141, 232);
+}
+
+.card-magazinBig-subtitle {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.card-magazinBig-container-subtitle a {
+    pointer-events: none;        
+}
+
+.card-magazinBig-info {
+    font-size: 1.25rem;
+    order: -1;
+}
+.card-magazinBig-info .card-date {
+
+    text-transform: uppercase;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.card-magazinBig-info .card-date {
+    text-transform: lowercase;
+}
+
+/* .card-magazin **************** */
+
+.magazin-title {
+    font-size: 4rem;
+}
+
+.card-magazin-text {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
 
 .card-magazin-title {
+    color: white;
     font-size: 1.75rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    color: white;
+    transition: color 0.25s;
 }
-.card-magazin-paragraphs {
-    font-size: 1.25rem;
+
+.card-magazin-title:hover {
+    color: rgb(15, 141, 250);
+}
+
+
+
+.card-magazin-info {
+    color: white;
+}
+
+.card-magazin-info .card-category {
+    font-size: 1rem;
+    font-family: sans-serif, Arial, Helvetica;
+    text-transform: uppercase;
+}
+
+.card-magazin-info .card-date {
+    font-size: 1rem;
+    text-transform: capitalize;
+}
+
+
+@media all and (max-width: 768px) {
+    .card-magazin-title {
+        font-size: 2rem;
+        line-height: 1.25;
+        letter-spacing: 1px;
+    }
+ 
+    .card-magazin-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card-magazin-info .card-category {
+        font-size: 1rem;
+    }
+    
+    .card-magazin-info .card-date {
+        font-size: 1rem;
+    }
 }

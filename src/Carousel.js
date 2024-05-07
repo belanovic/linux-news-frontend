@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
+import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay, EffectCube} from 'swiper';
 import dateFormat from './dateFormat.js';
@@ -10,7 +11,8 @@ import './style/typography/carousel.css';
 
 SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
 
-export default function BootstrapCarousel({ frontpageNews }) {
+export default function BootstrapCarousel() {
+  const {frontpageNews} = useContext(context);
   const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
   return (
@@ -30,67 +32,25 @@ export default function BootstrapCarousel({ frontpageNews }) {
         wrapperTag='ul' 
         thumbs={{ swiper: thumbsSwiper }}
       >
-        <SwiperSlide tag='li'>
-          <CardCarousel
-            path = {`/article/${frontpageNews[0]._id}`}
-            title={frontpageNews[0].title}
-            subtitle={frontpageNews[0].subtitle}
-            // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-            src={frontpageNews[0].imgURL}
-            filter = {frontpageNews[0].imgFilter}
-            position = {frontpageNews[0].position}
-            videoURL = {frontpageNews[0].videoURL}
-            category = {frontpageNews[0].category}
-            datePublished = {dateFormat(frontpageNews[0].datePublished, 'month', 'dayMonth','comma', 'clock')}
-            dateUpdated = {dateFormat(frontpageNews[3].dateUpdated, 'clock')}
-        
-          />
+        {frontpageNews.map((article, i) => {
+          if((i > 3)) return
+          return  <SwiperSlide tag='li' key = {i}>
+            <CardCarousel
+              key = {i}
+              path = {`/article/${frontpageNews[i]._id}`}
+              title={frontpageNews[i].title}
+              subtitle={frontpageNews[i].subtitle}
+              src={frontpageNews[i].imgURL}
+              filter = {frontpageNews[i].imgFilter}
+              position = {frontpageNews[i].position}
+              videoURL = {frontpageNews[i].videoURL}
+              category = {frontpageNews[i].category}
+              datePublished = {dateFormat(frontpageNews[i].datePublished, 'month', 'dayMonth','comma', 'clock')}
+              dateUpdated = {dateFormat(frontpageNews[i].dateUpdated, 'clock')}
+          
+            />
         </SwiperSlide>
-        <SwiperSlide tag='li'>
-          <CardCarousel
-            path = {`/article/${frontpageNews[1]._id}`}
-            title={frontpageNews[1].title}
-            subtitle={frontpageNews[1].subtitle}
-            // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-            src={frontpageNews[1].imgURL}
-            filter = {frontpageNews[1].imgFilter}
-            position = {frontpageNews[1].position}
-            videoURL = {frontpageNews[1].videoURL}
-            category = {frontpageNews[1].category}
-            datePublished = {dateFormat(frontpageNews[1].datePublished, 'month', 'dayMonth','comma', 'clock')}
-            dateUpdated = {dateFormat(frontpageNews[3].dateUpdated, 'clock')}
-          />
-        </SwiperSlide>
-        <SwiperSlide tag='li'>
-          <CardCarousel
-            path = {`/article/${frontpageNews[2]._id}`}
-            title={frontpageNews[2].title}
-            subtitle={frontpageNews[2].subtitle}
-            // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-            src={frontpageNews[2].imgURL}
-            filter = {frontpageNews[2].imgFilter}
-            position = {frontpageNews[2].position}
-            videoURL = {frontpageNews[2].videoURL}
-            category = {frontpageNews[2].category}
-            datePublished = {dateFormat(frontpageNews[2].datePublished, 'month', 'dayMonth','comma', 'clock')}
-            dateUpdated = {dateFormat(frontpageNews[3].dateUpdated, 'clock')}
-          />
-        </SwiperSlide>
-        <SwiperSlide tag='li'>
-          <CardCarousel
-            path = {`/article/${frontpageNews[3]._id}`}
-            title={frontpageNews[3].title}
-            subtitle ={frontpageNews[3].subtitle}
-            // date = {new Date().toLocaleDateString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-            src={frontpageNews[3].imgURL}
-            filter = {frontpageNews[3].imgFilter}
-            position = {frontpageNews[3].position}
-            videoURL = {frontpageNews[3].videoURL}
-            category = {frontpageNews[3].category}
-            datePublished = {dateFormat(frontpageNews[3].datePublished, 'month', 'dayMonth','comma', 'clock')}
-            dateUpdated = {dateFormat(frontpageNews[3].dateUpdated, 'clock')}
-          />
-        </SwiperSlide>
+        })}
       </Swiper>
     </div>
   )

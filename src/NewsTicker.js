@@ -18,7 +18,7 @@ function NewsTicker({positioned}) {
                 >
                     <span className='text'>Najvažnije</span>
                 </div>
-               {frontpageNews.length > 10 && <Ticker>
+               {frontpageNews.length < 100 && <Ticker>
                     {({ index }) => (
                         <>
                         <div className='ticker-container'>

@@ -22,13 +22,11 @@ import './style/typography/card-latest.css';
 export default function Card({ position, classSuffix, title, subtitle, videoURL, line, path, readMore,
     datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
-    const { dateLoaded, setDateLoaded, alphabet } = useContext(context);
+    const { alphabet } = useContext(context);
     const cardElement = useRef(null);
     const [inViewport, setInViewport] = useState(false);
-
     const [filterStyle, setFilterStyle] = useState('none');
 
-    
     useEffect(() => {
         if (filter) {
             setFilterStyle(() => {
@@ -50,16 +48,16 @@ export default function Card({ position, classSuffix, title, subtitle, videoURL,
             {src && <div className={`card-${classSuffix}-container-img`}>
                 <Link to={path}>
                     {videoURL && (videoURL !== 'none') && <div className="play"><i className="far fa-play-circle"></i></div>}
-                    {src == 'generic' ?
+                    {(src == 'generic')?
                         <GenericThumb 
-                            className={`card-${classSuffix}-img card-img`}
-                            shape = {thumbShape} 
+                            className={`card-img card-${classSuffix}-img`}
+                            thumbShape = {thumbShape} 
                             category={category} 
                         />
                         :
                         <img className={`card-img card-${classSuffix}-img`}
                             ref={cardElement}
-                            src={src = src}
+                            src={src}
                             style={{ filter: filterStyle }}
                         >
                         </img>}

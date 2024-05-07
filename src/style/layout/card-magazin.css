@@ -1,13 +1,76 @@
+/* card-magazinBig ********************* */
 
+.card-magazinBig {
+    display: flex;
+    justify-content: space-between;
+}
 
-.card-magazin {
+.card-magazinBig-container-img {
+    overflow: hidden;
+    flex: 0 0 60%;
+}
+
+.card-magazinBig-container-img a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+.card-magazinBig-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.card-magazinBig-text {
+    flex: 0 0 38%;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
+
+.card-magazinBig-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card-magazinBig-info .card-category {
+    display: none;
+}
+
+.card-magazinBig .play {
+    margin: 0.2em;
+}
+
+.card-magazinBig .read-more {
+    order: 2;
+}
+.card-magazinBig .read-more a {
+    display: inline-block;
+}
+
+.card-magazinBig .read-more a {    
+    padding: 0.5em 2em 0.5em 2em;
+    background: rgb(161, 0, 0);
+    color: white;
+    font-size: 1rem;
+    transition: background 0.25s;
+}
+.card-magazinBig .read-more a:hover {
+    cursor: pointer;
+    color: white;
+    background: rgb(223, 0, 0);
+}
+
+/* card-magazin ********************* */
+
+.card-magazin {
+    flex: 0 0 32%;
+    position: relative;
+}
+
 .card-magazin-container-img {
-    width: 100%;
-    height: 65vw;
-    overflow: hidden;
+    overflow: hidden;;
 }
 .card-magazin-container-img a {
     display: inline-block;
@@ -15,9 +78,56 @@
     height: 100%;
 }
 .card-magazin-img {
+    object-fit: cover;
     width: 100%;
     height: 100%;
 }
+
 .card-magazin-text {
-    margin-left: 1em;
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    padding: 1em 1em 1em 1em;
+}
+
+.card-magazin-title {
+    margin-bottom: 0.25em;
+    margin-top: 0em;
+}
+
+
+.card-magazin-info {
+    margin-bottom: 1em;
+}
+
+.card-magazin-info .card-category {
+    display: none;
+}
+
+.card-magazin-info .card-date {
+    display: inline-block;
+}
+
+.card-magazin-info  .fa-arrow-right {
+    margin: 0 5px 0 7px;
+}
+
+
+/* magazin themas ********************* */
+
+.magazin-themas {
+    display: flex;
+    justify-content: space-between;
+}
+.thema-item {
+    height: 100px;
+    width: 100px;
+    
+    background: white;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

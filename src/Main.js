@@ -6,6 +6,7 @@ import './style/play.css';
 import Carousel from './Carousel.js';
 import Latest from './Latest.js';
 import General from './General.js';
+import Magazin from './Magazin.js';
 import Card from './Card.js';
 import NavigationDesk from './NavigationDesk.js';
 import PartTitle from './PartTitle.js';
@@ -30,53 +31,16 @@ export default function Main() {
                 {/* <NewsTicker1 frontpageNews = {frontpageNews} /> */}
                 <section className='central'>
                     <div className='central-up'>
-                        <Carousel frontpageNews = {frontpageNews} />
+                        <Carousel />
                         <Latest />
                     </div>
                     <div className='central-down'>
                         <General />
                     </div>
                 </section>
-                <Line />
-                <PartTitle title = "Magazin" classSuffix = "magazin"/>
-                <Card 
-                    path = {`/article/${frontpageNews[8]._id}`}
-                    classSuffix = 'magazin'
-                    title = {frontpageNews[8].title}
-                    subtitle = {frontpageNews[8].subtitle}
-                    paragraphs = {frontpageNews[8].text}
-                    datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[8].dateUpdated, 'clock')}
-                    src = {frontpageNews[8].imgURL}
-                    filter = {frontpageNews[8].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    position = {frontpageNews[8].position}
-                    videoURL = {frontpageNews[8].videoURL}
-                    thumbShape = 'wide'
-                    category = {frontpageNews[8].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                    readMore = {false}
-                />
-                <Card 
-                    path = {`/article/${frontpageNews[9]._id}`}
-                    classSuffix = 'magazin'
-                    title = {frontpageNews[9].title}
-                    subtitle = {frontpageNews[9].subtitle}
-                    paragraphs = {frontpageNews[9].text}
-                    datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                    dateUpdated = {dateFormat(frontpageNews[9].dateUpdated, 'clock')}
-                    src = {frontpageNews[9].imgURL}
-                    filter = {frontpageNews[9].imgFilter2}
-                    frontpageNews = {frontpageNews}
-                    position = {frontpageNews[9].position}
-                    videoURL = {frontpageNews[9].videoURL}
-                    thumbShape = 'wide'
-                    category = {frontpageNews[9].category}
-                    hasDateArrow={true}
-                    line = 'bottom'
-                    readMore = {false}
-                />
+                <Line className = 'inMain' />
+                <Magazin />
+               
                  {/* <Card 
 
                     classSuffix = 'magazin'

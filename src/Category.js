@@ -16,7 +16,7 @@ export default function Category() {
     const {alphabet, setShowSiteOverlay, activeCategory, setActiveCategory } = useContext(context);
     const [articlesByCategory, setArticlesByCategory] = useState('');
     
-    const { category } = useParams();
+    const { category, tag } = useParams();
     const [pageNum, setPageNum] = useState({number: 1, isLast: false, numOfPages: ''});
 
     const formatCategory = (category) => {
@@ -35,37 +35,38 @@ export default function Category() {
     return (
         <div className="category container">
             <div className='category-articles'>
-                {articlesByCategory && articlesByCategory.map((article, i) => {
-                    let lineType = '';
-                    if(articlesByCategory.length == (i+1)) {
-                        lineType = ''
-                    } else {
-                        lineType = 'bottom'
-                    }
-                    return <>
+                <div className='articles-list'>
+                    {articlesByCategory && articlesByCategory.map((article, i) => {
+                        let lineType = '';
+                        if(articlesByCategory.length == (i+1)) {
+                            lineType = ''
+                        } else {
+                            lineType = 'bottom'
+                        }
+                        return <>
 
-                        <Card
-                            key = {i}
-                            classSuffix={'category'}
-                            path = {`/article/${article._id}`}
-                            position={article.position} 
-                            title={article.title}
-                            subtitle={article.subtitle}
-                            src={article.imgURL}
-                            videoURL={article.videoURL}
-                            filter = {article.imgFilter}
-                            category = {category}
-                            datePublished = {dateFormat(article.datePublished, 'month', 'dayMonth','comma', 'clock')}
-                            dateUpdated = {dateFormat(article.dateUpdated,'clock')}
-                            hasDateArrow={true}
-                            thumbShape={'wide'}
-                            line = {lineType}
-                            readMore = {true}
-                        />
-                        
-                    </>
-                })}
-        
+                            <Card
+                                key = {i}
+                                classSuffix={'category'}
+                                path = {`/article/${article._id}`}
+                                position={article.position} 
+                                title={article.title}
+                                subtitle={article.subtitle}
+                                src={article.imgURL}
+                                videoURL={article.videoURL}
+                                filter = {article.imgFilter}
+                                category = {category}
+                                datePublished = {dateFormat(article.datePublished, 'month', 'dayMonth','comma', 'clock')}
+                                dateUpdated = {dateFormat(article.dateUpdated,'clock')}
+                                hasDateArrow={true}
+                                thumbShape={'wide'}
+                                line = {lineType}
+                                readMore = {true}
+                            />
+                            
+                        </>
+                    })}
+                </div>
                 <Pagination 
                     category = {category} 
                     articlesByCategory = {articlesByCategory}
@@ -84,20 +85,19 @@ export default function Category() {
                 {category === 'business' && <div className='news-feed'>
                     <div className='news-feed-title'>Više sa web-a</div>
                     <iframe width="850" height="600" src="https://rss.app/embed/v1/list/tfvgQKyHd9tPF4EH" frameborder="1"></iframe>
-                    {/* <iframe width="850" height="1600" src="https://rss.app/embed/v1/list/tfvgQKyHd9tPF4EH" frameborder="0"></iframe> */}
-                    {/* <iframe width="850" height="1600" src="https://rss.app/embed/v1/list/tfvgQKyHd9tPF4EH" frameborder="0"></iframe> */}
+            
                 </div>}
                 {category === 'technology' && <div className='news-feed'>
                     <div className='news-feed-title'>Više sa web-a</div>
-                    <iframe width="360" height="440"  src="https://rss.app/embed/v1/carousel/tGppZmp6yfjyl7wq" frameborder="0"></iframe>
+                    <iframe width="850" height="1600" src="https://rss.app/embed/v1/list/tN5fVbqtFiG6SpDE" frameborder="1"></iframe>
                 </div>}
                 {category === 'entertainment' && <div className='news-feed'>
                     <div className='news-feed-title'>Više sa web-a</div>
-                    <iframe width="360" height="440"  src="https://rss.app/embed/v1/carousel/t1vbyAR2q2PB0Enb" frameborder="0"></iframe>
+                    <iframe width="850" height="1600" src="https://rss.app/embed/v1/list/tpZKWfyxQjObXAr2" frameborder="1"></iframe>
                 </div>}
                 {category === 'sports' && <div className='news-feed'>
                     <div className='news-feed-title'>Više sa web-a</div>
-                    <iframe width="360" height="440"  src="https://rss.app/embed/v1/carousel/tAkCRwm8kJvC2N0J" frameborder="0"></iframe>
+                    <iframe width="850" height="1600" src="https://rss.app/embed/v1/list/t0mYvvqpHSs2iQsD" frameborder="1"></iframe>
                 </div>}
             </div>
 

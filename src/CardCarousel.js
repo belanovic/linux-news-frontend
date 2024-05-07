@@ -39,7 +39,7 @@ export default function CardCarousel({ title, subtitle, datePublished, dateUpdat
                 {src === 'generic'?
                     <GenericThumb 
                         className = {`card-slide-img `}  
-                        shape = 'wide'
+                        thumbShape = 'wide'
                         category = {category}
                     />
                     :

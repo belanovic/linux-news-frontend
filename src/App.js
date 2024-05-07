@@ -51,11 +51,11 @@ export default function App() {
                 <Route path = {`/articleTrending3/:id`}><Article key = {19}/></Route>
                 <Route path = {`/articleTrending4/:id`}><Article key = {20}/></Route>
 
-                <Route path = "/politics/:category"><Category key = {1} /></Route>
-                <Route path = "/technology/:category"><Category key = {2}/></Route>
-                <Route path = "/business/:category"><Category key = {3}/></Route>
-                <Route path = "/entertainment/:category"><Category key = {4}/></Route>
-                <Route path = "/sports/:category"><Category key = {5}/></Route>
+                <Route path = "/politics/:category/:tag"><Category key = {1} /></Route>
+                <Route path = "/technology/:category/:tag"><Category key = {2}/></Route>
+                <Route path = "/business/:category/:tag"><Category key = {3}/></Route>
+                <Route path = "/entertainment/:category/:tag"><Category key = {4}/></Route>
+                <Route path = "/sports/:category/:tag"><Category key = {5}/></Route>
                 
                 {/* <Route path = "/form"><Form /></Route>  */}
 

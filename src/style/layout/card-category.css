@@ -36,10 +36,10 @@
     margin: 0.2em;
 }
 
-.read-more {
+.card-category .read-more {
     order: 2;
     margin-top: auto;
 }
-.read-more a {
+.card-category .read-more a {
     display: inline-block;
 }

@@ -16,9 +16,7 @@ export default function Header() {
         setNavVisible(prev => !prev);
     }
 
-    const [numTitle, setNumTitle] = useState(1);
-
-    useEffect(()=> console.log(numTitle), [numTitle])
+    const [numTitle, setNumTitle] = useState(0);
  
     return (
         <header className="header">
@@ -34,6 +32,9 @@ export default function Header() {
                                 <img style = {{display: numTitle == 0? 'block' : 'none'}} className='title-img' src='https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fvesti2.png?alt=media&token=dc60acff-4ce3-44ac-9174-1a7db4de5ca1'></img>
             
                                 <img style = {{display: numTitle == 1? 'block' : 'none'}} className='title-img' src='https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fvesti6.png?alt=media&token=739b833b-bdf5-4308-9435-0c1cab9466d2'></img>
+                                <img style = {{display: numTitle == 2? 'block' : 'none'}} className='title-img' src='https://r74.cooltext.com/rendered/cooltext457665053425105.png'></img>
+
+                                
                                
                                {/*  <i className="fab fa-react">
                                     {numTitle == 0 && <span className='new-rocker-regular'>{'Вести'}</span>}

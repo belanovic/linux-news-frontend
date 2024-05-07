@@ -14,3 +14,9 @@
     background-color: rgb(136, 136, 136);
     margin: 2em 0em 2em 0em;
 }
+
+.inMain {
+    background-color: black;
+    height: 3px;
+    margin: 3em 0em 3em 0em;
+}

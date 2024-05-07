@@ -3,10 +3,11 @@ import { getFrontpageNews } from './getNews.js';
 
 const context = React.createContext();
 
-function Provider(props) {
+let defaultFrontpageNews = [];
+for(let i = 0; i < 100; i++) {defaultFrontpageNews.push(i)}
 
-    const [frontpageNews, setFrontpageNews] = useState([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]);
-    const [dateLoaded, setDateLoaded] = useState(false);
+function Provider(props) {
+    const [frontpageNews, setFrontpageNews] = useState(defaultFrontpageNews);
     const [showSiteOverlay, setShowSiteOverlay] = useState('none');
     const [alphabet, setAlphabet] = useState('cirilica');
     const [navVisible, setNavVisible] = useState(false);
@@ -20,10 +21,9 @@ function Provider(props) {
             const n = await getFrontpageNews();
             setShowSiteOverlay('none');
             n.sort((a, b) => a.position - b.position);
+            /* setFrontpageNews([]); */
             setFrontpageNews(n);
-            setDateLoaded(true);
         } catch (error) {
-            setDateLoaded(false)
             alert(error.message);
         }
     }
@@ -36,8 +36,6 @@ function Provider(props) {
                 frontpageNews,
                 setFrontpageNews,
                 getAndSetFrontpageNews,
-                dateLoaded,
-                setDateLoaded,
                 showSiteOverlay,
                 setShowSiteOverlay,
                 alphabet,

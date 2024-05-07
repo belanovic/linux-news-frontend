@@ -4,7 +4,7 @@ import './style/typography/part-title.css';
 
 export default function PartTitle({classSuffix, title}) {
     return (
-        <div className = {`container partTitle partTitle-${classSuffix}`}>
+        <div className = {`partTitle partTitle-${classSuffix}`}>
             <div className = "partTitle-text">
                 {title}
             </div>
