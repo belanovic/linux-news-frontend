@@ -8,6 +8,15 @@
 .category-articles .pagination {
     margin-bottom: 2em;
 }
+.articles-tag {
+    display: inline-block;
+    padding: 0.75em 1.5em 1em 1.5em;
+    letter-spacing: 1px;
+}
+.articles-tag::before {
+    content: '#';
+}
+
 .articles-list {
     margin-bottom: 2em;
 }

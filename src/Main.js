@@ -6,6 +6,8 @@ import './style/play.css';
 import Carousel from './Carousel.js';
 import Latest from './Latest.js';
 import General from './General.js';
+import GeneralSmall from './GeneralSmall.js';
+import Recommend from './Recommend.js';
 import Magazin from './Magazin.js';
 import Card from './Card.js';
 import NavigationDesk from './NavigationDesk.js';
@@ -16,6 +18,7 @@ import dateFormat from './dateFormat.js';
 import {context} from './newsContext.js';
 import Covid from './Covid.js';
 import Line from './Line.js';
+import Space from './Space.js';
 import Form from './Form.js';
 
 export default function Main() {
@@ -28,82 +31,20 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
-                {/* <NewsTicker1 frontpageNews = {frontpageNews} /> */}
                 <section className='central'>
-                    <div className='central-up'>
                         <Carousel />
                         <Latest />
-                    </div>
-                    <div className='central-down'>
-                        <General />
-                    </div>
                 </section>
-                <Line className = 'inMain' />
+
+                <Space margin = '3em'/>
+                <General />
+                <Space margin = '3em'/>
+                <GeneralSmall />
+                <Line type = 'main'/>
+                <Recommend />
+                <Line type = 'main'/>
                 <Magazin />
                
-                 {/* <Card 
-
-                    classSuffix = 'magazin'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/2LE1wdd'
-                    line = 'bottom'
-         
-                />
-                 <Card 
-
-                    classSuffix = 'magazin'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/2LE1wdd'
-                    line = 'bottom'
-                
-                />
-                <PartTitle title = "Sport" classSuffix = "sport" />
-                <Card 
-                    classSuffix = 'sport'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/2Y1Vyp1'
-                    line = 'bottom'
-
-                />
-                <Card 
-                    classSuffix = 'sport'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/3qH7Dfn'
-                    line = 'bottom'
-              
-                />
-                <Card 
-                    classSuffix = 'sport'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/39XvfFN'
-                    line = 'bottom'
-          
-                />
-
-                <Card 
-
-                    classSuffix = 'sport'
-                    title = "Naslov prve kartice"
-                    paragraphs = {lorem(0, 150)}
-                    // datePublished = {new Date(frontpageNews[5].datePublished).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    // dateUpdated = {new Date(frontpageNews[5].dateUpdated).toLocaleTimeString('rs-RS', { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric'})}
-                    src = 'https://bit.ly/3sI8COt'
-                /> */}
             </div>
         </main>
     )

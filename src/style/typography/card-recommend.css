@@ -1,0 +1,62 @@
+.card-recommend {
+    padding: 3em 2em 1em 2em;
+    background-color: rgb(255, 255, 255, 0.3);
+
+}
+
+.card-recommend-text {
+    background-color: rgba(255, 255, 255);
+}
+
+.card-recommend-title {
+    color: black;
+    font-size: 1.75rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    transition: color 0.25s;
+    height: 100px;
+    overflow: hidden;
+}
+
+.card-recommend-title:hover {
+    color: rgb(15, 141, 250);
+}
+
+.card-recommend-info {
+    color: white;
+}
+
+.card-recommend-info .card-info-category {
+    color: rgb(61, 170, 237);
+    font-size: 1.5rem;
+    font-family: sans-serif, Arial, Helvetica;
+    text-transform: uppercase;
+}
+
+.card-recommend-info .card-info-date {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+
+@media all and (max-width: 768px) {
+    .card-recommend-title {
+        font-size: 2rem;
+        line-height: 1.25;
+        letter-spacing: 1px;
+    }
+ 
+    .card-recommend-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card-recommend-info .card-info-category {
+        font-size: 1rem;
+    }
+    
+    .card-recommend-info .card-info-date {
+        font-size: 1rem;
+    }
+}

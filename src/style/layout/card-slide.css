@@ -4,6 +4,7 @@
 }
 
 .card-slide-container-img {
+    width: 100%;
     overflow: hidden;
 }
 
@@ -46,14 +47,14 @@
 }
 
 
-.card-slide-info .card-category {
+.card-slide-info .card-info-category {
     display: inline-block;
 }
-.card-slide-info .card-category {
+.card-slide-info .card-info-category {
     padding-right: 0.5em;
 }
 
-.card-slide-info .card-date {
+.card-slide-info .card-info-date {
     display: inline-block;
 }
 

@@ -19,7 +19,7 @@
     line-height: 1.5;
 }
 
-.card-slide-info .card-category {
+.card-slide-info .card-info-category {
     /* background-color: rgba(57, 57, 57, 0.1); */
     font-size: 1.5rem;
     font-family: sans-serif, Arial, Helvetica;
@@ -27,7 +27,7 @@
     letter-spacing: 1px;
 }
 
-.card-slide-info .card-date {
+.card-slide-info .card-info-date {
     /* background-color: rgba(57, 57, 57, 0.1); */
     font-size: 1.5rem;
     text-transform: capitalize;
@@ -46,11 +46,11 @@
         line-height: 1.5;
     }
 
-    .card-slide-info .card-category {
+    .card-slide-info .card-info-category {
         font-size: 1rem;
     }
     
-    .card-slide-info .card-date {
+    .card-slide-info .card-info-date {
         font-size: 1rem;
     }
 }

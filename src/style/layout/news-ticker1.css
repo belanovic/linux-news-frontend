@@ -5,7 +5,7 @@
 .ticker-wrapper {
     display: flex;
     z-index: 2;
-    margin-bottom: 1.5em;
+
 }
 
 .ticker-wrapper.positioned {

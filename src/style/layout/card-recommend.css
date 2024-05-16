@@ -1,0 +1,49 @@
+
+
+
+.card-recommend {
+    flex: 0 0 24%;
+    position: relative;
+}
+
+.card-recommend-container-img {
+    overflow: hidden;
+}
+.card-recommend-container-img a {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+
+}
+.card-recommend-img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+
+}
+
+.card-recommend-text {  
+    width: 100%;
+    padding: 1em 1em 1em 1em;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-recommend-title {
+    margin-bottom: 0.25em;
+    margin-top: 0em;
+}
+.card-recommend-info {
+    order: -1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card-recommend-info .card-info-category {
+    display: inline-block;
+}
+
+.card-recommend-info  .fa-arrow-right {
+    margin: 0 5px 0 7px;
+}

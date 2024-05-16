@@ -13,13 +13,13 @@
 .card-latest-info {
     font-size: 1.25rem;
 }
-.card-latest-info .card-category {
+.card-latest-info .card-info-category {
 
     text-transform: uppercase;
     color: rgb(61, 170, 237);
     letter-spacing: 1px;
 }
 
-.card-latest-info .card-date {
+.card-latest-info .card-info-date {
     text-transform: lowercase;
 }

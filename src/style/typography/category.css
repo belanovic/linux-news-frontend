@@ -1,6 +1,9 @@
 .category .news-feed-title {
     font-size: 2rem;
     text-align: center;
-    background-color: black;
-    color: white;
+}
+
+.articles-tag {
+    font-size: 2rem;
+    color: rgb(15, 141, 250);
 }

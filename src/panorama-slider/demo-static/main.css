@@ -1,0 +1,45 @@
+html,
+body {
+  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #222222;
+  color: #fff;
+  line-height: 1.5;
+  font-family: -apple-system, system-ui, "Helvetica Neue", Helvetica, Arial, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.panorama-slider {
+  padding: 48px 0;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+.panorama-slider .swiper {
+  width: 100%;
+  height: 280px;
+}
+.panorama-slider .slide-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+}
+.panorama-slider .swiper-pagination {
+  bottom: -10px;
+  --swiper-pagination-bullet-inactive-color: #fff;
+  --swiper-pagination-color: #fff;
+}

@@ -10,6 +10,8 @@ import './style/layout/card.css';
 import './style/typography/card.css';  
 import './style/layout/card-general.css';
 import './style/typography/card-general.css';  
+import './style/layout/card-generalSmall.css';
+import './style/typography/card-generalSmall.css';
 import './style/layout/card-magazin.css';
 import './style/typography/card-magazin.css';  
 import './style/layout/card-sport.css';
@@ -18,8 +20,10 @@ import './style/layout/card-category.css';
 import './style/typography/card-category.css'; 
 import './style/layout/card-latest.css';
 import './style/typography/card-latest.css'; 
+import './style/layout/card-recommend.css';
+import './style/typography/card-recommend.css'; 
 
-export default function Card({ position, classSuffix, title, subtitle, videoURL, line, path, readMore,
+export default function Card({index, position, pageNum, classSuffix, title, subtitle, videoURL, line, path, readMore,
     datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
     const { alphabet } = useContext(context);
@@ -43,8 +47,8 @@ export default function Card({ position, classSuffix, title, subtitle, videoURL,
 
     return (
         <>
-        {line == 'top'? <Line /> : ''}
-        <div className={`card card-${classSuffix}`}>
+        {line == 'top'? <Line type={classSuffix} /> : ''}
+        <div className={`card card-${classSuffix} ${(index == 0) && (pageNum.number == 1)? 'first' : ''}`}>
             {src && <div className={`card-${classSuffix}-container-img`}>
                 <Link to={path}>
                     {videoURL && (videoURL !== 'none') && <div className="play"><i className="far fa-play-circle"></i></div>}
@@ -72,8 +76,8 @@ export default function Card({ position, classSuffix, title, subtitle, videoURL,
                     </Link>
                 </div>}
                 {(category || datePublished || dateUpdated) && <div className={`card-${classSuffix}-info`}>
-                    {category && <div className='card-category'>{category} / </div>}
-                    {(datePublished || dateUpdated) && <div className={`card-date`}>
+                    {category && <div className='card-info-category'>{category} / </div>}
+                    {(datePublished || dateUpdated) && <div className={`card-info-date`}>
                         {datePublished && <span className="date datePublished" >
                             {datePublished ? datePublished: ''}
                         </span>}
@@ -95,7 +99,7 @@ export default function Card({ position, classSuffix, title, subtitle, videoURL,
                 {readMore && <div className='read-more'> <Link to={path}>Pročitaj</Link></div>}
             </div>}
         </div>
-        {line == 'bottom'? <Line /> : ''}
+        {line == 'bottom'? <Line type={classSuffix} /> : ''}
         </>
     )
 }

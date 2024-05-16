@@ -3,8 +3,8 @@ import {context} from './newsContext.js';
 import Card from './Card.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
-import './style/layout/general.css';
-import './style/typography/general.css';
+import './style/layout/general-small.css';
+import './style/typography/general-small.css';
 
 export default function General() {
 
@@ -23,6 +23,7 @@ export default function General() {
                         videoURL = {article.videoURL}
                         filter = {article.imgFilter}
                         category = {article.category}
+                        datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
                         title = {article.title}
                         thumbShape = 'wide'
                         readMore={false}

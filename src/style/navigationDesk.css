@@ -1,8 +1,5 @@
 /* ========== NavigationDesk ============= */
 
-.navigationDesk-container{
-    margin-bottom: 2em;
-}
 
 .navigationDesk-container.positioned {
     position: sticky;
@@ -12,7 +9,7 @@
 
 .navigationDesk {
     display: block;
-    width: 63%;
+    width: 62%;
 }
 
 .navDesk-list {

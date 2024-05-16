@@ -1,0 +1,42 @@
+.card-generalSmall {
+    flex: 0 0 32%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card-generalSmall:nth-child(1) {
+    margin-bottom: 3em;
+}
+
+.card-generalSmall-container-img {
+    flex: 0 0 30%;
+    overflow: hidden;
+}
+
+.card-generalSmall-img {
+    width: 100%;
+}
+
+.card-generalSmall-container-title {
+    order: 1;
+}
+
+.card-generalSmall-text {
+    flex: 0 0 68%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-generalSmall-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card-generalSmall-container-subtitle {
+    display: none;
+}
+
+.card-generalSmall .play {
+    margin: 0.2em;
+}

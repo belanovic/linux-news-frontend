@@ -34,9 +34,12 @@
 }
 .card-general-info {
     order: -1;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
 }
 
-.card-general-info .card-category {
+.card-general-info .card-info-category {
     display: inline-block;
 }
 

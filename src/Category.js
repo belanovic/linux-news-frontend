@@ -29,24 +29,31 @@ export default function Category() {
 
     useEffect(() => {
         setActiveCategory(category);
+
+        console.log(category)
+        console.log(tag)
+
+
         return () => setActiveCategory('')
     }, [])
 
     return (
         <div className="category container">
             <div className='category-articles'>
+                {tag && (tag != 'vesti') && <div className='articles-tag'>{tag}</div>}
                 <div className='articles-list'>
                     {articlesByCategory && articlesByCategory.map((article, i) => {
+                        if(tag && !article.tagsArr.includes(tag)) return
                         let lineType = '';
                         if(articlesByCategory.length == (i+1)) {
                             lineType = ''
                         } else {
                             lineType = 'bottom'
                         }
-                        return <>
-
-                            <Card
+                        return  <Card
                                 key = {i}
+                                index={i}
+                                pageNum={pageNum}
                                 classSuffix={'category'}
                                 path = {`/article/${article._id}`}
                                 position={article.position} 
@@ -60,11 +67,10 @@ export default function Category() {
                                 dateUpdated = {dateFormat(article.dateUpdated,'clock')}
                                 hasDateArrow={true}
                                 thumbShape={'wide'}
-                                line = {lineType}
-                                readMore = {true}
+                           
+                                readMore = {false}
                             />
-                            
-                        </>
+    
                     })}
                 </div>
                 <Pagination 

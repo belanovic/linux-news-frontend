@@ -21,14 +21,14 @@
 .card-category-info {
     font-size: 1rem;
 }
-.card-category-info .card-category {
+.card-category-info .card-info-category {
 
     text-transform: uppercase;
     color: rgb(61, 170, 237);
     letter-spacing: 1px;
 }
 
-.card-category-info .card-date {
+.card-category-info .card-info-date {
     text-transform: lowercase;
 }
 

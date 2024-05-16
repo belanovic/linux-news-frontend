@@ -1,0 +1,16 @@
+.recommend-label {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+}
+
+.recommend .swiper {
+    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231023/pngtree-black-texture-background-deepening-darkness-image_13674973.png');
+    
+    background-image: url('https://w0.peakpx.com/wallpaper/926/821/HD-wallpaper-brick-abstract-dark-wall.jpg');
+    background-image: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
+    background-image: url('https://png.pngtree.com/background/20230412/original/pngtree-background-wall-wall-bricks-brick-red-wall-background-picture-image_2399715.jpg');
+    
+    
+    background-size: cover;
+    background-position: bottom;
+}

@@ -1,15 +1,16 @@
 import React, { useState, useEffect, useContext } from 'react';
 import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperCore, { Navigation, Pagination, Thumbs, Autoplay, EffectCube} from 'swiper';
+import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import dateFormat from './dateFormat.js';
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
-import 'swiper/swiper-bundle.css';
+import 'swiper/css/bundle';
 import './style/layout/carousel.css';
 import './style/typography/carousel.css';
 
-SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay])
+
+/* SwiperCore.use([Navigation, Pagination, Thumbs, Autoplay]) */
 
 export default function BootstrapCarousel() {
   const {frontpageNews} = useContext(context);
@@ -18,11 +19,13 @@ export default function BootstrapCarousel() {
   return (
     <div className='carousel'>
       <Swiper
+        modules={[Navigation, Pagination, Autoplay,EffectCube, EffectFade, EffectCoverflow]}
         id="main"
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
+        slidesPerView={'1'}
         speed={1500}
         pagination= {{clickable: true}}
         loop={true}

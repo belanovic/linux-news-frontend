@@ -2,11 +2,24 @@
     display: flex;
     justify-content: space-between;
     overflow: hidden;
+    box-shadow: 0 0 30px 0 rgb(118, 118, 118); 
+    padding: 2em 1em 1em 2em;
+    margin-bottom: 3em;
+}
+
+.card-category.first {
+    flex-direction: column;
+    padding: 3em;
+    box-shadow: 0 0 30px 0 rgb(118, 118, 118);
 }
 
 .card-category-container-img {
     flex: 0 0 35%;
     overflow: hidden;
+}
+
+.card-category.first .card-category-container-img {
+    margin-bottom: 1em;
 }
 
 .card-category-img {

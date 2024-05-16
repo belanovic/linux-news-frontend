@@ -9,6 +9,7 @@ import {context} from './newsContext';
 import NewsTicker1 from './NewsTicker1.js';
 import NewsTicker from './NewsTicker.js';
 import NavigationDesk from './NavigationDesk.js';
+import Space from './Space.js';
 import Form from './Form';
 
 export default function App() {
@@ -18,8 +19,11 @@ export default function App() {
         <div className = "wrapper"> 
             <div className = "siteOverlay" ref = {cmsOverlay} style = {{display: showSiteOverlay}}></div>
             <NewsTicker positioned={true} />
+            <Space margin = '1.5em' />
             <Header />
+            <Space margin = '3em' />
             <NavigationDesk positioned={false} />
+            <Space margin = '2em' />
             <Switch> 
 
                 <Route exact path = "/"><Main /></Route> 
@@ -51,11 +55,17 @@ export default function App() {
                 <Route path = {`/articleTrending3/:id`}><Article key = {19}/></Route>
                 <Route path = {`/articleTrending4/:id`}><Article key = {20}/></Route>
 
-                <Route path = "/politics/:category/:tag"><Category key = {1} /></Route>
-                <Route path = "/technology/:category/:tag"><Category key = {2}/></Route>
-                <Route path = "/business/:category/:tag"><Category key = {3}/></Route>
-                <Route path = "/entertainment/:category/:tag"><Category key = {4}/></Route>
-                <Route path = "/sports/:category/:tag"><Category key = {5}/></Route>
+                <Route path = "/politics/:category"><Category key = {1} /></Route>
+                <Route path = "/technology/:category"><Category key = {2}/></Route>
+                <Route path = "/business/:category"><Category key = {3}/></Route>
+                <Route path = "/entertainment/:category"><Category key = {4}/></Route>
+                <Route path = "/sports/:category"><Category key = {5}/></Route>
+                
+                <Route path = "/politicsTagged/:category/:tag"><Category key = {6} /></Route>
+                <Route path = "/technologyTagged/:category/:tag"><Category key = {7}/></Route>
+                <Route path = "/businessTagged/:category/:tag"><Category key = {8}/></Route>
+                <Route path = "/entertainmentTagged/:category/:tag"><Category key = {9}/></Route>
+                <Route path = "/sportsTagged/:category/:tag"><Category key = {10}/></Route>
                 
                 {/* <Route path = "/form"><Form /></Route>  */}
 

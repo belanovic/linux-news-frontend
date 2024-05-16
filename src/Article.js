@@ -74,7 +74,7 @@ export default function Article() {
                 </div> */}
                 <div className='article-body'>
                     <h2 className = "article-title">{article.title}</h2>
-                    <Line  className='inArticle' />
+                    <Line  type = 'article' />
                     <div className = "article-metadata">
                         <div className = "article-origin">
                             <div className = "author">{'Autor'}: <span>{article.author}</span></div>
@@ -85,7 +85,7 @@ export default function Article() {
                             <div className = "date-updated">{'Poslednja izmena'}: <span>{dateFormat(article.dateUpdated, 'month', 'dayMonth', 'year', 'comma', 'clock')}</span></div>
                         </div>
                     </div>
-                    <Line className='inArticle' />
+                    <Line  type = 'article' />
                     <h3 className = "article-subtitle">{article.subtitle}</h3>
                     {article.videoURL === 'none'? 
                         <div className = "article-img-container">
@@ -113,7 +113,7 @@ export default function Article() {
                         className = "article-text"
                         dangerouslySetInnerHTML={{__html: article.text}}
                     />
-                    <Tags article = {article} />
+                    <Tags tagsArr = {article.tagsArr} category = {article.category} />
                 </div>
             </div>
             

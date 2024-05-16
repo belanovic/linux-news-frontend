@@ -16,9 +16,9 @@
 }
 
 .magazin-down {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 2em;
+    /* display: flex;
+    justify-content: space-between; */
+    margin-bottom: 5em;
 }
 .magazin-up {
     margin-bottom: 3em;

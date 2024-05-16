@@ -53,8 +53,8 @@ export default function CardCarousel({ title, subtitle, datePublished, dateUpdat
                 </div>
                 <div className={`card-slide-text`}>
                     <div className={`card-slide-info`}>
-                        <div className='card-category'>{category} / </div>
-                        <div className={`card-date`}>
+                        <div className='card-info-category'>{category} / </div>
+                        <div className={`card-info-date`}>
                             <span className="date datePublished" >
                                 {datePublished}
                             </span>
