@@ -1,16 +1,25 @@
+.recommend-mobile {
+    display: none;
+}
+
 .recommend-label {
     font-size: 3rem;
     margin-bottom: 0.5em;
 }
 
-.recommend .swiper {
-    background-image: url('https://png.pngtree.com/thumb_back/fw800/background/20231023/pngtree-black-texture-background-deepening-darkness-image_13674973.png');
-    
-    background-image: url('https://w0.peakpx.com/wallpaper/926/821/HD-wallpaper-brick-abstract-dark-wall.jpg');
-    background-image: url('https://images.pexels.com/photos/276514/pexels-photo-276514.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-    background-image: url('https://png.pngtree.com/background/20230412/original/pngtree-background-wall-wall-bricks-brick-red-wall-background-picture-image_2399715.jpg');
-    
+.recommend .swiper, .recommend-mobile .swiper {
+
+    background-image: url('https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fzid.png?alt=media&token=df74d93a-d576-4184-9e7e-159610ffd9e1');
     
     background-size: cover;
     background-position: bottom;
+}
+
+@media all and (max-width: 768px) {
+    .recommend {
+        display: none;
+    }
+    .recommend-mobile {
+        display: block;
+    }
 }

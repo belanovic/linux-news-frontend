@@ -41,9 +41,12 @@
     display: flex;
 }
 
-.header-images .react-image, .header-images  .mern-image  {
-    height: 6em;
+.header-images .one-tech, .header-images .mern-image {
+    height: 5em;
     width: 100%;
+}
+.header-images .mern-image {
+    display: none;
 }
 
 .menu-toggle {
@@ -66,7 +69,10 @@
 
 @media all and (max-width: 768px) {
 
-   
+    .header-box {
+        flex-direction: column;
+    }
+
     .header-icons {
         justify-content: flex-end;
     }
@@ -75,7 +81,13 @@
         display: block;
     }
 
-    .header-images {
+    .header-images .one-tech {
         display: none;
     }
+
+    .header-images .mern-image {
+        display: block;
+        height: 4em;
+    }
 }
+

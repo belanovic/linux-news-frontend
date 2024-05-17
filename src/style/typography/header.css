@@ -11,12 +11,8 @@
 }
 
 .header-title {
-  background-color: rgb(161, 0, 0);
-  background-color: rgb(120, 0, 0);
-  background-color: black;
   background-color: white;
  
-  /* box-shadow: 0px 0px 20px 0px grey; */
 }
 
 .header-title a {
@@ -24,10 +20,11 @@
 }
 
 .header-title a .title {
-    font-size: 4.5rem;    
+    font-size: 4rem;    
     font-style: italic;
     user-select: none;    
 }
+
 .header-title a .title span {
   color: white;
   color: black;
@@ -43,110 +40,9 @@
   box-shadow: 0px 5px 15px 5px grey;
 }
 
-/* google fontovi ////////////////////////// */
-
-.new-rocker-regular {
-    font-family: "New Rocker", system-ui;
-    font-weight: 400;
-    font-style: normal;
-} 
   
-.jersey-10.charted-regular {
-    font-family: "Jersey 10 Charted", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+@media all and (max-width: 768px) {
+  .header-title a .title {
+    font-size: 3rem; 
 }
-
-.seymour-one-regular {
-    font-family: "Seymour One", sans-serif;
-    font-weight: 700;
-    font-style: italic;
-  }
-
-  .abril-fatface-regular {
-    font-family: "Abril Fatface", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  .aladin-regular {
-    font-family: "Aladin", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .gravitas-one-regular {
-    font-family: "Gravitas One", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  
-  .rubik-mono.one-regular {
-    font-family: "Rubik Mono One", monospace;
-    font-weight: 400;
-    font-style: italic;
-    
-  }
-  .bangers-regular {
-    font-family: "Bangers", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .sriracha-regular {
-    font-family: "Sriracha", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: larger;
-
-  }
-  .ultra-regular {
-    font-family: "Ultra", serif;
-    font-weight: 700;
-    font-style: italic;
-
-  }
-  .bungee-shade-regular {
-    font-family: "Bungee Shade", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .creepster-regular {
-    font-family: "Creepster", system-ui;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .rubik-moonrocks-regular {
-    font-family: "Rubik Moonrocks", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .racing-sans.one-regular {
-    font-family: "Racing Sans One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-  .rye-regular {
-    font-family: "Rye", serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-.bowlby-one.sc-regular {
-    font-family: "Bowlby One SC", sans-serif;
-    font-weight: 400;
-    font-style: normal;
 }
-.rancho-regular {
-    font-family: "Rancho", cursive;
-    font-weight: 700;
-    font-style: normal;
-    font-size: larger;
-}
-  
-
-/* .login {
-    cursor: pointer;
-}
-
-.fa-user-edit {
-    font-size: 1.5rem;
-    color: white;
-} */

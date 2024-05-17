@@ -5,32 +5,37 @@ import { getNewsByCategory } from './getNews';
 import './style/layout/pagination.css';
 import './style/typography/pagination.css';
 
-export default function Pagination({articlesByCategory, setArticlesByCategory, pageNum, setPageNum, category}) {
+export default function Pagination({articlesByCategory, setArticlesByCategory, pageNum, setPageNum, category, tag}) {
 
     const {setShowSiteOverlay} = useContext(context);
 
-    async function pageArticles(category, pageNum) {
+    async function pageArticles(category, tag, pageNum) {
         setShowSiteOverlay('flex');
         let newsMsg = await getNewsByCategory(category, pageNum);
         setShowSiteOverlay('none');
+        window.scrollTo(0, 0);
         if(newsMsg == null) {
             const promiseResolveA = await setArticlesByCategory([]);
             return null
         }
-        const promiseResolveA = await setArticlesByCategory(newsMsg.newsByCategory);
+        const promiseResolveA = await setArticlesByCategory(() => {
+          
+            if(tag == 'vesti' || !tag)   return newsMsg.newsByCategory;
+            return newsMsg.newsByCategory.filter(article => article.tagsArr.includes(tag))
+        });
         if(pageNum.isLast == true) return newsMsg.numOfPages
         return true
     }
 
     const increasePageNum = async () => {
-        const retValue = await pageArticles(category, {number: pageNum.number + 1, isLast: false});
+        const retValue = await pageArticles(category, tag, {number: pageNum.number + 1, isLast: false});
         if(retValue == null) return;
         setPageNum((prev) => {
             return {number: prev.number + 1, isLast: false}
         })
     }
     const decreasePageNum = async () => {
-        const retValue = await pageArticles(category, {number: pageNum.number - 1, isLast: false});
+        const retValue = await pageArticles(category, tag, {number: pageNum.number - 1, isLast: false});
         if(retValue == null) return;
         setPageNum((prev) => {
             if (prev.number == 1) return prev;
@@ -39,18 +44,19 @@ export default function Pagination({articlesByCategory, setArticlesByCategory, p
     }
 
     const firstPageNum = async () => {
-        const retValue = await pageArticles(category, {number:1, isLast: false});
+        const retValue = await pageArticles(category, tag, {number:1, isLast: false});
         if(retValue == null) return;
         setPageNum({number: 1, isLast: false})
     }
     const lastPageNum = async () => {
-        const numOfPages = await pageArticles(category, {number: pageNum.number, isLast: true});
+        const numOfPages = await pageArticles(category, tag, {number: pageNum.number, isLast: true});
         setPageNum({number: numOfPages, isLast: true});
     }
 
 
     useEffect(async () => {
-        pageArticles(category, pageNum);
+        pageArticles(category, tag, pageNum);
+     
         /* newsByCategory.sort((a, b) => a.datePublished - b.datePublished); */
     }, [])
 

@@ -46,6 +46,7 @@ export default function Article() {
     }, [filter])
 
     useEffect(async() => {
+        window.scrollTo(0, 0);
         setShowSiteOverlay('flex');
         const articleFound = await getArticle(id);
         setShowSiteOverlay('none');

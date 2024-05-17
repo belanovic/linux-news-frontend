@@ -29,11 +29,7 @@ export default function Category() {
 
     useEffect(() => {
         setActiveCategory(category);
-
-        console.log(category)
-        console.log(tag)
-
-
+        window.scrollTo(0, 0);
         return () => setActiveCategory('')
     }, [])
 
@@ -43,7 +39,7 @@ export default function Category() {
                 {tag && (tag != 'vesti') && <div className='articles-tag'>{tag}</div>}
                 <div className='articles-list'>
                     {articlesByCategory && articlesByCategory.map((article, i) => {
-                        if(tag && !article.tagsArr.includes(tag)) return
+                        
                         let lineType = '';
                         if(articlesByCategory.length == (i+1)) {
                             lineType = ''
@@ -79,6 +75,7 @@ export default function Category() {
                     setArticlesByCategory = {setArticlesByCategory}
                     pageNum = {pageNum}
                     setPageNum = {setPageNum}
+                    tag = {tag}
                 />
             </div>
             <div className='category-sidebar'>
