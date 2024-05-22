@@ -33,6 +33,11 @@ export default function Line({key, type}) {
             setHeight('3px');
             setBackgroundColor('white');
         }
+        if(type == 'sport') {
+            setMargin('4em 0em 5em 0em');
+            setHeight('3px');
+            setBackgroundColor('white');
+        }
     }, [])
 
     return (

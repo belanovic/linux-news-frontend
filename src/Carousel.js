@@ -2,6 +2,9 @@ import React, { useState, useEffect, useContext } from 'react';
 import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
+import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
+import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
+import TripleSlider from './triple-slider/demo-vite/triple-slider.js';
 import dateFormat from './dateFormat.js';
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
@@ -19,13 +22,14 @@ export default function BootstrapCarousel() {
   return (
     <div className='carousel'>
       <Swiper
-        modules={[Navigation, Pagination, Autoplay,EffectCube, EffectFade, EffectCoverflow]}
+        modules={[Navigation, Pagination, Autoplay,EffectCube, EffectFade, EffectCoverflow, EffectCarousel, EffectPanorama]}
         id="main"
+
         autoplay={{
           delay: 2000,
           disableOnInteraction: false,
         }}
-        slidesPerView={'1'}
+        slidesPerView={'auto'}
         speed={1500}
         pagination= {{clickable: true}}
         loop={true}

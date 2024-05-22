@@ -1,10 +1,10 @@
 import React, {useState, useEffect, useContext} from 'react';
 import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
-import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
+import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js'; 
+import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 
 import Card from './Card.js';
 import Line from './Line';
@@ -21,7 +21,7 @@ export default function Recommend() {
     return (<><div className='recommend'>
               <div className='recommend-label'>Preporučujemo</div>
               <Swiper
-                    modules={[Navigation, SwiperGL, Autoplay,EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
+                    modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
                     id="main"
                     effect="coverflow"
                     coverflowEffect={{
@@ -69,9 +69,12 @@ export default function Recommend() {
             <div className='recommend-mobile'>
               <div className='recommend-label'>Preporučujemo</div>
               <Swiper
-                    modules={[Navigation, Autoplay,EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
+                    modules={[Navigation, SwiperGL, Autoplay,EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
                     id="main"
                     effect="fade"
+                    gl = {{
+                        shader: 'morph-x'
+                    }}
                     coverflowEffect={{
                         rotate: 50,
                         stretch: 0,

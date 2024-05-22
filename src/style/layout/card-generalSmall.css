@@ -40,3 +40,13 @@
 .card-generalSmall .play {
     margin: 0.2em;
 }
+
+@media all and (max-width: 768px) {
+
+    .card-generalSmall {
+        margin-bottom: 1.25em;
+    }
+    .card-generalSmall:nth-child(1) {
+        margin-bottom: 1.25em;;
+    }
+}

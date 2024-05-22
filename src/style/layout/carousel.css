@@ -1,6 +1,7 @@
 .carousel {
     flex: 0 0 62%;
     overflow: hidden;
+    margin-bottom: 2em;
 }
 
 /* fix swiper ////////////////// */
@@ -67,3 +68,9 @@
     position: absolute;
     bottom: -100%;
 } */
+
+@media all and (max-width: 768px) {
+    .carousel {
+        margin-bottom: 2em;
+    }
+}

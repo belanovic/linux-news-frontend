@@ -63,3 +63,10 @@
 .weather-data sub {
     font-size: 1.5rem;
 }
+
+@media all and (max-width: 768px) {
+    .ticker-label .text {
+        font-size: 1.25rem;
+    }
+
+}

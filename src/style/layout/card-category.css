@@ -56,3 +56,10 @@
 .card-category .read-more a {
     display: inline-block;
 }
+
+@media all and (max-width: 768px) {
+    
+    .card-category-container-subtitle {
+        display: none
+    }
+}

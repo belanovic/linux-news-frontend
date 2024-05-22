@@ -28,4 +28,7 @@
     .latest {
         padding: 0 5em 0 5em;
     }
+    .latest-tabs {
+        margin-bottom: 1em;
+    }
 }

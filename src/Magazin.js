@@ -6,6 +6,9 @@ import Card from './Card.js';
 import { Link } from 'react-router-dom';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
+import EffectMaterial from './material-you-slider/dist/effect-material.esm.js';
+import TripleSlider from './triple-slider/demo-vite/triple-slider.js';
+import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
 import './style/layout/magazin.css';
@@ -16,12 +19,6 @@ export default function Magazin() {
 
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
-    const [magazinNews, setMagazinNews] = useState('');
-
-    useEffect(async () => {
-        setMagazinNews();
-        setMagazinNews(frontpageNews);
-    }, [frontpageNews])
 
     return (
         <div className='magazin'>
@@ -53,9 +50,12 @@ export default function Magazin() {
             </div>
             <div className='magazin-down'>
             <Swiper
-                    modules={[Navigation, Autoplay,EffectCube, EffectCarousel, EffectFade, EffectCoverflow, EffectPanorama]}
+                    modules={[Navigation, Autoplay,EffectCube, EffectCarousel, EffectMaterial, EffectFade, EffectCoverflow, EffectPanorama]}
                     id="main"
                     effect="coverflow"
+                    materialEffect = {{
+                        slideSplitRatio: 0.65,
+                    }}
                     coverflowEffect={{
                         rotate: 50,
                         stretch: 0,
@@ -73,7 +73,53 @@ export default function Magazin() {
                     tag='section'
                     /* navigation */
                     grabCursor={true}
-                    wrapperTag='ul' 
+                    wrapperTag='div' 
+                    thumbs={{ swiper: thumbsSwiper }}
+                >
+                {frontpageNews.map((article, i) => {
+                    if((i < 3) || (i > 14)) return
+                    return <SwiperSlide tag='li' key = {i}>
+                        <Card  
+                            key = {i}
+                            path = {`/article/${article._id}`}
+                            classSuffix = 'magazin'
+                            id = {article._id}
+                            src = {article.imgURL}
+                            videoURL = {article.videoURL}
+                            category = {article.category}
+                            
+                            filter = {article.imgFilter}
+                            title = {article.title}
+                            thumbShape = 'wide'
+                            readMore={false}
+                        />
+                    </SwiperSlide> 
+                })}
+            </Swiper>
+            </div>
+            <div className='magazin-down-mobile'>
+            <Swiper
+                    modules={[Navigation, Autoplay,EffectCube, SwiperGL, EffectCarousel, EffectFade, EffectCoverflow, EffectPanorama]}
+                    id="main"
+                    effect="carousel"
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1
+                    }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
+                    slidesPerView={'2'}
+                    speed={1500}
+                    pagination= {{clickable: true}}
+                    loop={true}
+                    tag='section'
+                    /* navigation */
+                    grabCursor={true}
+                    wrapperTag='div' 
                     thumbs={{ swiper: thumbsSwiper }}
                 >
                 {frontpageNews.map((article, i) => {

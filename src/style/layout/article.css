@@ -73,3 +73,24 @@
 .article-text iframe {
     width: 100%;
 }
+
+@media all and (max-width: 768px) {
+    .article {
+
+        flex-direction: column;
+    }
+    .article.container {
+
+        width: 100%
+    }
+    .article-central {
+        padding: 0;
+        margin-bottom: 3em;
+    }
+    .article .latest {
+        margin-bottom: 3em;
+    }
+  /*   .article .news-feed {
+        margin: 0 2em 0 2em;
+    } */
+}

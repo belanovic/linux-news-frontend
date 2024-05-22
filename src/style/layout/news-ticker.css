@@ -21,7 +21,7 @@
 }
 
 .ticker {
-    flex: 0 0 60%;
+    flex: 1 1 60%;
     overflow: hidden;
     padding-left: 50%;
 }
@@ -61,4 +61,11 @@
     width: 3em;
 }
 
-
+@media all and (max-width: 768px) {
+    .ticker-label {
+        padding: 0.5em 1em 0.5em 1em;
+    }
+    .ticker-day {
+        display: none;
+    }
+}

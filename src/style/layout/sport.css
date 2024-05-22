@@ -1,0 +1,34 @@
+
+
+.sport {
+    padding: 1.5em 4em 4em 4em;
+}
+
+.sport-up {
+    margin-bottom: 3em;
+}
+.sport-down {
+    display: flex;
+}
+
+.sport-down-center {
+    display: flex;
+    flex-wrap: wrap;
+}
+.sport-down-center * {
+    flex: 0 0 50%;
+}
+
+.sport-down-mobile {
+    display: none;
+}
+
+
+@media all and (max-width: 768px) {
+    .sport-down {
+        display: none;
+    }
+    .sport-down-mobile {
+        display: block;
+    }
+}

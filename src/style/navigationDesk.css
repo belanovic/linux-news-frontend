@@ -19,15 +19,10 @@
 }
 
 .navDesk-item {
-    flex: 1 1 0;
-    padding: 0.5em 2em 0.5em 2em;
+    flex: 1 1 30%;
+    padding: 0.5em 0em 0.5em 0em;
     text-align: center;
     border-right: 1px solid black;
-}
-
-.navDesk-item.active {
-    /* background-color: rgb(32, 148, 249); */
-
 }
 
 .navDesk-item:first-child {
@@ -52,7 +47,16 @@
 
 
 @media all and (max-width: 768px) {
-    .navigationDesk-container  {
-        display: none;
+    
+    .navigationDesk {
+        width: 100%;
     }
+
+ /*    .navDesk-list {
+        flex-wrap: wrap;
+    } */
+    .navDesk-label {
+        font-size: 1.25rem;
+    }
+    
 }

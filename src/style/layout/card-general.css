@@ -46,3 +46,9 @@
 .card-general-info  .fa-arrow-right {
     margin: 0 5px 0 7px;
 }
+
+@media all and (max-width: 768px) {
+    .card-general {
+        margin-bottom: 2em;
+    }
+}

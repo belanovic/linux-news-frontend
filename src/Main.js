@@ -9,6 +9,7 @@ import General from './General.js';
 import GeneralSmall from './GeneralSmall.js';
 import Recommend from './Recommend.js';
 import Magazin from './Magazin.js';
+import Sport from '././Sport.js';
 import Card from './Card.js';
 import NavigationDesk from './NavigationDesk.js';
 import PartTitle from './PartTitle.js';
@@ -44,6 +45,8 @@ export default function Main() {
                 <Recommend />
                 <Line type = 'main'/>
                 <Magazin />
+                <Line type = 'main' />
+                <Sport />
                
             </div>
         </main>

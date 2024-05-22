@@ -64,11 +64,8 @@
 
 /* card-magazin ********************* */
 
-.card-magazin {
-    flex: 0 0 32%;
-    position: relative;
 
-}
+ 
 
 .card-magazin-container-img {
     overflow: hidden;;
@@ -119,13 +116,11 @@
 .magazin-themas {
     display: flex;
     justify-content: space-between;
+    
 }
 .thema-item {
     height: 120px;
     width: 120px;
-
-
-
     border-radius: 50%;
     transition: all 0.25s;
 }
@@ -147,4 +142,31 @@
 
 .thema-item:hover {
     transform: scale(1.1);
+}
+
+
+@media all and (max-width: 768px) {
+    .card-magazinBig {
+        flex-direction: column;
+    }
+    .card-magazinBig-container-img {
+        margin-bottom: 1em;
+    }
+    
+
+    .magazin-themas {
+        flex-wrap: wrap;     
+        justify-content: space-evenly;   
+    }
+    .thema-item {
+        height: 100px;
+        width: 20%;
+        margin-bottom: 2em;
+        margin-right: 1em;
+    }
+    .thema-item a span {
+        font-size: 1.5rem;
+    }
+
+
 }

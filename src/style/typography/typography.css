@@ -28,3 +28,14 @@ a:hover {
     background: black;
     caret-color: transparent;
 }
+
+@media all and (max-width: 1400px) and (min-width: 768px) {
+    html {
+        font-size: 9px;
+    }
+}
+@media all and (max-width: 768px) {
+    html {
+        font-size: 12px;
+    }
+}
