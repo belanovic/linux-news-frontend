@@ -6,7 +6,6 @@ import Card from './Card.js';
 import { Link } from 'react-router-dom';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
-import TripleSlider from './triple-slider/demo-vite/triple-slider.js';
 import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
@@ -28,6 +27,25 @@ export default function Sport() {
               
             </div>
             <div className='sport-up'>
+            <Card  
+                        key = {9}
+                        path = {`/article/${frontpageNews[9]._id}`}
+                        classSuffix = 'sportBig'
+                        id = {frontpageNews[9]._id}
+                        src = {frontpageNews[9].imgURL}
+                        videoURL = {frontpageNews[9].videoURL}
+                        category = {frontpageNews[9].category}
+                        filter = {frontpageNews[9].imgFilter}
+                        title = {frontpageNews[9].title}
+                        subtitle = {frontpageNews[9].subtitle}
+                        thumbShape = 'wide'
+                        readMore={true}
+                        datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
+                        dateUpdated = {dateFormat(frontpageNews[9].dateUpdated,'clock')}
+                        hasDateArrow={true}
+                    />
+            </div>
+            <div className='sport-center'>
             <Swiper
                     modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
                     id="main"
@@ -58,7 +76,7 @@ export default function Sport() {
                                 <Card  
                                     key = {i}
                                     path = {`/article/${article._id}`}
-                                    classSuffix = 'recommend'
+                                    classSuffix = 'sportCenter'
                                     id = {article._id}
                                     src = {article.imgURL}
                                     videoURL = {article.videoURL}

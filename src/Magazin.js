@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
 import EffectMaterial from './material-you-slider/dist/effect-material.esm.js';
-import TripleSlider from './triple-slider/demo-vite/triple-slider.js';
+
 import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
