@@ -13,20 +13,22 @@ import './style/layout/sport.css';
 import './style/typography/sport.css';
 import 'swiper/css/bundle';
 
-export default function Sport() {
+export default function Sport({onTop}) {
 
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <div className='sport'>
-            <div className='sport-header'>
+        <div className={`sport ${onTop? 'onTop' : ''}`}>
+            <div className='sport-header' >
                 {/* <div className='sport-title'>sport</div> */}
-          
-                <img src = 'https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fsport1.png?alt=media&token=ac31ffde-2685-4271-93ad-53fca5bbccdd'></img>
+                <Link to = '/sports/sports'>
+                    <img src = 'https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fsport1.png?alt=media&token=ac31ffde-2685-4271-93ad-53fca5bbccdd'></img>
+                </Link> 
+                
               
             </div>
-            <div className='sport-up'>
+            <div className='sport-big'>
             <Card  
                         key = {9}
                         path = {`/article/${frontpageNews[9]._id}`}
@@ -35,8 +37,9 @@ export default function Sport() {
                         src = {frontpageNews[9].imgURL}
                         videoURL = {frontpageNews[9].videoURL}
                         category = {frontpageNews[9].category}
-                        filter = {frontpageNews[9].imgFilter}
+                        filter = {frontpageNews[9].imgFilter} 
                         title = {frontpageNews[9].title}
+                        supertitle = {frontpageNews[9].supertitle}
                         subtitle = {frontpageNews[9].subtitle}
                         thumbShape = 'wide'
                         readMore={true}
@@ -45,7 +48,7 @@ export default function Sport() {
                         hasDateArrow={true}
                     />
             </div>
-            <div className='sport-center'>
+            <div className='sport-carousel'>
             <Swiper
                     modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
                     id="main"
@@ -76,7 +79,7 @@ export default function Sport() {
                                 <Card  
                                     key = {i}
                                     path = {`/article/${article._id}`}
-                                    classSuffix = 'sportCenter'
+                                    classSuffix = 'sportCarousel'
                                     id = {article._id}
                                     src = {article.imgURL}
                                     videoURL = {article.videoURL}
@@ -84,6 +87,7 @@ export default function Sport() {
                                     category = {article.category}
                                     datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
                                     title = {article.title}
+                                    supertitle = {article.supertitle}
                                     thumbShape = 'wide'
                                     readMore={false}
                                 />
@@ -92,14 +96,62 @@ export default function Sport() {
   
                 </Swiper>
             </div>
-            <div className='sport-down'>
-                <div className='sport-down-center'>
+            <div className='sport-carousel-mobile'>
+            <Swiper
+                    modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
+                    id="main"
+                    effect="carousel"
+                    coverflowEffect={{
+                        rotate: 50,
+                        stretch: 0,
+                        depth: 100,
+                        modifier: 1
+                    }}
+                    autoplay={{
+                        delay: 2000,
+                        disableOnInteraction: false,
+                    }}
+                    slidesPerView={'2'}
+                    speed={1500}
+                    /* pagination= {{clickable: true}} */
+                    loop={true}
+                    tag='section'
+                    /* navigation */
+                    grabCursor={true}
+                    wrapperTag='ul' 
+                    thumbs={{ swiper: thumbsSwiper }}
+                >
+                    {frontpageNews.map((article, i) => {
+                        if((i < 7) || (i > 14)) return
+                        return <SwiperSlide tag='li' key = {i}>
+                                <Card  
+                                    key = {i}
+                                    path = {`/article/${article._id}`}
+                                    classSuffix = 'sportCarousel'
+                                    id = {article._id}
+                                    src = {article.imgURL}
+                                    videoURL = {article.videoURL}
+                                    filter = {article.imgFilter}
+                                    category = {article.category}
+                                    datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
+                                    title = {article.title}
+                                    supertitle = {article.supertitle}
+                                    thumbShape = 'wide'
+                                    readMore={false}
+                                />
+                            </SwiperSlide>
+                    })}
+  
+                </Swiper>
+            </div>
+            <div className='sport-block'>
+                <div className='sport-block-center'>
                     {frontpageNews.map((article, i) => {
                         if((i < 11) || (i > 14)) return
                         return <Card  
                                 key = {i}
                                 path = {`/article/${article._id}`}
-                                classSuffix = 'sport'
+                                classSuffix = 'sportBlock'
                                 id = {article._id}
                                 src = {article.imgURL}
                                 videoURL = {article.videoURL}
@@ -107,24 +159,25 @@ export default function Sport() {
                                 
                                 filter = {article.imgFilter}
                                 title = {article.title}
+                                supertitle = {article.supertitle}
                                 thumbShape = 'wide'
                                 readMore={false}
                             />
                     })}
                 </div>
-                <div className='sport-down-sidebar'>
+                <div className='sport-latest'>
                     {frontpageNews.map((article, i) => {
-                        if((i < 9) || (i > 14)) return
+                        if((i < 10) || (i > 14)) return
                         return <Card  
                                 
                                 key = {i}
-                                path = {`/articleTrending${i}/${article._id}`}
-                                classSuffix={'latest'}
+                                path = {`/article/${article._id}`}
+                                classSuffix={'sportLatest'}
                                 title={article.title}
                                 videoURL={article.videoURL}
                                 datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
-                                src={article.imgURL2}
-                                category = {article.category}
+                                
+                                
                                 filter = {article.imgFilter2} 
                                 thumbShape = 'square'
                                 line = 'top'
@@ -135,13 +188,14 @@ export default function Sport() {
             </div>
             <Line type = 'sport' />
             <div className='sport-themas'>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fmuzika.jpg?alt=media&token=61f1c9b0-752e-4482-9f26-bbfe08911ae0)'}}><Link to = '/entertainmentTagged/entertainment/muzika'><span>#muzika</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Ffilm.jpg?alt=media&token=be861a46-abc7-4f44-a2ee-208325e6934b)'}}><Link to = '/entertainmentTagged/entertainment/film'><span>#film</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fpoznati.jpg?alt=media&token=ab2a1bd7-4d79-431c-ab18-88d1ce25a4ed)'}}><Link to = '/entertainmentTagged/entertainment/poznati'><span>#poznati</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fzdravlje.jpg?alt=media&token=3b9c975b-b5fb-44c9-ab52-1e35c4029738)'}}><Link to = '/entertainmentTagged/entertainment/zdravlje'><span>#zdravlje</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fnauka.jpg?alt=media&token=635394b4-f143-458e-8726-344a22d3d444)'}}><Link to = '/entertainmentTagged/entertainment/nauka'><span>#nauka</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fpriroda.jpg?alt=media&token=4db9fc28-ed55-43ab-84ba-be5d60a6fe38)'}}><Link to = '/entertainmentTagged/entertainment/priroda'><span>#priroda</span></Link></div>
-                <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fturizam.jpg?alt=media&token=fa40d444-f0e1-4045-bc7e-cb32b8541ab9)'}}><Link to = '/entertainmentTagged/entertainment/turizam'><span>#turizam</span></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/fudbal'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Ffudbal.jpg?alt=media&token=017f2011-b0e7-4987-aadf-f1e875b85f5d"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/košarka'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fkosarka.jpg?alt=media&token=c03a8f51-e6e3-40e2-b967-5f440c9c14e6"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/tenis'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Ftenis.jpg?alt=media&token=09b7208a-2ce9-49f7-8584-2df055778784"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/odbojka'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fodbojka.jpg?alt=media&token=70e2984e-9716-47c6-afea-7b8c07c559a7"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/vaterpolo'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fvaterpolo.jpg?alt=media&token=656e6f10-fe4d-42a6-b1ad-78daba734fb5"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/rukomet'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Frukomet.jpg?alt=media&token=01522eab-33e6-4495-b0cd-cf4a39b7ba71"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/atletika'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fatletika.jpg?alt=media&token=10e7ec53-467f-4083-bf4c-849ff3aea218"></img></Link></div>
+                <div className='thema-item'><Link to = '/sportsTagged/sports/ostali'><img src = "https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fostali.jpg?alt=media&token=3bb16cae-0577-47e0-8aac-84234af4cec8"></img></Link></div>
             </div>
           
         </div>

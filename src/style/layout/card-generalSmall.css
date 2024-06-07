@@ -3,12 +3,14 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+
 }
 .card-generalSmall:nth-child(1) {
     margin-bottom: 3em;
 }
 
 .card-generalSmall-container-img {
+    position: relative;
     flex: 0 0 30%;
     overflow: hidden;
 }

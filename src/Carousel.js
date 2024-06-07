@@ -46,6 +46,7 @@ export default function BootstrapCarousel() {
               key = {i}
               path = {`/article/${frontpageNews[i]._id}`}
               title={frontpageNews[i].title}
+              supertitle={frontpageNews[i].supertitle}
               subtitle={frontpageNews[i].subtitle}
               src={frontpageNews[i].imgURL}
               filter = {frontpageNews[i].imgFilter}

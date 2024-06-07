@@ -19,16 +19,24 @@
     text-decoration: none;
 }
 
-.header-title a .title {
+.header-title a .title .title-text {
+    font-size: 8rem;    
+    font-weight: bold;
+    font-style: italic;
+    user-select: none;
+    color: rgb(143, 1, 1);
+}
+.black-ops-one-regular {
+  font-family: "Black Ops One", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  padding: 0;
+}
+
+.header-title a .title img {
     font-size: 4rem;    
     font-style: italic;
     user-select: none;    
-}
-
-.header-title a .title span {
-  color: white;
-  color: black;
-  letter-spacing: 5px;
 }
 
 .fa-react {
@@ -55,8 +63,12 @@
 }
   
 @media all and (max-width: 768px) {
-  .header-title a .title {
-    font-size: 2.5rem; 
+ 
+  .header-title a .title .title-img{
+    font-size: 3rem;  
+  }
+  .header-title a .title .title-text{
+    font-size: 5rem;   
   }
   .header-icons {
     box-shadow: none

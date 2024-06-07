@@ -9,7 +9,8 @@ import General from './General.js';
 import GeneralSmall from './GeneralSmall.js';
 import Recommend from './Recommend.js';
 import Magazin from './Magazin.js';
-import Sport from '././Sport.js';
+import Sport from './Sport.js';
+import Social from './Social.js';
 import Card from './Card.js';
 import NavigationDesk from './NavigationDesk.js';
 import PartTitle from './PartTitle.js';
@@ -24,30 +25,40 @@ import Form from './Form.js';
 
 export default function Main() {
 
-    const {frontpageNews, setActiveTab } = useContext(context);
+    const {frontpageNews, setActiveTab, settings } = useContext(context);
     const mainOverlay = useRef(null);
 
-    useEffect(() => {setActiveTab('recent')}, [])
+    const sectionsMain = ['sport', 'preporucujemo', 'magazin', 'velike vesti', 'central', 'space',  'male vesti', 'space', 'preporucujemo']
+    const defaultSectionsMain = ['central', 'space', 'velike vesti', 'space', 'male vesti', 'space', 
+                        'mreze', 'space', 'line', 'preporucujemo', 'line', 'magazin', 'line', 'sport'];
+
+    function generateMain(section, i) {
+        if(section == 'central') return <section className='central'>
+            <Carousel />
+            <Latest />
+        </section>
+        if(section == 'velike vesti') return <General/>
+        if(section == 'male vesti') return <GeneralSmall />
+        if((section == 'preporučujemo') || (section == 'preporucujemo')) return <Recommend onTop = {i == 0} />
+        if((section == 'mreže') || (section == 'mreze')) return <Social />
+        if(section == 'magazin') return <Magazin onTop = {i == 0}/>
+        if(section == 'sport') return <Sport onTop = {i == 0}/>
+        if(section == 'line') return <Line type = 'main' />
+        if(section == 'space') return <Space margin = '3em'/>
+    }
+
+    useEffect(() => {
+        setActiveTab('recent');
+    }, [])
 
     return (
         <main className="main">
             <div className="container main-container">
-                <section className='central'>
-                        <Carousel />
-                        <Latest />
-                </section>
-
-                <Space margin = '3em'/>
-                <General />
-                <Space margin = '3em'/>
-                <GeneralSmall />
-                <Line type = 'main'/>
-                <Recommend />
-                <Line type = 'main'/>
-                <Magazin />
-                <Line type = 'main' />
-                <Sport />
-               
+                {settings? 
+                    settings.templates.type == 'default'? defaultSectionsMain.map(generateMain) : settings.templates.sectionsMain.map(generateMain)
+                    : 
+                    defaultSectionsMain.map(generateMain)
+                }
             </div>
         </main>
     )

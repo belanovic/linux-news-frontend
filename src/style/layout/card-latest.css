@@ -5,6 +5,7 @@
 }
 
 .card-latest-container-img {
+    position: relative;
     flex: 0 0 15%;
     overflow: hidden;
 }

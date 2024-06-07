@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { getFrontpageNews } from './getNews.js';
+import { getFrontpageNews, getSettings } from './getNews.js';
 
 const context = React.createContext();
 
@@ -7,6 +7,7 @@ let defaultFrontpageNews = [];
 for(let i = 0; i < 100; i++) {defaultFrontpageNews.push(i)}
 
 function Provider(props) {
+    const [settings, setSettings] = useState('');
     const [frontpageNews, setFrontpageNews] = useState(defaultFrontpageNews);
     const [showSiteOverlay, setShowSiteOverlay] = useState('none');
     const [alphabet, setAlphabet] = useState('cirilica');
@@ -21,18 +22,36 @@ function Provider(props) {
             const n = await getFrontpageNews();
             setShowSiteOverlay('none');
             n.sort((a, b) => a.position - b.position);
-            /* setFrontpageNews([]); */
             setFrontpageNews(n);
         } catch (error) {
-            alert(error.message);
+            
         }
     }
 
-    useEffect(getAndSetFrontpageNews, [])
+    useEffect(async () => {
+        try {
+            await getAndSetFrontpageNews();
+        
+            setShowSiteOverlay('flex');
+            const settingsMsg = await getSettings();
+            setShowSiteOverlay('none');
+            if(settingsMsg == null) {
+                setSettings('');
+            }
+            if(settingsMsg.isSuccess) {
+                setSettings(settingsMsg.settings);
+            }
+        } catch (error) {
+            
+        }
+
+    }, [])
+
+    /* useEffect(() => {console.log(settings)}, [settings]) */
 
     return (
         <context.Provider value={
-            {
+            {   settings,
                 frontpageNews,
                 setFrontpageNews,
                 getAndSetFrontpageNews,

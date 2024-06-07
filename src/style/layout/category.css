@@ -36,6 +36,16 @@
     margin-bottom: 5em;
 }
 
+.category-themas {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 3em;
+}
+
+.category-themas .thema-item a {
+    display: block;
+}
+
 @media all and (max-width: 768px) {
     .category {
         flex-direction: column;

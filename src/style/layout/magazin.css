@@ -3,18 +3,23 @@
 .magazin {
     padding: 1.5em 4em 4em 4em;
 }
+.magazin-header {
+    margin-bottom: 3em;
+}
+.magazin.onTop .magazin-header {
+    display: none;
+}
+.magazin-up {
+    margin-bottom: 5em;
+}
 .magazin-down {
     margin-bottom: 5em;
-
 }
 
 .magazin-down-mobile {
     display: none;
 }
 
-.magazin-up {
-    margin-bottom: 3em;
-}
 
 @media all and (max-width: 768px) {
     .magazin-down {

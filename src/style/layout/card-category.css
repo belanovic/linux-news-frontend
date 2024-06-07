@@ -14,6 +14,7 @@
 }
 
 .card-category-container-img {
+    position: relative;
     flex: 0 0 35%;
     overflow: hidden;
 }
@@ -34,6 +35,25 @@
 
 .card-category-container-title {
     order: 1;
+}
+
+.card-category.first .card-category-container-supertitle {
+    margin-left: 20px;
+    top: 50px;
+}
+
+.card-category-container-supertitle {
+    position: absolute;
+    margin-left: 10px;
+    width: 100%;
+    top: 35px;
+    z-index: 1;
+    padding: 0;
+}
+
+.card-category-supertitle {
+    display: inline-block;
+    padding: 0.3em 0.7em 0.3em 0.7em;
 }
 .card-category-container-subtitle {
     order: 2;

@@ -15,17 +15,21 @@ import './style/layout/magazin.css';
 import './style/typography/magazin.css';
 import 'swiper/css/bundle';
 
-export default function Magazin() {
+export default function Magazin({onTop}) {
+
+    console.log(onTop)
 
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
     return (
-        <div className='magazin'>
-            <div className='magazin-header'>
+        <div className={`magazin ${onTop? 'onTop' : ''}`}>
+            <div className= 'magazin-header'>
                 {/* <div className='magazin-title'>Magazin</div> */}
-          
-                <img src = 'https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Flabel-magazin.jpg?alt=media&token=5a87ef1b-1bca-4aff-ae5c-17b09f3e69be'></img>
+                <Link to = '/entertainment/entertainment'>
+                    <img src = 'https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Flabel-magazin.jpg?alt=media&token=5a87ef1b-1bca-4aff-ae5c-17b09f3e69be'></img>
+                </Link>
+                
               
 
             </div>
@@ -40,6 +44,7 @@ export default function Magazin() {
                         category = {frontpageNews[8].category}
                         filter = {frontpageNews[8].imgFilter}
                         title = {frontpageNews[8].title}
+                        supertitle = {frontpageNews[8].supertitle}
                         subtitle = {frontpageNews[8].subtitle}
                         thumbShape = 'wide'
                         readMore={true}
@@ -90,6 +95,7 @@ export default function Magazin() {
                             
                             filter = {article.imgFilter}
                             title = {article.title}
+                            supertitle = {article.supertitle}
                             thumbShape = 'wide'
                             readMore={false}
                         />
@@ -136,6 +142,7 @@ export default function Magazin() {
                             
                             filter = {article.imgFilter}
                             title = {article.title}
+                            supertitle = {article.supertitle}
                             thumbShape = 'wide'
                             readMore={false}
                         />
@@ -143,7 +150,7 @@ export default function Magazin() {
                 })}
             </Swiper>
             </div>
-            <Line type = 'magazin' />
+            <Line type = {onTop? 'magazinOnTop' : 'magazin'}/>
             <div className='magazin-themas'>
                 <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fmuzika.jpg?alt=media&token=61f1c9b0-752e-4482-9f26-bbfe08911ae0)'}}><Link to = '/entertainmentTagged/entertainment/muzika'><span>#muzika</span></Link></div>
                 <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Ffilm.jpg?alt=media&token=be861a46-abc7-4f44-a2ee-208325e6934b)'}}><Link to = '/entertainmentTagged/entertainment/film'><span>#film</span></Link></div>

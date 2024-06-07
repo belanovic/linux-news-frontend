@@ -13,12 +13,12 @@ import './style/layout/recommend.css';
 import './style/typography/recommend.css';
 import 'swiper/css/bundle';
 
-export default function Recommend() {
+export default function Recommend({onTop}) {
 
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
 
-    return (<><div className='recommend'>
+    return (<><div className={`recommend ${onTop? 'onTop' : ''}`}>
               <div className='recommend-label'>Preporučujemo</div>
               <Swiper
                     modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
@@ -58,6 +58,7 @@ export default function Recommend() {
                                     category = {article.category}
                                     datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
                                     title = {article.title}
+                                    supertitle = {article.supertitle}
                                     thumbShape = 'wide'
                                     readMore={false}
                                 />
@@ -109,6 +110,7 @@ export default function Recommend() {
                                     category = {article.category}
                                     datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
                                     title = {article.title}
+                                    supertitle = {article.supertitle}
                                     thumbShape = 'wide'
                                     readMore={false}
                                 />

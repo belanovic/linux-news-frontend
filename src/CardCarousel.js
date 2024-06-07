@@ -9,7 +9,7 @@ import './style/typography/carousel.css';
 import './style/layout/card-slide.css';
 import './style/typography/card-slide.css';
 
-export default function CardCarousel({ title, subtitle, datePublished, dateUpdated,
+export default function CardCarousel({ title, supertitle, subtitle, datePublished, dateUpdated,
                                        date, src, filter, path, videoURL, category}) {
 
     const {alphabet} = useContext(context);
@@ -34,7 +34,9 @@ export default function CardCarousel({ title, subtitle, datePublished, dateUpdat
         <Link to = {path}>
             <div className={`card-slide`}>
                 {videoURL !== 'none' && <div className="play"><i className="far fa-play-circle"></i></div>}
-
+                {supertitle && <div className={`card-slide-container-supertitle`}>
+                        <div className={`card-slide-supertitle`}>{supertitle}</div>
+                </div>}
                 <div className = {`card-slide-container-img`}>
                 {src === 'generic'?
                     <GenericThumb 

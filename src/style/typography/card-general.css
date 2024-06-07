@@ -11,6 +11,18 @@
     color: rgb(15, 141, 250);
 }
 
+
+.card-general-supertitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(255, 49, 49), rgb(0, 0, 0));
+}
+.card-general-subtitle {
+    font-size: 1.5rem;
+    line-height: 1.5;
+}
+
 .card-general-info {
     color: white;
 }
@@ -40,6 +52,11 @@
         line-height: 1.25;
         letter-spacing: 1px;
         color: white;
+    }
+
+
+    .card-general-supertitle {
+        font-size: 1.25rem;
     }
  
     .card-general-subtitle {

@@ -51,7 +51,6 @@ export default function Article() {
         const articleFound = await getArticle(id);
         setShowSiteOverlay('none');
         if(articleFound == null) {
-            window.location.href = '/'
             return
         }
 

@@ -1,7 +1,7 @@
-/* .card-magazinBig **************** */
+/* .card-sportBig **************** */
 
 .card-sportBig {
-    background-color: rgb(0, 145, 0); 
+    
 
 }
 .card-sportBig-title {
@@ -13,6 +13,18 @@
 .card-sportBig-title:hover {
     text-decoration: none;
     color: rgb(151, 187, 255);
+}
+
+
+.card-sportBig-container-supertitle {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(84, 84, 84, 0) 100%);
+}
+
+.card-sportBig-supertitle {
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(255, 49, 49), rgb(0, 0, 0));
 }
 
 .card-sportBig-subtitle {
@@ -39,22 +51,22 @@
     text-transform: lowercase;
 }
 
-/* .card-sportCenter **************** */
+/* .card-sportCarousel **************** */
 
-.card-sportCenter {
+.card-sportCarousel {
     padding: 3em 2em 1em 2em;
     background-color: rgb(255, 255, 255, 0.3);
 }
 
-.sport-mobile .card-sportCenter {
+.sport-mobile .card-sportCarousel {
     padding: 0
 }
 
-.card-sportCenter-text {
+.card-sportCarousel-text {
     background-color: rgba(255, 255, 255);
 }
 
-.card-sportCenter-title {
+.card-sportCarousel-title {
     color: black;
     font-size: 1.75rem;
     line-height: 1.25;
@@ -64,45 +76,165 @@
     overflow: hidden;
 }
 
-.card-sportCenter-title:hover {
+.card-sportCarousel-title:hover {
     color: rgb(15, 141, 250);
 }
 
-.card-sportCenter-info {
+
+.card-sportCarousel-container-supertitle {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(84, 84, 84, 0) 100%);
+}
+
+.card-sportCarousel-supertitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(255, 49, 49), rgb(0, 0, 0));
+}
+
+.card-sportCarousel-info {
     color: white;
 }
 
-.card-sportCenter-info .card-info-category {
+.card-sportCarousel-info .card-info-category {
     color: rgb(61, 170, 237);
     font-size: 1.5rem;
     font-family: sans-serif, Arial, Helvetica;
     text-transform: uppercase;
 }
 
-.card-sportCenter-info .card-info-date {
+.card-sportCarousel-info .card-info-date {
     font-size: 1rem;
     text-transform: capitalize;
     color: black;
 }
 
+/* card-sportBlock ********************* */
+
+
+.card-sportBlock-text {
+    background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 100%);
+}
+
+.card-sportBlock-title {
+    color: white;
+    font-size: 1.5rem;
+    line-height: 1.25;
+    letter-spacing: 1px;
+    color: white;
+    transition: color 0.25s;
+}
+
+.card-sportBlock-title:hover {
+    color: rgb(15, 141, 250);
+}
+
+
+.card-sportBlock-container-supertitle {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(84, 84, 84, 0) 100%);
+}
+
+.card-sportBlock-supertitle {
+    color: white;
+    font-size: 1.25rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(255, 49, 49), rgb(0, 0, 0));
+}
+
+.card-sportBlock-info {
+    color: white;
+}
+
+.card-sportBlock-info .card-info-category {
+    font-size: 1rem;
+    font-family: sans-serif, Arial, Helvetica;
+    text-transform: uppercase;
+}
+
+.card-sportBlock-info .card-info-date {
+    font-size: 1rem;
+    text-transform: capitalize;
+    color: black;
+}
+
+/* card-sportLatest ********************* */
+
+.card-sportLatest-title  {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.5s;
+    color: black;
+}
+
+.card-sportLatest-title:hover {
+    text-decoration: none;
+    color: rgb(61, 170, 237);
+}
+
+.card-sportLatest-info {
+    font-size: 1.25rem;
+}
+.card-sportLatest-info .card-info-category {
+
+    text-transform: uppercase;
+    color: rgb(61, 170, 237);
+    letter-spacing: 1px;
+}
+
+.card-sportLatest-info .card-info-date {
+    text-transform: lowercase;
+}
+
 
 @media all and (max-width: 768px) {
-    .card-sportCenter-title {
+    .card-sportCarousel-title {
         font-size: 2rem;
         line-height: 1.25;
         letter-spacing: 1px;
     }
+
+   
+    .card-sportBig-supertitle {
+        font-size: 1.25rem;
+    }
+    .card-sportCarousel-supertitle {
+        font-size: 1rem;
+    }
+    .card-sportBlock-supertitle {
+        font-size: 1rem;
+    }
+    
  
-    .card-sportCenter-subtitle {
+    .card-sportCarousel-subtitle {
         font-size: 1rem;
         line-height: 1.5;
     }
 
-    .card-sportCenter-info .card-info-category {
+    .card-sportCarousel-info .card-info-category {
         font-size: 1rem;
     }
     
-    .card-sportCenter-info .card-info-date {
+    .card-sportCarousel-info .card-info-date {
+        font-size: 1rem;
+    }
+
+    .card-sportBlock-title {
+        font-size: 1rem;
+        line-height: 1.25;
+        letter-spacing: 1px;
+    }
+ 
+    .card-sportBlock-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card-sportBlock-info .card-info-category {
+        font-size: 1rem;
+    }
+    
+    .card-sportBlock-info .card-info-date {
         font-size: 1rem;
     }
 }
+

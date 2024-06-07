@@ -6,15 +6,14 @@ export async function getFrontpageNews() {
         const responseBody = await response.json();
 
         if(responseBody.error) {
-            alert(responseBody.error.message);
             return null
         }
         if(responseBody.frontpageArticles) {
             return responseBody.frontpageArticles;
         }
+        return null
     }
     catch(error) {
-        alert(error.message);
         return null;
     }
 }
@@ -24,15 +23,14 @@ export async function getArticle(id) {
         const response = await fetch(`${HOST_BACKEND}/oneArticleFE/${id}`);
         const responseBody = await response.json();
         if(responseBody.error) {
-            alert(responseBody.error.message);
             return null
         }
         if(responseBody.articleFound) {
             return responseBody.articleFound;
         }
+        return null
     }
     catch(error) {
-        alert(error.message);
         return null;
     }
 }
@@ -53,17 +51,15 @@ export async function getNewsByCategory(category, pageNum) {
     try {
         const response = await fetch(`${HOST_BACKEND}/${pageNum.isLast == true? 'lastPageFE' : 'category'}`, options);
         const responseBody = await response.json();
-        console.log(responseBody)
         if(responseBody.error) {
-            alert(responseBody.error.message)
             return null
         }
         if(responseBody.newsMsg) {
             return responseBody.newsMsg
         }
+        return null
     }
     catch (error) {
-        alert(error.message)
         return null
     }
 
@@ -87,7 +83,6 @@ export async function getLatestNews(count) {
         const responseBody = await response.json();
 
         if(responseBody.error) {
-            alert(responseBody.error.message);
             return null
         }
         if(responseBody.latestNews) {
@@ -95,7 +90,32 @@ export async function getLatestNews(count) {
         }
     }
     catch(error) {
-        alert(error.message);
+        return null;
+    }
+}
+
+
+export async function getSettings() {
+
+    const options = { 
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        credentials: 'include'
+    }
+
+    try {
+        const response = await fetch(`${HOST_BACKEND}/getSettings`, options);
+        const responseBody = await response.json();
+        if(responseBody.error) {
+            return null;
+        }
+        if(responseBody.settingsMsg) {
+            return responseBody.settingsMsg;
+        }
+        return null
+    }
+    catch (error) {
         return null;
     }
 }

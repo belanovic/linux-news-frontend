@@ -23,7 +23,7 @@
 
 .header-title .title {
     margin: 0; 
-    margin-right: 0.5em
+    margin-right: 5.5em
 }
 
 .title-img {
@@ -41,7 +41,7 @@
 }
 
 .header-images .one-tech, .header-images .mern-image {
-    height: 5em;
+    height: 6em;
     width: 100%;
 }
 .header-images .mern-image {
@@ -68,6 +68,12 @@
 
 @media all and (max-width: 768px) {
 
+
+
+    .header-title a .title {
+        margin-right: 1.5em;
+      }
+
     .header-icons {
         flex: 0 0 50%;
         justify-content: space-between;
@@ -78,6 +84,7 @@
     }
 
 
+
     .header-icons .menu-toggle  {
         display: block;
     }
@@ -86,9 +93,13 @@
         display: none;
     }
 
+
+/* 
     .header-images .mern-image {
         display: block;
         height: 4em;
-    }
+        width: auto;
+        margin-left: auto;
+    } */
 }
 

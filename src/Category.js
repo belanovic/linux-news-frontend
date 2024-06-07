@@ -2,6 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useParams } from 'react-router-dom';
 import { getNewsByCategory } from './getNews.js';
 import {context} from './newsContext.js';
+import { Link } from 'react-router-dom';
 import Card from './Card.js';
 import Line from './Line.js';
 import dateFormat from './dateFormat.js';
@@ -36,7 +37,69 @@ export default function Category() {
     return (
         <div className="category container">
             <div className='category-articles'>
-                {tag && (tag != 'vesti') && <div className='articles-tag'>{tag}</div>}
+                {tag && (tag != 'vesti')? 
+                <div className='articles-tag'>{tag}</div> 
+                : 
+                <div>
+                {category == 'sports'?
+                <div className='category-themas'>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/fudbal'>#fudbal</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/košarka'>#košarka</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/tenis'>#tenis</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/odbojka'>#odbojka</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/vaterpolo'>#vaterpolo</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/rukomet'>#rukomet</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/atletika'>#atletika</Link></div>
+                    <div className='thema-item'><Link to = '/sportsTagged/sports/ostali'>#ostali</Link></div>
+                </div>
+                :
+                ''
+                }
+                {category == 'entertainment'?
+                <div className='category-themas'>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/muzika'>#muzika</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/film'>#film</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/poznati'>#poznati</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/zdravlje'>#zdravlje</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/nauka'>#nauka</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/priroda'>#priroda</Link></div>
+                    <div className='thema-item'><Link to = '/entertainmentTagged/entertainment/turizam'>#turizam</Link></div>
+                </div>
+                :
+                ''
+                }
+                {category == 'politics'?
+                <div className='category-themas'>
+                    <div className='thema-item'><Link to = '/politicsTagged/politics/srbija'>#srbija</Link></div>
+                    <div className='thema-item'><Link to = '/politicsTagged/politics/region'>#region</Link></div>
+                    <div className='thema-item'><Link to = '/politicsTagged/politics/evropa'>#evropa</Link></div>
+                    <div className='thema-item'><Link to = '/politicsTagged/politics/svet'>#svet</Link></div>
+                </div>
+                :
+                ''
+                }
+                {category == 'business'?
+                <div className='category-themas'>
+                    <div className='thema-item'><Link to = '/businessTagged/business/industrija'>#industrija</Link></div>
+                    <div className='thema-item'><Link to = '/businessTagged/business/poljoprivreda'>#poljoprivreda</Link></div>
+                    <div className='thema-item'><Link to = '/businessTagged/business/IT'>#IT</Link></div>
+                    <div className='thema-item'><Link to = '/businessTagged/business/finansije'>#finansije</Link></div>
+                    <div className='thema-item'><Link to = '/businessTagged/business/energetika'>#energetika</Link></div>
+                </div>
+                :
+                ''
+                }
+                {category == 'technology'?
+                <div className='category-themas'>
+                    <div className='thema-item'><Link to = '/technologyTagged/technology/softver'>#softver</Link></div>
+                    <div className='thema-item'><Link to = '/technologyTagged/technology/hardver'>#hardver</Link></div>
+                    <div className='thema-item'><Link to = '/technologyTagged/technology/AI'>#AI</Link></div>
+                    <div className='thema-item'><Link to = '/technologyTagged/technology/inovacije'>#inovacije</Link></div>
+                </div>
+                :
+                ''
+                }
+                </div>}
                 <div className='articles-list'>
                     {articlesByCategory && articlesByCategory.map((article, i) => {
                         
@@ -54,6 +117,7 @@ export default function Category() {
                                 path = {`/article/${article._id}`}
                                 position={article.position} 
                                 title={article.title}
+                                supertitle={article.supertitle}
                                 subtitle={article.subtitle}
                                 src={article.imgURL}
                                 videoURL={article.videoURL}

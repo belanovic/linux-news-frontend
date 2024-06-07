@@ -9,6 +9,22 @@
     color: rgb(61, 170, 237);
 }
 
+
+.card-category-container-supertitle {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3) 0%, rgba(84, 84, 84, 0) 100%);
+}
+
+.card-category.first .card-category-supertitle {
+    font-size: 1.5rem;
+}
+
+.card-category-supertitle {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    background: linear-gradient(180deg, rgb(255, 49, 49), rgb(0, 0, 0));
+}
+
 .card-category-container-subtitle a {
     pointer-events: none;        
 }
@@ -34,7 +50,7 @@
 
 .card-category .read-more a {    
     padding: 0.5em 2em 0.5em 2em;
-    background: rgb(161, 0, 0);
+    background: linear-gradient(180deg, rgb(216, 6, 6), rgb(0, 0, 0));
     color: white;
     font-size: 1rem;
     transition: background 0.25s;
@@ -46,8 +62,18 @@
 }
 
 @media all and (max-width: 768px) {
+
+    .card-category.first .card-category-supertitle {
+        font-size: 1.25rem;
+    }
     
     .card-category-title {
         font-size: 1.75rem;
+    }
+
+    .card-category-supertitle {
+
+        font-size: 0.75rem;
+       
     }
 }

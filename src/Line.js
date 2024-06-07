@@ -23,6 +23,11 @@ export default function Line({key, type}) {
             setHeight('1px');
             setBackgroundColor('rgb(136, 136, 136)');
         }   
+        if(type == 'sportLatest') {
+            setMargin('1em 0em 1em 0em');
+            setHeight('1px');
+            setBackgroundColor('rgb(136, 136, 136)');
+        }   
         if(type == 'main') {
             setMargin('4em 0em 3em 0em');
             setHeight('3px');
@@ -33,10 +38,15 @@ export default function Line({key, type}) {
             setHeight('3px');
             setBackgroundColor('white');
         }
+        if(type == 'magazinOnTop') {
+            setMargin('4em 0em 5em 0em');
+            setHeight('3px');
+            setBackgroundColor('black');
+        }
         if(type == 'sport') {
             setMargin('4em 0em 5em 0em');
             setHeight('3px');
-            setBackgroundColor('white');
+            setBackgroundColor('black');
         }
     }, [])
 

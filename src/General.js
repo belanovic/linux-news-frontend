@@ -25,6 +25,7 @@ export default function General() {
                         category = {article.category}
                         datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
                         title = {article.title}
+                        supertitle={article.supertitle}
                         thumbShape = 'wide'
                         readMore={false}
                     />

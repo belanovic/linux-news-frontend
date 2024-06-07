@@ -23,7 +23,7 @@ import './style/typography/card-latest.css';
 import './style/layout/card-recommend.css';
 import './style/typography/card-recommend.css'; 
 
-export default function Card({index, position, pageNum, classSuffix, title, subtitle, videoURL, line, path, readMore,
+export default function Card({index, position, pageNum, classSuffix, title, supertitle, subtitle, videoURL, line, path, readMore,
     datePublished, dateUpdated, src, filter, id, category, frontpageNews, thumbShape, hasDateArrow }) {
 
     const { alphabet } = useContext(context);
@@ -49,6 +49,9 @@ export default function Card({index, position, pageNum, classSuffix, title, subt
         <>
         {line == 'top'? <Line type={classSuffix} /> : ''}
         <div className={`card card-${classSuffix} ${(index == 0) && (pageNum.number == 1)? 'first' : ''}`}>
+            {supertitle && <div className={`card-${classSuffix}-container-supertitle`}>
+                        <div className={`card-${classSuffix}-supertitle`}>{supertitle}</div>
+            </div>}
             {src && <div className={`card-${classSuffix}-container-img`}>
                 <Link to={path}>
                     {videoURL && (videoURL !== 'none') && <div className="play"><i className="far fa-play-circle"></i></div>}
