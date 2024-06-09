@@ -24,10 +24,10 @@ export default function Header() {
                     <div className="header-title">
                         <Link to = '/'>
                             <div className="title" onClick = {() => getAndSetFrontpageNews()}>
-                                {settings.name == ''?
-                                <img className='title-img' src='https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fvesti2.png?alt=media&token=dc60acff-4ce3-44ac-9174-1a7db4de5ca1'></img>
-                                :
+                                {settings.name?
                                 <div className='title-text black-ops-one-regular'>{settings.name}</div>
+                                :
+                                <img className='title-img' src='https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fvesti2.png?alt=media&token=dc60acff-4ce3-44ac-9174-1a7db4de5ca1'></img>
                             }
             
                             </div>

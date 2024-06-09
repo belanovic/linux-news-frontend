@@ -14,7 +14,7 @@ export default function General() {
         <div className='general'>
             {frontpageNews.map((article, i) => {
                 if((i < 4) || (i > 7)) return
-                return <Card  
+                return <Card   
                         key = {i}
                         path = {`/article/${article._id}`}
                         classSuffix = 'general'

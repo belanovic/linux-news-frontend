@@ -22,6 +22,7 @@ export async function getArticle(id) {
     try {
         const response = await fetch(`${HOST_BACKEND}/oneArticleFE/${id}`);
         const responseBody = await response.json();
+        
         if(responseBody.error) {
             return null
         }
@@ -100,13 +101,13 @@ export async function getSettings() {
     const options = { 
         headers: {
             'Content-Type': 'application/json'
-        },
-        credentials: 'include'
+        }
     }
 
     try {
-        const response = await fetch(`${HOST_BACKEND}/getSettings`, options);
+        const response = await fetch(`${HOST_BACKEND}/getSettingsFE`, options);
         const responseBody = await response.json();
+        console.log(responseBody);
         if(responseBody.error) {
             return null;
         }

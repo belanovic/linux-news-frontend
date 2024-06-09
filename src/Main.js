@@ -22,6 +22,7 @@ import Covid from './Covid.js';
 import Line from './Line.js';
 import Space from './Space.js';
 import Form from './Form.js';
+import Custom from './Custom.js';
 
 export default function Main() {
 
@@ -54,6 +55,7 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
+                <Custom />
                 {settings? 
                     settings.templates.type == 'default'? defaultSectionsMain.map(generateMain) : settings.templates.sectionsMain.map(generateMain)
                     : 

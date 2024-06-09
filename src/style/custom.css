@@ -1,0 +1,58 @@
+
+.card-custom-title:hover {
+    color: rgb(85, 136, 255);
+}
+
+.card-custom .read-more a {
+    background: rgb(122, 0, 0);
+    transition: all 0.25s;
+}
+.card-custom .read-more a:hover {
+    cursor: pointer;
+    color: white;
+    background: rgb(223, 0, 0) !important;
+}
+
+@media all and (max-width: 768px) {
+
+    .custom-articles {
+        flex-direction: column;
+    }
+
+    .card-custom {
+        margin-bottom: 2em;
+        background-color: black;
+        width: 100% !important;
+    }
+    
+    .card-custom-title {
+        font-size: 1.5rem;
+        line-height: 1.25;
+        letter-spacing: 1px;
+        color: white;
+    }
+
+    .card-custom-container-supertitle {
+        padding: 1em 1em 1em 1em;
+    }
+
+    .card-custom-supertitle {
+        font-size: 1.25rem;
+    }
+ 
+    .card-custom-subtitle {
+        font-size: 1rem;
+        line-height: 1.5;
+    }
+
+    .card-custom-info .card-info-category {
+        font-size: 1rem;
+        color: white
+    }
+    
+    .card-custom-info .card-info-date {
+        font-size: 1rem;
+        color: white
+    }
+
+}

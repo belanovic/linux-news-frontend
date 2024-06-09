@@ -1,6 +1,6 @@
 import react, {useState, useEffect} from 'react';
 
-export default function GenericThumb({className, category, thumbShape}) {
+export default function GenericThumb({className, category, thumbShape, isCustom}) {
 
     const [thumbURL, setThumbURL] = useState('');
 
@@ -30,11 +30,24 @@ export default function GenericThumb({className, category, thumbShape}) {
 
     useEffect(prom => chooseThumb(), []);
 
-    return (
+    return (<>
+            {isCustom?
+            <img 
+                src = {thumbURL}
+                className = {className}
+                style = {{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover'
+                }}
+            >
+            </img>
+            :
             <img 
                 src = {thumbURL}
                 className = {className}
             >
             </img>
+        }</>
     )
 }

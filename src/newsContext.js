@@ -35,6 +35,7 @@ function Provider(props) {
             setShowSiteOverlay('flex');
             const settingsMsg = await getSettings();
             setShowSiteOverlay('none');
+      
             if(settingsMsg == null) {
                 setSettings('');
             }
