@@ -31,6 +31,14 @@ export default function Card({index, position, pageNum, classSuffix, title, supe
     const [inViewport, setInViewport] = useState(false);
     const [filterStyle, setFilterStyle] = useState('none');
 
+    const formatCathegory = (category) => {
+        if (category === 'politics') return 'Politika'
+        if (category === 'business') return 'Ekonomija'
+        if (category === 'technology') return 'Tehnologija'
+        if (category === 'entertainment') return 'Magazin'
+        if (category === 'sports') return 'Sport'
+    }
+
     useEffect(() => {
         if (filter) {
             setFilterStyle(() => {
@@ -79,7 +87,7 @@ export default function Card({index, position, pageNum, classSuffix, title, supe
                     </Link>
                 </div>}
                 {(category || datePublished || dateUpdated) && <div className={`card-${classSuffix}-info`}>
-                    {category && <div className='card-info-category'>{category} / </div>}
+                    {category && <div className='card-info-category'>{formatCathegory(category)} / </div>}
                     {(datePublished || dateUpdated) && <div className={`card-info-date`}>
                         {datePublished && <span className="date datePublished" >
                             {datePublished ? datePublished: ''}
