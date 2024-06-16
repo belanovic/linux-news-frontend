@@ -15,7 +15,7 @@ export default function Latest() {
     const [trendingNews, setTrendingNews] = useState('');
     
     useEffect(async () => {
-        const articles = await getLatestNews(4);
+        const articles = await getLatestNews(4, 'all');
         if(articles == null) return;
         setLatestNews(articles);
         setPopularNews(frontpageNews.slice(1, 5));

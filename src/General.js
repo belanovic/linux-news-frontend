@@ -3,6 +3,7 @@ import {context} from './newsContext.js';
 import Card from './Card.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
+import range from './sectionsRange.js';
 import './style/layout/general-small.css';
 import './style/typography/general-small.css';
 
@@ -13,7 +14,7 @@ export default function General() {
     return (
         <div className='general'>
             {frontpageNews.map((article, i) => {
-                if((i < 4) || (i > 7)) return
+                if((i < (range.velikeVesti.start - 1)) || (i > range.velikeVesti.end - 1)) return
                 return <Card   
                         key = {i}
                         path = {`/article/${article._id}`}

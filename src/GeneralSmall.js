@@ -3,6 +3,7 @@ import {context} from './newsContext.js';
 import Card from './Card.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
+import range from './sectionsRange.js';
 import './style/layout/general.css';
 import './style/typography/general.css';
 
@@ -14,7 +15,7 @@ export default function GeneralSmall() {
     return (
         <div className='generalSmall'>
             {frontpageNews.map((article, i) => {
-                if((i < 8) || (i > 13)) return
+                if((i < (range.maleVesti.start - 1)) || (i > (range.maleVesti.end - 1))) return
                 return <Card  
                         key = {i}
                         path = {`/article/${article._id}`}

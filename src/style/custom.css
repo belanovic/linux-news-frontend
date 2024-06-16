@@ -3,7 +3,7 @@
     color: rgb(61, 170, 237) !important;
 }
 
-.card-custom .read-more a:hover {
+.card-custom .read-more a:hover { 
     cursor: pointer;
     transform: scale(1.1) !important;
 }

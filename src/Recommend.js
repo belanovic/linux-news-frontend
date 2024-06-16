@@ -5,7 +5,7 @@ import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, Effec
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js'; 
 import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
-
+import range from './sectionsRange.js';
 import Card from './Card.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
@@ -45,7 +45,7 @@ export default function Recommend({onTop}) {
                     thumbs={{ swiper: thumbsSwiper }}
                 >
                     {frontpageNews.map((article, i) => {
-                        if((i < 7) || (i > 12)) return
+                        if((i < (range.preporucujemo.start - 1)) || (i > (range.preporucujemo.end - 1))) return
                         return <SwiperSlide tag='li' key = {i}>
                                 <Card  
                                     key = {i}

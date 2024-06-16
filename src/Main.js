@@ -34,8 +34,9 @@ export default function Main() {
                         'mreze', 'space', 'line', 'preporucujemo', 'line', 'magazin', 'line', 'sport'];
 
     function generateMain(section, i) {
-        if(section == 'central') return <section className='central'>
-            <Carousel />
+
+        if((section == 'central') && settings) return <section className='central'>
+            <Carousel/>
             <Latest />
         </section>
         if(section == 'velike vesti') return <General/>
@@ -46,6 +47,17 @@ export default function Main() {
         if(section == 'sport') return <Sport onTop = {i == 0}/>
         if(section == 'line') return <Line type = 'main' />
         if(section == 'space') return <Space margin = '3em'/>
+        if(section == 'custom0') return <Custom customX ={settings.customs[0]} />
+        if(section == 'custom1') return <Custom customX ={settings.customs[1]} />
+        if(section == 'custom2') return <Custom customX ={settings.customs[2]} />
+        if(section == 'custom3') return <Custom customX ={settings.customs[3]} />
+        if(section == 'custom4') return <Custom customX ={settings.customs[4]} />
+        if(section == 'custom5') return <Custom customX ={settings.customs[5]} />
+        if(section == 'custom6') return <Custom customX ={settings.customs[6]} />
+        if(section == 'custom7') return <Custom customX ={settings.customs[7]} />
+        if(section == 'custom8') return <Custom customX ={settings.customs[8]} />
+        if(section == 'custom9') return <Custom customX ={settings.customs[9]} />
+
     }
 
     useEffect(() => {
@@ -55,7 +67,6 @@ export default function Main() {
     return (
         <main className="main">
             <div className="container main-container">
-                <Custom />
                 {settings? 
                     settings.templates.type == 'default'? defaultSectionsMain.map(generateMain) : settings.templates.sectionsMain.map(generateMain)
                     : 

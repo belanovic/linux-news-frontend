@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import { getLatestNews } from './getNews.js';
 import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
@@ -7,7 +8,7 @@ import { Link } from 'react-router-dom';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
 import EffectMaterial from './material-you-slider/dist/effect-material.esm.js';
-
+import range from './sectionsRange.js';
 import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
@@ -17,10 +18,15 @@ import 'swiper/css/bundle';
 
 export default function Magazin({onTop}) {
 
-    console.log(onTop)
-
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [latestMagazinNews, setLatestMagazinNews] = useState('');
+
+    useEffect(async () => {
+        const articles = await getLatestNews(6, 'entertainment');
+        if(articles == null) return;
+        setLatestMagazinNews(articles);
+    }, [])
 
     return (
         <div className={`magazin ${onTop? 'onTop' : ''}`}>
@@ -29,27 +35,24 @@ export default function Magazin({onTop}) {
                 <Link to = '/entertainment/entertainment'>
                     <img src = 'https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Flabel-magazin.jpg?alt=media&token=5a87ef1b-1bca-4aff-ae5c-17b09f3e69be'></img>
                 </Link>
-                
-              
-
             </div>
             <div className='magazin-up'>
                     <Card  
-                        key = {8}
-                        path = {`/article/${frontpageNews[8]._id}`}
+                        key = {range.magazin.start - 1}
+                        path = {`/article/${frontpageNews[range.magazin.start - 1]._id}`}
                         classSuffix = 'magazinBig'
-                        id = {frontpageNews[8]._id}
-                        src = {frontpageNews[8].imgURL}
-                        videoURL = {frontpageNews[8].videoURL}
-                        category = {frontpageNews[8].category}
-                        filter = {frontpageNews[8].imgFilter}
-                        title = {frontpageNews[8].title}
-                        supertitle = {frontpageNews[8].supertitle}
-                        subtitle = {frontpageNews[8].subtitle}
+                        id = {frontpageNews[range.magazin.start - 1]._id}
+                        src = {frontpageNews[range.magazin.start - 1].imgURL}
+                        videoURL = {frontpageNews[range.magazin.start - 1].videoURL}
+                        category = {frontpageNews[range.magazin.start - 1].category}
+                        filter = {frontpageNews[range.magazin.start - 1].imgFilter}
+                        title = {frontpageNews[range.magazin.start - 1].title}
+                        supertitle = {frontpageNews[range.magazin.start - 1].supertitle}
+                        subtitle = {frontpageNews[range.magazin.start - 1].subtitle}
                         thumbShape = 'wide'
                         readMore={true}
-                        datePublished = {dateFormat(frontpageNews[8].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                        dateUpdated = {dateFormat(frontpageNews[8].dateUpdated,'clock')}
+                        datePublished = {dateFormat(frontpageNews[range.magazin.start - 1].datePublished, 'month', 'dayMonth','comma', 'clock')}
+                        dateUpdated = {dateFormat(frontpageNews[range.magazin.start - 1].dateUpdated,'clock')}
                         hasDateArrow={true}
                     />
             </div>
@@ -82,7 +85,8 @@ export default function Magazin({onTop}) {
                     thumbs={{ swiper: thumbsSwiper }}
                 >
                 {frontpageNews.map((article, i) => {
-                    if((i < 3) || (i > 14)) return
+                    if((i < (range.magazin.start)) || (i > range.magazin.end - 1)) return
+                    
                     return <SwiperSlide tag='li' key = {i}>
                         <Card  
                             key = {i}
@@ -151,6 +155,30 @@ export default function Magazin({onTop}) {
             </Swiper>
             </div>
             <Line type = {onTop? 'magazinOnTop' : 'magazin'}/>
+            <div className='magazin-latest'>
+                <div className='magazin-latest-title'>Najnovije iz Magazina</div>
+                <div className='magazin-latest-articles'>
+                    {latestMagazinNews && latestMagazinNews.map((article, i) => {
+                            
+                            return <Card  
+                                    
+                                    key = {i}
+                                    path = {`/article/${article._id}`}
+                                    classSuffix={'magazinLatest'}
+                                    title={article.title}
+                                    videoURL={article.videoURL}
+                                    datePublished = {dateFormat(article.datePublished, 'clock', 'comma', 'month', 'dayMonth')}
+                                    
+                                    
+                                    filter = {article.imgFilter2} 
+                                    thumbShape = 'square'
+                                    readMore = {false}
+                                />
+                        })}
+                </div>
+               
+                </div>
+            <Line type = 'magazin' />
             <div className='magazin-themas'>
                 <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Fmuzika.jpg?alt=media&token=61f1c9b0-752e-4482-9f26-bbfe08911ae0)'}}><Link to = '/entertainmentTagged/entertainment/muzika'><span>#muzika</span></Link></div>
                 <div className='thema-item' style={{backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/site-news-storage.appspot.com/o/site-news-images%2Fthumbs%2Ffilm.jpg?alt=media&token=be861a46-abc7-4f44-a2ee-208325e6934b)'}}><Link to = '/entertainmentTagged/entertainment/film'><span>#film</span></Link></div>

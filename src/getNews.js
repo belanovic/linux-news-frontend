@@ -66,7 +66,7 @@ export async function getNewsByCategory(category, pageNum) {
 
 }
 
-export async function getLatestNews(count) {
+export async function getLatestNews(count, category) {
 
     const options = {
         method: 'POST',
@@ -74,7 +74,8 @@ export async function getLatestNews(count) {
             'Content-Type': 'application/json'
         },
         body: JSON.stringify({
-            count: count
+            count: count,
+            category: category
         })
 
     }

@@ -1,4 +1,5 @@
 import React, {useState, useEffect, useContext} from 'react';
+import { getLatestNews } from './getNews.js';
 import {context} from './newsContext.js';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
@@ -9,6 +10,7 @@ import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
 import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
+import range from './sectionsRange.js';
 import './style/layout/sport.css';
 import './style/typography/sport.css';
 import 'swiper/css/bundle';
@@ -17,6 +19,13 @@ export default function Sport({onTop}) {
 
     const {frontpageNews} = useContext(context);
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
+    const [latestSportNews, setLatestSportNews] = useState('');
+
+    useEffect(async () => {
+        const articles = await getLatestNews(5, 'sports');
+        if(articles == null) return;
+        setLatestSportNews(articles);
+    }, [])
 
     return (
         <div className={`sport ${onTop? 'onTop' : ''}`}>
@@ -30,21 +39,21 @@ export default function Sport({onTop}) {
             </div>
             <div className='sport-big'>
             <Card  
-                        key = {9}
-                        path = {`/article/${frontpageNews[9]._id}`}
+                        key = {range.sport.start - 1}
+                        path = {`/article/${frontpageNews[range.sport.start - 1]._id}`}
                         classSuffix = 'sportBig'
-                        id = {frontpageNews[9]._id}
-                        src = {frontpageNews[9].imgURL}
-                        videoURL = {frontpageNews[9].videoURL}
-                        category = {frontpageNews[9].category}
-                        filter = {frontpageNews[9].imgFilter} 
-                        title = {frontpageNews[9].title}
-                        supertitle = {frontpageNews[9].supertitle}
-                        subtitle = {frontpageNews[9].subtitle}
+                        id = {frontpageNews[range.sport.start - 1]._id}
+                        src = {frontpageNews[range.sport.start - 1].imgURL}
+                        videoURL = {frontpageNews[range.sport.start - 1].videoURL}
+                        category = {frontpageNews[range.sport.start - 1].category}
+                        filter = {frontpageNews[range.sport.start - 1].imgFilter} 
+                        title = {frontpageNews[range.sport.start - 1].title}
+                        supertitle = {frontpageNews[range.sport.start - 1].supertitle}
+                        subtitle = {frontpageNews[range.sport.start - 1].subtitle}
                         thumbShape = 'wide'
                         readMore={true}
-                        datePublished = {dateFormat(frontpageNews[9].datePublished, 'month', 'dayMonth','comma', 'clock')}
-                        dateUpdated = {dateFormat(frontpageNews[9].dateUpdated,'clock')}
+                        datePublished = {dateFormat(frontpageNews[range.sport.start - 1].datePublished, 'month', 'dayMonth','comma', 'clock')}
+                        dateUpdated = {dateFormat(frontpageNews[range.sport.start - 1].dateUpdated,'clock')}
                         hasDateArrow={true}
                     />
             </div>
@@ -74,7 +83,8 @@ export default function Sport({onTop}) {
                     thumbs={{ swiper: thumbsSwiper }}
                 >
                     {frontpageNews.map((article, i) => {
-                        if((i < 7) || (i > 14)) return
+    
+                        if((i < (range.sport.start)) || (i > range.sport.end - 1)) return
                         return <SwiperSlide tag='li' key = {i}>
                                 <Card  
                                     key = {i}
@@ -166,8 +176,9 @@ export default function Sport({onTop}) {
                     })}
                 </div>
                 <div className='sport-latest'>
-                    {frontpageNews.map((article, i) => {
-                        if((i < 10) || (i > 14)) return
+                <div className='sport-latest-title'>Najnovije iz Sporta</div>
+                    {latestSportNews && latestSportNews.map((article, i) => {
+                        
                         return <Card  
                                 
                                 key = {i}

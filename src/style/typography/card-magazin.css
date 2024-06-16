@@ -100,6 +100,7 @@
 
 .card-magazin-info {
     color: white;
+
 }
 
 .card-magazin-info .card-info-category {
@@ -111,8 +112,39 @@
 .card-magazin-info .card-info-date {
     font-size: 1rem;
     text-transform: capitalize;
-    color: black;
+    color: white;
 }
+
+/* .cardLatest **************** */
+
+.card-magazinLatest-title  {
+    font-size: 1.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    transition: color 0.5s;
+    color: white;
+}
+
+.card-magazinLatest-title:hover {
+    text-decoration: none;
+    color: rgb(61, 170, 237);
+}
+
+.card-magazinLatest-info {
+    font-size: 1.25rem;
+    color: white;
+    font-style: italic;
+}
+.card-magazinLatest-info .card-info-category {
+
+    text-transform: uppercase;
+    color: rgb(61, 170, 237);
+    letter-spacing: 1px;
+}
+
+.card-magazinLatest-info .card-info-date {
+    text-transform: lowercase;
+}
+
 
 
 

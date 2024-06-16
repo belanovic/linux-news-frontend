@@ -9,3 +9,10 @@
     background-image: none;
     box-shadow: none;
 }
+
+.magazin-latest-title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 1.5em
+}
+

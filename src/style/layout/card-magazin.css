@@ -135,6 +135,48 @@
 }
 
 
+/* card-magazinLatest ********************* */
+
+.card-magazinLatest {
+    flex: 0 0 30%;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+}
+
+.card-magazinLatest:nth-child(1) {
+    margin-bottom: 4em;
+}
+
+
+.card-magazinLatest-img {
+    width: 100%;
+}
+
+.card-magazinLatest-container-title {
+    order: 1;
+}
+
+.card-magazinLatest-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-magazinLatest-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 0.5em;
+}
+
+.card-magazinLatest-container-subtitle {
+    display: none;
+}
+
+.card-magazinLatest .play {
+    margin: 0.2em;
+}
+
+
 /* magazin themas ********************* */
 
 .magazin-themas {
@@ -177,9 +219,19 @@
         margin-bottom: 1em;
     }
     .card-magazinBig-container-supertitle {
-        
         left: 0;
+    }
 
+
+    .card-magazinLatest {
+        flex: 0 0 30%;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
+    }
+    
+    .card-magazinLatest {
+        margin-bottom: 2em;
     }
 
    .magazin-themas {

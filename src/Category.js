@@ -37,7 +37,7 @@ export default function Category() {
     return (
         <div className="category container">
             <div className='category-articles'>
-                {tag && (tag != 'vesti')? 
+                {tag? 
                 <div className='articles-tag'>{tag}</div> 
                 : 
                 <div>

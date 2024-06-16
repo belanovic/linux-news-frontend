@@ -18,6 +18,13 @@
 
 .magazin-down-mobile {
     display: none;
+    flex-wrap: wrap;
+}
+
+.magazin-latest-articles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 
 
@@ -27,5 +34,10 @@
     }
     .magazin-down-mobile {
         display: block;
+    }
+
+
+    .magazin-latest-articles {
+        flex-direction: column;
     }
 }
