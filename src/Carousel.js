@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
-import TripleSlider from './triple-slider/demo-vite/triple-slider.js';
+
 import dateFormat from './dateFormat.js';
 import Card from './Card.js';
 import CardCarousel from './CardCarousel.js';
