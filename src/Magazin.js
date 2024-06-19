@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import Card from './Card.js';
 import { Link } from 'react-router-dom';
-import EffectCarousel from 'carousel-slider/dist/effect-carousel.esm.js';
+import EffectCarousel from '../node_modules/carousel-slider/dist/effect-carousel.esm.js';
 import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
 import EffectMaterial from './material-you-slider/dist/effect-material.esm.js';
 import range from './sectionsRange.js';
