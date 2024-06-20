@@ -27,6 +27,8 @@
     "vite": "^2.5.0"
   },
   "dependencies": {
+    "react-script": "^2.0.5",
+    "react-scripts": "^5.0.1",
     "swiper": "^11.0.4"
   }
 }
