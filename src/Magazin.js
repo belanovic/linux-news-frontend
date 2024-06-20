@@ -5,10 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import Card from './Card.js';
 import { Link } from 'react-router-dom';
-import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
-import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
-import EffectMaterial from './material-you-slider/dist/effect-material.esm.js';
-import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import range from './sectionsRange.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
@@ -58,7 +54,7 @@ export default function Magazin({onTop}) {
             </div>
             <div className='magazin-down'>
             <Swiper
-                    modules={[Navigation, Autoplay,EffectCube, EffectCarousel, EffectMaterial, EffectFade, EffectCoverflow, EffectPanorama]}
+                    modules={[Navigation, Autoplay,EffectCube, EffectFade, EffectCoverflow]}
                     id="main"
                     effect="coverflow"
                     materialEffect = {{
@@ -109,9 +105,8 @@ export default function Magazin({onTop}) {
             </div>
             <div className='magazin-down-mobile'>
             <Swiper
-                    modules={[Navigation, Autoplay,EffectCube, SwiperGL, EffectCarousel, EffectFade, EffectCoverflow, EffectPanorama]}
+                    modules={[Navigation, Autoplay,EffectCube, EffectFade, EffectCoverflow]}
                     id="main"
-                    effect="carousel"
                     coverflowEffect={{
                         rotate: 50,
                         stretch: 0,

@@ -5,9 +5,6 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Thumbs, Autoplay, EffectCube, EffectFade, EffectCoverflow} from 'swiper/modules';
 import Card from './Card.js';
 import { Link } from 'react-router-dom';
-import EffectCarousel from './carousel-slider/dist/effect-carousel.esm.js';
-import EffectPanorama from './panorama-slider/dist/effect-panorama.esm.js';
-import SwiperGL from './shaders-slider/dist/swiper-gl.esm.js';
 import Line from './Line';
 import dateFormat from './dateFormat.js';
 import range from './sectionsRange.js';
@@ -59,9 +56,9 @@ export default function Sport({onTop}) {
             </div>
             <div className='sport-carousel'>
             <Swiper
-                    modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
+                    modules={[Navigation,Autoplay, EffectCube, EffectFade, EffectCoverflow]}
                     id="main"
-                    effect="panorama"
+          
                     coverflowEffect={{
                         rotate: 50,
                         stretch: 0,
@@ -108,9 +105,8 @@ export default function Sport({onTop}) {
             </div>
             <div className='sport-carousel-mobile'>
             <Swiper
-                    modules={[Navigation, SwiperGL, Autoplay, EffectCube, EffectFade, EffectCoverflow, EffectPanorama, EffectCarousel]}
+                    modules={[Navigation, Autoplay, EffectCube, EffectFade, EffectCoverflow]}
                     id="main"
-                    effect="carousel"
                     coverflowEffect={{
                         rotate: 50,
                         stretch: 0,
