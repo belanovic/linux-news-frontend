@@ -55,3 +55,15 @@
 .article-video {
     outline: none;
 }
+
+
+
+
+
+@media all and (max-width: 500px) {
+    .article-subtitle {
+
+        font-weight: bold;
+    
+    }
+}
