@@ -29,11 +29,11 @@ a:hover {
 
 @media all and (max-width: 1400px) and (min-width: 500px) {
     html {
-        font-size: 9px;
+        font-size: 10px;
     }
 }
 @media all and (max-width: 500px) {
     html {
-        font-size: 9px;
+        font-size: 10px;
     }
 }
