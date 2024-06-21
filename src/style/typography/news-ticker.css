@@ -69,6 +69,12 @@
         font-size: 1.25rem;
     }
 
+    .tickerTitle {
+
+        font-weight: bold;
+
+    }
+
     .ticker-date {
    
         font-weight: bold;
