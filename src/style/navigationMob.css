@@ -42,7 +42,7 @@
  }
 
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .navigationMob {
         display: block;
     }

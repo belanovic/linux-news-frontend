@@ -61,7 +61,7 @@
 }
 
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .card-recommend-container-supertitle {
         padding: 1em 1em 3em 1em;
     }

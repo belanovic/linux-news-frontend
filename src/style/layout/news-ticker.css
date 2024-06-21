@@ -61,7 +61,7 @@
     width: 3em;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .ticker-label {
         padding: 0.5em 1em 0.5em 1em;
     }

@@ -28,7 +28,7 @@
     height: 4em;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .social-label {
         font-size: 1.25rem;
     }

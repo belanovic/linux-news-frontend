@@ -43,7 +43,7 @@
     margin: 0.2em;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
 
     .card-generalSmall {
         margin-bottom: 1.25em;

@@ -64,7 +64,7 @@
     font-size: 1.5rem;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .ticker-label .text {
         font-size: 1.25rem;
     }

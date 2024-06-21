@@ -75,7 +75,7 @@
     width: 100%;
 }
 
-@media all and (max-width: 768px) {
+@media all and (max-width: 500px) {
     .article {
 
         flex-direction: column;
