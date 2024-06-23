@@ -1,7 +1,7 @@
 import react, {useContext} from 'react';
 import {context} from './newsContext';
 import './style/icuc.css';
-
+/* sdfsdf */
 export default function Icuc() {
     const {alphabet} = useContext(context)
     return (
