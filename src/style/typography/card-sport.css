@@ -211,12 +211,18 @@
         line-height: 1.5;
     }
 
+    .card-sportCarousel-info {
+        flex-direction: column;
+    }
+
     .card-sportCarousel-info .card-info-category {
         font-size: 1rem;
+        margin-bottom: 5px;
     }
     
     .card-sportCarousel-info .card-info-date {
         font-size: 1rem;
+        margin-bottom: 10px;
     }
 
     .card-sportBlock-title {

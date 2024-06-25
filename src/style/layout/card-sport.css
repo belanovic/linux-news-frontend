@@ -99,7 +99,7 @@
 .card-sportCarousel-container-supertitle {
     position: absolute;
     width: 100%;
-    top: 40px;
+
     z-index: 1;
     padding: 0;
 }
@@ -276,6 +276,16 @@
 
     .card-sportBig-container-supertitle {
         top: -40px;
+    }
+    .card-sportBlock {
+        margin-bottom: 2em;
+    }
+    
+    .card-sportCarousel-container-supertitle {
+        top: 25px;
+    }
+    .card-sportCarousel-container-supertitle  .card-sportCarousel-supertitle {
+        font-size: 0.5rem;
     }
     .sport-themas {
         flex-wrap: wrap;     
