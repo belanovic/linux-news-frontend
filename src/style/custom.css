@@ -14,9 +14,15 @@
         flex-direction: column;
     }
 
+    .card-custom.first {
+        flex-direction: column;
+    }
+    .card-custom.first .card-custom-container-img {
+        margin-bottom: 1em;
+    }
+
     .card-custom {
         margin-bottom: 2em;
-        background-color: black;
         width: 100% !important;
         margin-bottom: 7em;
     }

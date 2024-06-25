@@ -4,7 +4,7 @@ import {context} from './newsContext.js';
 import dateFormat from './dateFormat.js';
 import shortenSentence from './shortenSentence.js';
 import GenericThumb from './GenericThumb';
-import './style/custom.css'; 
+import './style/custom.css';  
 
 
 export default function Custom({customX}) {

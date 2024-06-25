@@ -239,8 +239,8 @@
         justify-content: space-evenly;   
     }
     .magazin-themas .thema-item {
-        height: 100px;
-        width: 20%;
+        height: 80px;
+        width: 25%;
         margin-bottom: 2em;
         margin-right: 1em;
     }
