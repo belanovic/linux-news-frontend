@@ -62,7 +62,7 @@
   display: inline;
 }
   
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
  
   .header-title a .title .title-img{
     font-size: 3rem;  

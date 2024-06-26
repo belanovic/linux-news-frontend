@@ -17,7 +17,7 @@
     transform: scale(1.2);
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     .category-themas .thema-item a {
         font-size: 1rem;
     }

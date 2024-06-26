@@ -27,13 +27,22 @@ a:hover {
     caret-color: transparent;
 }
 
-@media all and (min-width: 512px) and (max-width: 1024px) {
+@media all and (max-width: 1024px) {
     html {
         font-size: 10px;
     }
 }
-@media all and (max-width: 512px) {
+
+@media all and (min-width: 512px) and (max-width: 1024px) {
     html {
-        font-size: 10px;
+        font-size: 16px;
     }
+}
+
+@media all and (min-width: 1024px) and (max-width: 1400px) {
+    
+    html {
+        font-size: 12px;
+    }
+
 }

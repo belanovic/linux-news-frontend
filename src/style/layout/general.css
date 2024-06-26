@@ -3,7 +3,7 @@
     justify-content: space-between;
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     .general {
         flex-direction: column;
     }

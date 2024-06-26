@@ -59,7 +59,7 @@
 }
 
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     .card-recommend-title {
         font-size: 2rem;
         line-height: 1.25;

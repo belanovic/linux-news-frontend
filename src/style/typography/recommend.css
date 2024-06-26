@@ -19,7 +19,7 @@
     background-position: bottom;
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     .recommend {
         display: none;
     }

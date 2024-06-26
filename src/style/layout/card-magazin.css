@@ -211,7 +211,7 @@
 }
 
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     .card-magazinBig {
         flex-direction: column;
     }

@@ -61,7 +61,7 @@
     background: rgb(223, 0, 0);
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
 
     .card-category.first .card-category-supertitle {
         font-size: 1.25rem;

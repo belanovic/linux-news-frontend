@@ -77,7 +77,7 @@
     display: inline-block;
 }
 
-@media all and (max-width: 512px) {
+@media all and (max-width: 1024px) {
     
     .card-category-container-subtitle {
         display: none
