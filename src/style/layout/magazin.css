@@ -28,7 +28,7 @@
 }
 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 512px) {
     .magazin-down {
         display: none;
     }

@@ -265,7 +265,7 @@
 }
 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 512px) {
     .card-sportBig {
         flex-direction: column;
     }

@@ -46,7 +46,7 @@
     display: block;
 }
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 512px) {
     .category {
         flex-direction: column;
     }

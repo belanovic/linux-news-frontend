@@ -45,7 +45,7 @@
 }
 
 
-@media all and (max-width: 500px) {
+@media all and (max-width: 512px) {
     .card-slide-title {
         font-size: 1.5rem;
         line-height: 1.25;
