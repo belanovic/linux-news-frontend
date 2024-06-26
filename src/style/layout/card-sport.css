@@ -280,11 +280,11 @@
     .card-sportBlock {
         margin-bottom: 2em;
     }
-    
-    .card-sportCarousel-container-supertitle {
-        top: 25px;
+    .card-sportBlock-container-supertitle {
+        top: 0px;
     }
-    .card-sportCarousel-container-supertitle  .card-sportCarousel-supertitle {
+
+    .card-sportCarousel-container-supertitle .card-sportCarousel-supertitle {
         font-size: 0.5rem;
     }
     .sport-themas {

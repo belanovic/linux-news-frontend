@@ -188,13 +188,20 @@
 
 
 @media all and (max-width: 500px) {
+
+
+    .card-sportCarousel {
+        padding: 1em 1em 1em 1em;
+    }
+
     .card-sportCarousel-title {
-        font-size: 2rem;
+        font-size: 1.5rem;
         line-height: 1.25;
         letter-spacing: 1px;
     }
 
-   
+
+       
     .card-sportBig-supertitle {
         font-size: 1.25rem;
     }
@@ -202,9 +209,11 @@
         font-size: 1rem;
     }
     .card-sportBlock-supertitle {
-        font-size: 1rem;
+        font-size: 0.5rem;
     }
-    
+    .card-sportCarousel-text {
+        padding: 1em 0em 1em 0em;
+    }
  
     .card-sportCarousel-subtitle {
         font-size: 1rem;

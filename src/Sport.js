@@ -124,7 +124,7 @@ export default function Sport({onTop}) {
                     tag='section'
                     /* navigation */
                     grabCursor={true}
-                    wrapperTag='ul' 
+                    wrapperTag='div' 
                     thumbs={{ swiper: thumbsSwiper }}
                 >
                     {frontpageNews.map((article, i) => {
