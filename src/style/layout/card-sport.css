@@ -287,6 +287,9 @@
     .card-sportCarousel-container-supertitle .card-sportCarousel-supertitle {
         font-size: 0.5rem;
     }
+    .card-sportBlock-info {
+        display: none;
+    }
     .sport-themas {
         flex-wrap: wrap;     
         justify-content: space-evenly;   
