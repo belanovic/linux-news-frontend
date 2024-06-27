@@ -40,10 +40,10 @@ body {
 @media all and (min-width: 512px) and (max-width: 1024px) {
     
     .container {
-        max-width: 95%;
+        max-width: 70%;
     }
     .container.article {
-        max-width: 100%;
+        max-width: 75%;
     }
 
 }
