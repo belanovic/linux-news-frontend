@@ -29,7 +29,7 @@ body {
 }
 
 
-@media all and (max-width: 1024px) {
+@media all and (max-width: 512px) {
     
     .container {
         max-width: 95%;
