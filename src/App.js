@@ -21,7 +21,7 @@ export default function App() {
             <NewsTicker positioned={true} />
             <Space margin = '1.5em' />
             <Header />
-            <Space margin = '3em' />
+            <Space margin = '1.5em' />
             <NavigationDesk positioned={false} />
             <Space margin = '2em' />
             <Switch> 
