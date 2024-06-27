@@ -91,7 +91,15 @@
     .article .latest {
         margin-bottom: 3em;
     }
-  /*   .article .news-feed {
-        margin: 0 2em 0 2em;
-    } */
+    .date-published, .date-updated {
+        margin-bottom: 10px;
+    }
+    .source, .author {
+        margin-bottom: 15px;
+    }
+    .source span, .author span, .date-published span, .date-updated span {
+        display: block;
+    }
+
+ 
 }
