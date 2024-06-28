@@ -3,7 +3,7 @@
 
 .navigationDesk-container.positioned {
     position: sticky;
-
+    top: 0;
     z-index: 2;
     background-color: white;
 }
@@ -12,6 +12,7 @@
     display: block;
     width: 62%;
 }
+
 
 .navDesk-list {
     display: flex;

@@ -58,6 +58,7 @@
 }
 .article-video-container {
     background: black;
+    width: 100%;
 }
 .article-video {
     width: 100%;
@@ -81,7 +82,6 @@
         flex-direction: column;
     }
     .article.container {
-
         width: 100%
     }
     .article-central {

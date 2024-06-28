@@ -2,6 +2,12 @@
     width: 100%;
 }
 
+.header.positioned {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+}
+
 .header-box {
     display: flex;
     justify-content: space-between;
@@ -40,12 +46,14 @@
     display: flex;
 }
 
-.header-images .one-tech, .header-images .mern-image {
-    height: 6em;
+.header-images .one-tech, .header-images{
+    height: 4em;
     width: 100%;
 }
 .header-images .mern-image {
     display: none;
+    height: 3.4em;
+    width: 70%;
 }
 
 .menu-toggle {
@@ -69,7 +77,6 @@
 @media all and (max-width: 1024px) {
 
 
-
     .header-title a .title {
         margin-right: 1.5em;
       }
@@ -80,7 +87,12 @@
     }
 
     .header-images {
+        justify-content: center;
         flex: 0 0 100%;
+    }
+
+    .header-images .mern-image {
+        display: block;
     }
 
     .header-icons .menu-toggle  {

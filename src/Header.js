@@ -8,7 +8,7 @@ import {context} from './newsContext.js';
 import './style/layout/header.css';
 import './style/typography/header.css';
 
-export default function Header() {
+export default function Header({positioned}) {
     const {getAndSetFrontpageNews, alphabet, navVisible, settings,
         setNavVisible, setFormVisible, frontpageNews} = useContext(context);
 
@@ -17,13 +17,16 @@ export default function Header() {
     }
  
     return (
-        <header className="header">
+        <header className={`header ${positioned? 'positioned' : ''}`}>
                
-            <div className="container header-container">
+            <div className={`container header-container `}>
                 <div className="header-box">
                     <div className="header-title">
                         <Link to = '/'>
-                            <div className="title" onClick = {() => getAndSetFrontpageNews()}>
+                            <div className="title" onClick = {() => {
+                                    getAndSetFrontpageNews();
+                                    window.scrollTo(0, 0);
+                                }}>
                                 {settings.name?
                                 <div className='title-text black-ops-one-regular'>{settings.name}</div>
                                 :
