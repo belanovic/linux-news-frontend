@@ -42,7 +42,7 @@
 /* ticker day */
 
 .ticker-day {
-    flex: 0 0 30%;
+    flex: 0 0 35%;
     display: flex;
     justify-content: space-around;
     align-items: center;

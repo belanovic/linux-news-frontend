@@ -15,6 +15,7 @@ function Provider(props) {
     const [formVisible, setFormVisible] = useState(false);
     const [activeTab, setActiveTab] = useState('recent');
     const [activeCategory, setActiveCategory] = useState('');
+    const [backgroundHeader, setBeckgroundHeader] = useState('linear-gradient(180deg, #970000, #000000)');
     
     async function getAndSetFrontpageNews() {
         try {
@@ -27,6 +28,11 @@ function Provider(props) {
             
         }
     }
+
+
+    useEffect(() => {
+        if(settings) setBeckgroundHeader(`linear-gradient(${settings.sitecolor[0]}deg, ${settings.sitecolor[1]}, ${settings.sitecolor[2]})`);
+    }, [settings])
 
     useEffect(async () => {
         try {
@@ -67,7 +73,8 @@ function Provider(props) {
                 activeTab, 
                 setActiveTab,
                 activeCategory, 
-                setActiveCategory
+                setActiveCategory,
+                backgroundHeader
 
             }
         }>{props.children}</context.Provider>

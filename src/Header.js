@@ -10,14 +10,17 @@ import './style/typography/header.css';
 
 export default function Header({positioned}) {
     const {getAndSetFrontpageNews, alphabet, navVisible, settings,
-        setNavVisible, setFormVisible, frontpageNews} = useContext(context);
+        setNavVisible, setFormVisible, frontpageNews, backgroundHeader} = useContext(context);
 
     const handleClickMenu = () => {
         setNavVisible(prev => !prev);
     }
  
     return (
-        <header className={`header ${positioned? 'positioned' : ''}`}>
+        <header 
+            className={`header ${positioned? 'positioned' : ''}`}
+            style={{background: backgroundHeader}}
+        >
                
             <div className={`container header-container `}>
                 <div className="header-box">

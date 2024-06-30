@@ -50,10 +50,10 @@ function NewsTicker({positioned}) {
                         </>
                     )}
                 </Ticker>}
-                <div className='ticker-day'>
+                {/* <div className='ticker-day'>
                     <div className='ticker-date'><span>{dateFormat(new Date(), 'dayWeek', 'comma', 'month', 'dayMonth')}</span></div>
                     <Weather />
-                </div>
+                </div> */}
             </div>
         )
 }

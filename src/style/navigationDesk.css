@@ -1,6 +1,11 @@
 /* ========== NavigationDesk ============= */
 
 
+.navigationDesk-container {
+    display: flex;
+    justify-content: space-between;
+}
+
 .navigationDesk-container.positioned {
     position: sticky;
     top: 0;
@@ -12,7 +17,6 @@
     display: block;
     width: 62%;
 }
-
 
 .navDesk-list {
     display: flex;

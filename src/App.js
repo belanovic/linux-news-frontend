@@ -14,15 +14,15 @@ import Form from './Form';
 
 export default function App() {
     const cmsOverlay = useRef(null);  
-    const {showSiteOverlay, setShowSiteOverlay} = useContext(context);
+    const {showSiteOverlay, setShowSiteOverlay, settings} = useContext(context);
     return (   
         <div className = "wrapper"> 
             <div className = "siteOverlay" ref = {cmsOverlay} style = {{display: showSiteOverlay}}></div>
-            <Header positioned={true} />
+            <Header positioned={settings.top == 'naslov'? true : false} />
             <Space margin = '1.5em' />
-            <NewsTicker positioned={false} />
+            <NewsTicker positioned={settings.top == 'skrol'? true : false} />
             <Space margin = '1.5em' />
-            <NavigationDesk positioned={false} />
+            <NavigationDesk positioned={settings.top == 'meni'? true : false}  />
             <Space margin = '2em' />
             <Switch> 
 

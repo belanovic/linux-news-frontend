@@ -2,6 +2,8 @@ import React, {useState, useContext} from 'react';
 import {context} from './newsContext.js';
 import {Link} from 'react-router-dom';
 import './style/navigationDesk.css';
+import dateFormat from './dateFormat';
+import Weather from './Weather';
 
 export default function NavigationDesk({positioned}) {
 
@@ -20,6 +22,10 @@ export default function NavigationDesk({positioned}) {
                     <div className={`navDesk-item ${(activeCategory == 'sports' && 'active')}`}><Link to = '/sports/sports'><span className="navDesk-label">Sport</span></Link> </div>
                 </div>
             </nav>
+            <div className='ticker-day'>
+                    <div className='ticker-date'><span>{dateFormat(new Date(), 'dayWeek', 'comma', 'month', 'dayMonth')}</span></div>
+                    <Weather />
+            </div>
         </div>
     )
 }
