@@ -31,7 +31,7 @@ function Provider(props) {
 
 
     useEffect(() => {
-        if(settings) setBeckgroundHeader(`linear-gradient(${settings.sitecolor[0]}deg, ${settings.sitecolor[1]}, ${settings.sitecolor[2]})`);
+        if(settings) setBeckgroundHeader(`linear-gradient(${settings.colors.headerColor[0]}deg, ${settings.colors.headerColor[1]}, ${settings.colors.headerColor[2]})`);
     }, [settings])
 
     useEffect(async () => {
